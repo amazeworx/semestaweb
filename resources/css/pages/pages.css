@@ -1,0 +1,48 @@
+.home-hero {
+    background: url("/images/home_hero_3.jpg") center center no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 80px);
+    @apply flex items-center;
+    @media (min-width: 1024px) {
+        min-height: 648px;
+    }
+}
+.hero-overlay {
+    @apply absolute w-full h-full top-0 left-0 right-0 bottom-0 bg-blue-dark bg-opacity-80 z-0;
+}
+
+.about-hero {
+    background: url("/images/about_hero.jpg") center center no-repeat;
+    background-size: cover;
+    @apply flex items-center relative;
+}
+.services-hero {
+    background: url("/images/services_hero.jpg") center center no-repeat;
+    background-size: cover;
+    @apply flex items-center relative;
+}
+.contact-hero {
+    background: url("/images/contact_hero.jpg") center center no-repeat;
+    background-size: cover;
+    @apply flex items-center relative;
+}
+.section-services {
+    p {
+        @apply mb-4;
+    }
+}
+.list-border-b {
+    li {
+        @apply border-b border-gray-200 py-4;
+    }
+}
+
+.pagination {
+    @apply flex flex-wrap justify-center py-4;
+    li {
+        @apply inline-block p-2;
+        a {
+            @apply text-gray-500 hover:text-orange;
+        }
+    }
+}

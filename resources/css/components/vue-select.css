@@ -1,0 +1,27 @@
+.vs__dropdown-toggle {
+    @apply mt-1 rounded-md border border-gray-300 shadow-sm text-sm text-gray-800;
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+}
+.vs__selected {
+    @apply text-gray-800;
+    padding: 0 3px;
+    margin: 3px 2px 0px;
+}
+.vs__dropdown-menu {
+    @apply border border-gray-300 -mt-1 shadow text-sm;
+}
+.vs__dropdown-option {
+    @apply leading-normal py-2 px-4;
+}
+.vs__dropdown-option--highlight {
+    @apply bg-orange-300;
+}
+.vs__open-indicator {
+    transform: scale(0.7);
+}
+.vs--open .vs__open-indicator {
+    transform: rotate(180deg) scale(0.7);
+}

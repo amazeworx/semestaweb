@@ -1,0 +1,27 @@
+.button {
+    @apply inline-flex items-center px-4 py-2 border border-transparent rounded text-sm font-bold uppercase whitespace-nowrap transition ease-in-out duration-150 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+    > span {
+        @apply inline-block;
+    }
+    &.button-md {
+        @apply px-6 py-2 text-sm leading-loose;
+    }
+    &.button-xl {
+        @apply px-8 py-4 text-base;
+    }
+    &-contained {
+        @apply text-white bg-gray-700 border-gray-700 shadow hover:shadow-md disabled:shadow;
+        &.button-orange {
+            @apply bg-orange-500 border-orange-500 hover:bg-orange-600 hover:border-orange-600 disabled:bg-orange disabled:border-orange;
+        }
+    }
+    &-outline {
+        @apply text-blue border-blue bg-transparent hover:bg-gray-100;
+    }
+    &-text {
+        @apply text-blue px-2 -ml-2 hover:text-blue-light;
+        &.button-lg {
+            @apply px-4 py-3 -ml-4 text-base;
+        }
+    }
+}

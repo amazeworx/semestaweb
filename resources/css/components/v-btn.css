@@ -1,0 +1,12 @@
+.v-btn--is-elevated {
+    @apply shadow;
+    &:hover {
+        @apply shadow-md;
+    }
+}
+.theme--light.v-btn.primary {
+    @apply bg-orange-500;
+    &:hover {
+        @apply bg-orange-400;
+    }
+}

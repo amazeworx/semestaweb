@@ -1,0 +1,26 @@
+.v-stepper {
+    @apply rounded-none shadow-md bg-white;
+}
+.v-stepper__header {
+    @apply shadow-none border-b-2 border-gray-200;
+}
+.v-stepper__step__step {
+    @apply bg-blue mr-3;
+}
+.theme--light.v-stepper {
+    @apply bg-white;
+}
+.theme--light.v-stepper
+    .v-stepper__step:not(.v-stepper__step--active):not(.v-stepper__step--complete):not(.v-stepper__step--error)
+    .v-stepper__step__step {
+    @apply bg-gray-200 text-gray-500;
+}
+.v-stepper__header {
+    @apply bg-white shadow;
+}
+.v-stepper__header .v-divider {
+    @apply -mx-2;
+}
+.v-stepper__content {
+    @apply p-0;
+}
