@@ -13,37 +13,36 @@
 [multiple],
 textarea,
 select {
-    @apply block mt-1 w-full rounded-md border border-gray-300 shadow-sm text-sm text-gray-800 px-3 py-2 placeholder-gray-500 placeholder-opacity-50 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    @apply block mt-1 w-full rounded-md border border-gray-300 shadow-sm text-sm text-gray-800 bg-white px-3 py-2 placeholder-gray-500 placeholder-opacity-50 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
 }
-[type="text"],
-[type="email"],
-[type="url"],
-[type="password"],
-[type="number"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="search"],
-[type="tel"],
-[type="time"],
-[type="week"],
-[multiple],
-textarea,
-select {
-    &:disabled {
-        @apply bg-gray-200 cursor-not-allowed text-gray-500;
-    }
+[type="text"]:disabled,
+[type="email"]:disabled,
+[type="url"]:disabled,
+[type="password"]:disabled,
+[type="number"]:disabled,
+[type="date"]:disabled,
+[type="datetime-local"]:disabled,
+[type="month"]:disabled,
+[type="search"]:disabled,
+[type="tel"]:disabled,
+[type="time"]:disabled,
+[type="week"]:disabled,
+[multiple]:disabled,
+textarea:disabled,
+select:disabled {
+    @apply bg-gray-200 cursor-not-allowed text-gray-500;
 }
 select {
     @apply pr-8;
 }
 [type="checkbox"],
 [type="radio"] {
-    @apply border border-gray-300 shadow-sm text-sm text-indigo-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200;
+    @apply border border-gray-300 bg-white shadow-sm text-sm text-indigo-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200;
     margin-top: 2px;
-    &:checked {
-        @apply bg-current;
-    }
+}
+[type="checkbox"]:checked,
+[type="radio"]:checked {
+    @apply bg-current;
 }
 [type="checkbox"] {
     @apply rounded;
