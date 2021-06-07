@@ -24,14 +24,15 @@
       <div class="flex flex-wrap gap-y-6 md:flex-nowrap md:gap-x-4">
         <div class="w-full md:w-1/2">
           <label class="form-label">Nama sesuai identitas <span class="form-required">*</span></label>
-          <input type="text" wire:model.lazy="familyName" placeholder="Isi nama lengkap sesuai identitas">
+          <input type="text" wire:model.lazy="familyName" name="familyName"
+            placeholder="Isi nama lengkap sesuai identitas">
           @error('familyName')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
           @enderror
         </div>
         <div class="w-full md:w-1/4">
           <label class="form-label">Hubungan <span class="form-required">*</span></label>
-          <select wire:model="familyRelation">
+          <select wire:model="familyRelation" name="familyRelation">
             <option value="" disabled>-- Pilih --</option>
             <option value="Suami">Suami</option>
             <option value="Istri">Istri</option>
@@ -63,7 +64,7 @@
       <div class="flex flex-wrap gap-y-2 md:flex-nowrap md:gap-x-4">
         <div class="w-full md:w-2/12">
           <label class="form-label">Jenis Kartu ID <span class="form-required">*</span></label>
-          <select wire:model="familyIdType" class="mb-1">
+          <select wire:model="familyIdType" name="familyIdType" class="mb-1">
             <option value="" disabled>-- Pilih Identitas --</option>
             <option value="KTP">KTP</option>
             <option value="Paspor">Paspor</option>
@@ -77,7 +78,7 @@
           @if ($familyIdType === 'KTP')
           <div class="w-full md:w-1/2">
             <label class="form-label">Nomor KTP (NIK) <span class="form-required">*</span></label>
-            <input type="text" wire:model.lazy="familyKtpNumber" placeholder="Isi NIK KTP">
+            <input type="text" wire:model.lazy="familyKtpNumber" name="familyKtpNumber" placeholder="Isi NIK KTP">
             @error('familyKtpNumber')
             <div class="form-validation-error"><small>{{ $message }}</small></div>
             @enderror
@@ -85,17 +86,20 @@
           <div class="w-full md:w-1/2">
             <label class="form-label">Berlaku s/d <span class="form-required">*</span></label>
             <div class="flex flex-nowrap gap-2">
-              <select wire:model="familyKtpExpiredDay" class="mb-1" {{ $familyKtpExpiredLifetime ? 'disabled' : '' }}>
+              <select wire:model="familyKtpExpiredDay" name="familyKtpExpiredDay" class="mb-1"
+                {{ $familyKtpExpiredLifetime ? 'disabled' : '' }}>
                 <option value="">Tgl</option>
                 @for ($i = 1; $i <= 31; $i++) <option value="{{ $i }}">{{ $i }}</option>
                   @endfor
               </select>
-              <select wire:model="familyKtpExpiredMonth" class="mb-1" {{ $familyKtpExpiredLifetime ? 'disabled' : '' }}>
+              <select wire:model="familyKtpExpiredMonth" name="familyKtpExpiredMonth" class="mb-1"
+                {{ $familyKtpExpiredLifetime ? 'disabled' : '' }}>
                 <option value="">Bln</option>
                 @for ($i = 1; $i <= 12; $i++) <option value="{{ $i }}">{{ $i }}</option>
                   @endfor
               </select>
-              <select wire:model="familyKtpExpiredYear" class="mb-1" {{ $familyKtpExpiredLifetime ? 'disabled' : '' }}>
+              <select wire:model="familyKtpExpiredYear" name="familyKtpExpiredYear" class="mb-1"
+                {{ $familyKtpExpiredLifetime ? 'disabled' : '' }}>
                 <option value="">Thn</option>
                 @for ($i = date("Y"); $i <= (date("Y") + 10); $i++) <option value="{{ $i }}">{{ $i }}</option>
                   @endfor
@@ -104,8 +108,8 @@
 
             <div>
               <div class="form-check mt-1 inline-flex">
-                <input id="familyKtpExpiredLifetime" wire:model="familyKtpExpiredLifetime" type="checkbox"
-                  class="form-check-input">
+                <input id="familyKtpExpiredLifetime" name="familyKtpExpiredLifetime"
+                  wire:model="familyKtpExpiredLifetime" type="checkbox" class="form-check-input">
                 <label class="form-check-label inline-block ml-2" for="familyKtpExpiredLifetime">Seumur Hidup</label>
               </div>
             </div>
@@ -124,7 +128,8 @@
           @if ($familyIdType === 'Paspor')
           <div class="w-full md:w-1/2">
             <label class="form-label">Nomor Paspor <span class="form-required">*</span></label>
-            <input type="text" wire:model.lazy="familyPassportNumber" placeholder="Isi nomor paspor">
+            <input type="text" wire:model.lazy="familyPassportNumber" name="familyPassportNumber"
+              placeholder="Isi nomor paspor">
             @error('familyPassportNumber')
             <div class="form-validation-error"><small>{{ $message }}</small></div>
             @enderror
@@ -132,17 +137,17 @@
           <div class="w-full md:w-1/2">
             <label class="form-label">Berlaku s/d <span class="form-required">*</span></label>
             <div class="flex flex-nowrap gap-2">
-              <select wire:model="familyPassportExpiredDay" class="mb-1">
+              <select wire:model="familyPassportExpiredDay" name="familyPassportExpiredDay" class="mb-1">
                 <option value="">Tgl</option>
                 @for ($i = 1; $i <= 31; $i++) <option value="{{ $i }}">{{ $i }}</option>
                   @endfor
               </select>
-              <select wire:model="familyPassportExpiredMonth" class="mb-1">
+              <select wire:model="familyPassportExpiredMonth" name="familyPassportExpiredMonth" class="mb-1">
                 <option value="">Bln</option>
                 @for ($i = 1; $i <= 12; $i++) <option value="{{ $i }}">{{ $i }}</option>
                   @endfor
               </select>
-              <select wire:model="familyPassportExpiredYear" class="mb-1">
+              <select wire:model="familyPassportExpiredYear" name="familyPassportExpiredYear" class="mb-1">
                 <option value="">Thn</option>
                 @for ($i = date("Y"); $i <= (date("Y") + 10); $i++) <option value="{{ $i }}">{{ $i }}</option>
                   @endfor
@@ -186,7 +191,7 @@
       <div class="flex flex-wrap gap-y-6 md:flex-nowrap md:gap-x-4">
         <div class="w-full md:w-1/3">
           <label class="form-label">Pekerjaan <span class="form-required">*</span></label>
-          <select wire:model="familyOccupation" class="mb-1">
+          <select wire:model="familyOccupation" name="familyOccupation" class="mb-1">
             <option value="" disabled>-- Pilih --</option>
             @foreach ($familyOccupations as $occupation)
             <option value="{{ $occupation->id }}">
@@ -210,7 +215,7 @@
           <label class="form-label">Jabatan/Pangkat <span class="form-required">*</span></label>
 
           @if (!$familyJobPositionIsText)
-          <select wire:model="familyJobPosition" class="mb-1">
+          <select wire:model="familyJobPosition" name="familyJobPosition" class="mb-1">
             <option value="" disabled>-- Pilih --</option>
             @foreach ($familyJobPositions as $position)
             <option value="{{ $position->id }}">{{ $position->name }}
@@ -224,7 +229,8 @@
           @enderror
 
           @if ($familyJobPositionIsText || $familyJobPositionIsOther)
-          <input type="text" wire:model.lazy="familyJobPositionText" placeholder="Isi Jabatan/Pangkat Anda">
+          <input type="text" wire:model.lazy="familyJobPositionText" name="familyJobPositionText"
+            placeholder="Isi Jabatan/Pangkat Anda">
           @endif
 
           @error('familyJobPositionText')
@@ -234,7 +240,7 @@
         <div class="w-full md:w-1/3">
           <label class="form-label">Bidang Usaha <span class="form-required">*</span></label>
           @if (!$familyBusinessFieldIsText)
-          <select wire:model="familyBusinessField" class="mb-1">
+          <select wire:model="familyBusinessField" name="familyBusinessField" class="mb-1">
             <option value="" disabled>-- Pilih --</option>
             @foreach ($familyBusinessFields as $business)
             <option value="{{ $business->id }}">{{ $business->name }}</option>
@@ -245,7 +251,8 @@
           <div class="form-validation-error"><small>{{ $message }}</small></div>
           @enderror
           @if ($familyBusinessFieldIsText || $familyBusinessFieldIsOther)
-          <input type="text" wire:model.lazy="familyBusinessFieldText" placeholder="Isi Bidang Usaha Pekerjaan Anda">
+          <input type="text" wire:model.lazy="familyBusinessFieldText" name="familyBusinessFieldText"
+            placeholder="Isi Bidang Usaha Pekerjaan Anda">
           @endif
           @error('familyBusinessFieldText')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
@@ -256,7 +263,7 @@
       <div class="flex flex-wrap gap-y-2">
         <div class="w-full">
           <label class="form-label">Nama Perusahaan/Kantor <span class="form-required">*</span></label>
-          <input type="text" wire:model.lazy="familyCompanyName"
+          <input type="text" wire:model.lazy="familyCompanyName" name="familyCompanyName"
             placeholder="Isi Nama Perusahaan/Kantor Pasangan/Orang Tua">
           @error('familyCompanyName')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
@@ -267,7 +274,8 @@
           <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2">
             <div class="w-full md:col-span-full">
               <label class="form-label">Alamat Kantor <span class="form-required">*</span></label>
-              <input type="text" wire:model.lazy="familyCompanyAddress" placeholder="Cth: Jl Buncit Persada No 1">
+              <input type="text" wire:model.lazy="familyCompanyAddress" name="familyCompanyAddress"
+                placeholder="Cth: Jl Buncit Persada No 1">
               @error('familyCompanyAddress')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -291,7 +299,7 @@
               <label class="form-label">Kota <span class="form-required">*</span></label>
               @if ($familyCompanyCountry === 'INDONESIA')
               <div wire:ignore>
-                <select id="familyCompanyCity" class="mb-1">
+                <select id="familyCompanyCity" name="familyCompanyCity" class="mb-1">
                   <option></option>
                   @foreach ($familyCompanyCities as $city)
                   <option value="{{ $city->ksei_name }}" {{ $city->ksei_name === 'JAKARTA' ? 'selected' : '' }}>
@@ -303,7 +311,8 @@
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
               @else
-              <input type="text" wire:model.lazy="familyCompanyCityText" placeholder="Nama Kota">
+              <input type="text" wire:model.lazy="familyCompanyCityText" name="familyCompanyCityText"
+                placeholder="Nama Kota">
               @error('familyCompanyCityText')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -311,7 +320,7 @@
             </div>
             <div class="w-full">
               <label class="form-label">Kode Pos <span class="form-required">*</span></label>
-              <input type="text" wire:model.lazy="familyCompanyZip" placeholder="Cth: 11250">
+              <input type="text" wire:model.lazy="familyCompanyZip" name="familyCompanyZip" placeholder="Cth: 11250">
               @error('familyCompanyZip')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -323,7 +332,8 @@
               <div>
                 <label class="form-label">Nomor Telepon Kantor</label>
                 <div wire:ignore>
-                  <input id="familyCompanyPhoneNumber" type="tel" placeholder="21567890" class="mt-1">
+                  <input id="familyCompanyPhoneNumber" name="familyCompanyPhoneNumber" type="tel" placeholder="21567890"
+                    class="mt-1">
                   @error('familyCompanyPhoneNumber')
                   <div class="form-validation-error"><small>{{ $message }}</small></div>
                   @enderror
@@ -336,7 +346,8 @@
                 <label class="form-label">Nomor Faksimili</label>
 
                 <div wire:ignore>
-                  <input id="familyCompanyFaxNumber" type="tel" placeholder="21567890" class="mt-1">
+                  <input id="familyCompanyFaxNumber" name="familyCompanyFaxNumber" type="tel" placeholder="21567890"
+                    class="mt-1">
                   @error('familyCompanyFaxNumber')
                   <div class="form-validation-error"><small>{{ $message }}</small></div>
                   @enderror
@@ -348,7 +359,8 @@
           <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2">
             <div class="w-full col-span-2">
               <label class="form-label">Email Kantor</label>
-              <input type="text" wire:model.lazy="familyCompanyEmail" placeholder="Isi alamat email kantor Anda">
+              <input type="text" wire:model.lazy="familyCompanyEmail" name="familyCompanyEmail"
+                placeholder="Isi alamat email kantor Anda">
               @error('familyCompanyEmail')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -356,7 +368,7 @@
             <div class="w-full">
               <label class="form-label">Lama Bekerja/Usaha</label>
               <div class="flex flex-nowrap gap-2">
-                <select wire:model="familyWorkYear" class="mb-1">
+                <select wire:model="familyWorkYear" name="familyWorkYear" class="mb-1">
                   <option value="" disabled>Tahun</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -375,7 +387,7 @@
                   <option value="15">15</option>
                   <option value=">15">>15</option>
                 </select>
-                <select wire:model="familyWorkMonth" class="mb-1">
+                <select wire:model="familyWorkMonth" name="familyWorkMonth" class="mb-1">
                   <option value="" disabled>Bulan</option>
                   @for ($i = 1; $i <= 11; $i++) <option value="{{ $i }}">{{ $i }}</option>
                     @endfor
@@ -408,7 +420,7 @@
       <div class="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-4">
         <div class="w-full">
           <label class="form-label">Penghasilan Utama/Kotor/thn <span class="form-required">*</span></label>
-          <select wire:model="familyIncomeYearly" class="mb-1">
+          <select wire:model="familyIncomeYearly" name="familyIncomeYearly" class="mb-1">
             <option value="" disabled>-- Pilih --</option>
             <option value="1">
               < 10 Juta</option> <option value="2">10-50 Juta
@@ -425,7 +437,7 @@
         <div class="w-full">
           <label class="form-label">Sumber Penghasilan Utama <span class="form-required">*</span></label>
 
-          <select wire:model="familyIncomeSource" class="mb-1">
+          <select wire:model="familyIncomeSource" name="familyIncomeSource" class="mb-1">
             <option value="" disabled>-- Pilih --</option>
             <option value="2">Gaji</option>
             <option value="3">Hasil Usaha</option>
@@ -447,7 +459,8 @@
           @enderror
 
           @if ($familyIncomeSource == 1)
-          <input type="text" wire:model.lazy="familyIncomeSourceText" placeholder="Isi Sumber Penghasilan Utama Anda *">
+          <input type="text" wire:model.lazy="familyIncomeSourceText" name="familyIncomeSourceText"
+            placeholder="Isi Sumber Penghasilan Utama Anda *">
           @endif
           @error('familyIncomeSourceText')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
@@ -455,7 +468,7 @@
         </div>
         <div class="w-full">
           <label class="form-label">Penghasilan Tambahan/Kotor/thn</label>
-          <select wire:model="familyExtraIncomeYearly" class="mb-1">
+          <select wire:model="familyExtraIncomeYearly" name="familyExtraIncomeYearly" class="mb-1">
             <option value="" disabled>-- Pilih --</option>
             <option value="1">
               < 10 Juta</option> <option value="2">10-50 Juta
@@ -471,7 +484,7 @@
         </div>
         <div class="w-full">
           <label class="form-label">Sumber Penghasilan Tambahan</label>
-          <select wire:model="familyExtraIncomeSource" class="mb-1">
+          <select wire:model="familyExtraIncomeSource" name="familyExtraIncomeSource" class="mb-1">
             <option value="" disabled>-- Pilih --</option>
             <option value="2">Gaji</option>
             <option value="3">Hasil Usaha</option>
@@ -493,7 +506,7 @@
           @enderror
 
           @if ($familyExtraIncomeSource == 1)
-          <input type="text" wire:model.lazy="familyExtraIncomeSourceText"
+          <input type="text" wire:model.lazy="familyExtraIncomeSourceText" name="familyExtraIncomeSourceText"
             placeholder="Isi Sumber Penghasilan Tambahan Anda">
           @endif
           @error('familyExtraIncomeSourceText')

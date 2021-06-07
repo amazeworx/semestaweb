@@ -11,7 +11,7 @@
       <div class="flex flex-wrap gap-y-6 md:flex-nowrap md:gap-x-4">
         <div class="w-full md:w-3/5">
           <label class="form-label">Nama lengkap <span class="form-required">*</span></label>
-          <input type="text" wire:model.lazy="fullName" name="fullName"
+          <input type="text" wire:model.lazy="fullName" x-model="fullName"
             placeholder="Isi nama lengkap Anda sesuai identitas">
           @error('fullName')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
@@ -25,7 +25,8 @@
               @foreach ($countries as $country)
               <option value="{{ $country->nationality }}"
                 {{ $country->nationality === 'INDONESIAN' ? 'selected' : '' }}>
-                {{ $country->nationality }}</option>
+                {{ $country->nationality }}
+              </option>
               @endforeach
             </select>
           </div>
@@ -277,7 +278,8 @@
               <option></option>
               @foreach ($countries as $country)
               <option value="{{ $country->code }}" {{ $country->code === 'ID' ? 'selected' : '' }}>
-                {{ $country->name }}</option>
+                {{ $country->name }}
+              </option>
               @endforeach
             </select>
           </div>
@@ -293,7 +295,8 @@
               <option></option>
               @foreach ($birthPlaces as $city)
               <option value="{{ $city->ksei_name }}" {{ $city->ksei_name === 'JAKARTA' ? 'selected' : '' }}>
-                {{ $city->ksei_name }}</option>
+                {{ $city->ksei_name }}
+              </option>
               @endforeach
             </select>
           </div>
@@ -497,7 +500,8 @@
                   <option></option>
                   @foreach ($countries as $country)
                   <option value="{{ $country->name }}" {{ $country->name === 'INDONESIA' ? 'selected' : '' }}>
-                    {{ $country->name }}</option>
+                    {{ $country->name }}
+                  </option>
                   @endforeach
                 </select>
               </div>
@@ -638,7 +642,8 @@
                   <option></option>
                   @foreach ($countries as $country)
                   <option value="{{ $country->name }}" {{ $country->name === 'INDONESIA' ? 'selected' : '' }}>
-                    {{ $country->name }}</option>
+                    {{ $country->name }}
+                  </option>
                   @endforeach
                 </select>
               </div>
@@ -898,22 +903,29 @@
     $('#postalAddressCountry').select2({
       placeholder: "-- Pilih --",
     });
-    $('#nationality').on('change', function (e) {
+    // let localNationality = localStorage.getItem('nationality');
+    // if (localNationality) {
+    //   $('#nationality').val(localNationality);
+    //   $('#nationality').trigger('change');
+    //   @this.set('nationality', localNationality);
+    // }
+    $('#nationality').on('change', function(e) {
       @this.set('nationality', e.target.value);
+      localStorage.setItem('nationality', e.target.value);
     });
-    $('#birthCountry').on('change', function (e) {
+    $('#birthCountry').on('change', function(e) {
       @this.set('birthCountry', e.target.value);
     });
-    $('#birthPlace').on('change', function (e) {
+    $('#birthPlace').on('change', function(e) {
       @this.set('birthPlace', e.target.value);
     });
-    $('#idCountry').on('change', function (e) {
+    $('#idCountry').on('change', function(e) {
       @this.set('idCountry', e.target.value);
     });
-    $('#homeCountry').on('change', function (e) {
+    $('#homeCountry').on('change', function(e) {
       @this.set('homeCountry', e.target.value);
     });
-    $('#postalAddressCountry').on('change', function (e) {
+    $('#postalAddressCountry').on('change', function(e) {
       @this.set('postalAddressCountry', e.target.value);
     });
 
@@ -923,7 +935,7 @@
       preferredCountries: ["id", "sg", "au", "my"],
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js",
     });
-    $('#mobileNumber').on('change', function (e) {
+    $('#mobileNumber').on('change', function(e) {
       let mobileNumber = mobileInput.getNumber();
       let countryData = mobileInput.getSelectedCountryData();
       //console.log(countryData.dialCode);
@@ -938,11 +950,11 @@
       preferredCountries: ["id", "sg", "au", "my"],
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js",
     });
-    $('#phoneNumber').on('change', function (e) {
+    $('#phoneNumber').on('change', function(e) {
       let phoneNumber = phoneInput.getNumber();
       let countryData = phoneInput.getSelectedCountryData();
       @this.set('phoneCountryCode', countryData.dialCode);
       @this.set('phoneNumber', phoneNumber);
     });
-});
+  });
 </script>

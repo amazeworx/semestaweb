@@ -29,11 +29,12 @@
               <span class="tab-text">Syarat & Ketentuan</span></div>
           </div>
         </div>
-        <div wire:loading..delay.class.remove="opacity-0" class="progress opacity-0 -mt-1 transition-opacity">
+        <div wire:loading.delay.class.remove="opacity-0" class="progress opacity-0 -mt-1 transition-opacity">
           <div class="indeterminate"></div>
         </div>
       </div>
-      <form wire:submit.prevent="submit">
+      <form wire:submit.prevent="submit" class="relative">
+        {{-- <div wire:loading.delay.class.remove="hidden" class="hidden absolute inset-0 bg-white bg-opacity-50 z-10"></div> --}}
 
         <div id="step-1" class="{{ $currentStep !== 1 ? 'hidden' : '' }}">
           @include("livewire.open-account.open-account-step1")
@@ -81,12 +82,14 @@
           </button> --}}
 
           @if($currentStep > 1)
-          <button type="button" wire:click="back({{ $currentStep - 1 }})" wire:loading.attr="disabled"
+          <button type="button" wire:click="back({{ $currentStep - 1 }})" wire:loading.attr="disabled" x-data
+            x-on:click="window.scrollTo(0, 0)"
             class="px-4 py-2 border rounded text-sm font-bold uppercase bg-orange border-orange text-white hover:bg-orange-light hover:border-orange-light focus:outline-none transition ease-in-out duration-150">⟵
             Kembali</button>
           @endif
 
-          <button type="button" wire:click="submit({{ $currentStep }})" wire:loading.attr="disabled"
+          <button type="button" wire:click="submit({{ $currentStep }})" wire:loading.attr="disabled" x-data
+            x-on:click="window.scrollTo(0, 0)"
             class="px-4 py-2 border rounded text-sm font-bold uppercase bg-orange border-orange text-white hover:bg-orange-light hover:border-orange-light focus:outline-none transition ease-in-out duration-150">{{ $currentStep !== 4 ? 'Berikutnya' : 'Submit' }}
             ⟶</button>
 

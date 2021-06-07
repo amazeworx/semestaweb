@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 .home-hero {
     background: url("/images/home_hero_3.jpg") center center no-repeat;
     background-size: cover;

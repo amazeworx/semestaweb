@@ -398,14 +398,15 @@
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
         <div class="w-full">
           <label class="form-label">Nama Ahli Waris <span class="form-required">*</span></label>
-          <input type="text" wire:model.lazy="heirName" placeholder="Isi Nama Ahli Waris Anda">
+          <input type="text" wire:model.lazy="heirName" name="heirName" placeholder="Isi Nama Ahli Waris Anda">
           @error('heirName')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
           @enderror
         </div>
         <div class="w-full">
           <label class="form-label">Hubungan <span class="form-required">*</span></label>
-          <input type="text" wire:model.lazy="heirRelationship" placeholder="Isi Hubungan dengan Ahli Waris Anda">
+          <input type="text" wire:model.lazy="heirRelationship" name="heirRelationship"
+            placeholder="Isi Hubungan dengan Ahli Waris Anda">
           @error('heirRelationship')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
           @enderror
@@ -417,7 +418,8 @@
           <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2">
             <div class="w-full md:col-span-full">
               <label class="form-label">Alamat <span class="form-required">*</span></label>
-              <input type="text" wire:model.lazy="heirAddress" placeholder="Cth: Jl Buncit Persada No 1">
+              <input type="text" wire:model.lazy="heirAddress" name="heirAddress"
+                placeholder="Cth: Jl Buncit Persada No 1">
               @error('heirAddress')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -425,7 +427,7 @@
             <div class="w-full">
               <label class="form-label">Negara <span class="form-required">*</span></label>
               <div wire:ignore>
-                <select id="heirCountry">
+                <select id="heirCountry" name="heirCountry">
                   <option></option>
                   @foreach ($countries as $country)
                   <option value="{{ $country->name }}" {{ $country->name === 'INDONESIA' ? 'selected' : '' }}>
@@ -441,7 +443,7 @@
               <label class="form-label">Kota <span class="form-required">*</span></label>
               @if ($heirCountry === 'INDONESIA')
               <div wire:ignore>
-                <select id="heirCity" class="mb-1">
+                <select id="heirCity" name="heirCity" class="mb-1">
                   <option></option>
                   @foreach ($heirCities as $city)
                   <option value="{{ $city->ksei_name }}" {{ $city->ksei_name === 'JAKARTA' ? 'selected' : '' }}>
@@ -453,7 +455,7 @@
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
               @else
-              <input type="text" wire:model.lazy="heirCityText" placeholder="Nama Kota">
+              <input type="text" wire:model.lazy="heirCityText" name="heirCityText" placeholder="Nama Kota">
               @error('heirCityText')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -461,7 +463,7 @@
             </div>
             <div class="w-full">
               <label class="form-label">Kode Pos <span class="form-required">*</span></label>
-              <input type="text" wire:model.lazy="heirZip" placeholder="Cth: 11250">
+              <input type="text" wire:model.lazy="heirZip" name="heirZip" placeholder="Cth: 11250">
               @error('heirZip')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -484,7 +486,7 @@
 
             <div class="w-full">
               <label class="form-label">Email</label>
-              <input type="text" wire:model.lazy="heirEmail" placeholder="Isi email ahli waris Anda">
+              <input type="text" wire:model.lazy="heirEmail" name="heirEmail" placeholder="Isi email ahli waris Anda">
               @error('heirEmail')
               <div class="form-validation-error"><small>{{ $message }}</small></div>
               @enderror
@@ -512,7 +514,7 @@
         <div class="w-full grid grid-cols-1 md:grid-cols-5 gap-x-4 gap-y-2">
           <div class="w-full">
             <label class="form-label">Bank BCA <span class="form-required">*</span></label>
-            <select wire:model="bank2Name">
+            <select wire:model="bank2Name" name="bank2Name">
               <option value="" disabled>-- Pilih --</option>
               <option value="BANK CENTRAL ASIA">Ada</option>
               <option value="0">Tidak Ada</option>
@@ -524,8 +526,8 @@
           <div class="w-full md:col-span-2">
             <label class="form-label">Nama Pemilik Rekening <span
                 class="form-required {{ $bank2Name == 2 ? 'hidden' : '' }}">*</span></label>
-            <input type="text" wire:model.lazy="bank2AccName" placeholder="Isi nama rekening BCA Anda"
-              {{ $bank2Name == 2 ? 'disabled' : '' }}>
+            <input type="text" wire:model.lazy="bank2AccName" name="bank2AccName"
+              placeholder="Isi nama rekening BCA Anda" {{ $bank2Name == 2 ? 'disabled' : '' }}>
             @error('bank2AccName')
             <div class="form-validation-error"><small>{{ $message }}</small></div>
             @enderror
@@ -533,8 +535,8 @@
           <div class="w-full md:col-span-2">
             <label class="form-label">Nomor Rekening <span
                 class="form-required {{ $bank2Name == 2 ? 'hidden' : '' }}">*</span></label>
-            <input type="text" wire:model.lazy="bank2AccNumber" placeholder="Isi nomor rekening BCA Anda"
-              {{ $bank2Name == 2 ? 'disabled' : '' }}>
+            <input type="text" wire:model.lazy="bank2AccNumber" name="bank2AccNumber"
+              placeholder="Isi nomor rekening BCA Anda" {{ $bank2Name == 2 ? 'disabled' : '' }}>
             @error('bank2AccNumber')
             <div class="form-validation-error"><small>{{ $message }}</small></div>
             @enderror
@@ -550,7 +552,7 @@
           <div class="w-full">
             <label class="form-label">Nama Bank & Cabang</label>
             <div wire:ignore>
-              <select id="bank3Name">
+              <select id="bank3Name" name="bank3Name">
                 <option></option>
                 @foreach ($bankNames as $bank)
                 <option value="{{ $bank->name }}">
@@ -564,14 +566,16 @@
           </div>
           <div class="w-full">
             <label class="form-label">Nama Pemilik Rekening</label>
-            <input type="text" wire:model.lazy="bank3AccName" placeholder="Isi nama pemilik rekening">
+            <input type="text" wire:model.lazy="bank3AccName" name="bank3AccName"
+              placeholder="Isi nama pemilik rekening">
             @error('bank3AccName')
             <div class="form-validation-error"><small>{{ $message }}</small></div>
             @enderror
           </div>
           <div class="w-full">
             <label class="form-label">Nomor Rekening</label>
-            <input type="text" wire:model.lazy="bank3AccNumber" placeholder="Isi nomor rekening Anda">
+            <input type="text" wire:model.lazy="bank3AccNumber" name="bank3AccNumber"
+              placeholder="Isi nomor rekening Anda">
             @error('bank3AccNumber')
             <div class="form-validation-error"><small>{{ $message }}</small></div>
             @enderror
@@ -590,14 +594,14 @@
     <div class="w-full grid grid-cols-1 gap-3 lg:w-3/4">
       <div class="w-full">
         <div class="form-check mt-1 inline-flex">
-          <input wire:model="fatcaHolder" type="checkbox" id="fatcaHolder" class="form-check-input">
+          <input wire:model="fatcaHolder" type="checkbox" id="fatcaHolder" name="fatcaHolder" class="form-check-input">
           <label class="form-check-label inline-block ml-2" for="fatcaHolder">
             Saya memiliki kewajiban FATCA (Foreign Account Tax Compliance Act)
           </label>
         </div>
         @if ($fatcaHolder)
         <div class="w-full mt-2 mb-2 pl-6">
-          <input type="text" wire:model.lazy="fatcaTinSsn" placeholder="Isi TIN/SSN Anda *">
+          <input type="text" wire:model.lazy="fatcaTinSsn" name="fatcaTinSsn" placeholder="Isi TIN/SSN Anda *">
           @error('fatcaTinSsn')
           <div class="form-validation-error"><small>{{ $message }}</small></div>
           @enderror
@@ -606,7 +610,8 @@
       </div>
       <div class="w-full">
         <div class="form-check mt-1 inline-flex">
-          <input wire:model="otherTaxPayer" type="checkbox" id="otherTaxPayer" class="form-check-input">
+          <input wire:model="otherTaxPayer" name="otherTaxPayer" type="checkbox" id="otherTaxPayer"
+            class="form-check-input">
           <label class="form-check-label inline-block ml-2" for="otherTaxPayer">
             Saya memiliki kewajiban pajak di negara lain selain Indonesia dan Amerika Serikat
           </label>

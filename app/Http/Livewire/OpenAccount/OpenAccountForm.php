@@ -22,7 +22,7 @@ class OpenAccountForm extends Component
 {
   use WithFileUploads;
 
-  public $currentStep = 1;
+  public $currentStep = 3;
   public $countries, $provinces, $cities, $districts, $subDistricts;
 
   // Step 1
@@ -57,7 +57,7 @@ class OpenAccountForm extends Component
   public $companyCities = [];
   public $companyEmail, $companyPhoneNumber, $companyPhoneCountryCode, $companyFaxCountryCode, $companyFaxNumber, $workYear, $workMonth;
   public $incomeYearly, $incomeSource, $incomeSourceIsOther, $incomeSourceText;
-  public $extraIncomeYearly, $extraIncomeSource, $extraIncomeSourceIsOther, $extraIncomeSourceText;
+  public $extraIncomeYearly, $extraIncomeSource, $extraIncomeSourceIsOther, $extraIncomeSourceText, $expensesMonthly;
   public $objectives = [];
   public $heirName, $heirRelationship, $heirAddress, $heirCity, $heirCityText, $heirZip, $heirEmail, $heirMobileNumber;
   public $heirCountry = NULL;
@@ -147,6 +147,7 @@ class OpenAccountForm extends Component
     $this->extraIncomeYearly = '';
     $this->extraIncomeSource = '';
     $this->extraIncomeSourceIsOther = false;
+    $this->expensesMonthly = '';
     $this->heirCountry = 'INDONESIA';
     $this->heirCities = City::select('ksei_name')->whereNotIn('ksei_code', array(141, 142, 143, 144, 145))->distinct()->orderBy('ksei_name', 'asc')->get();
     $this->heirCity = 'JAKARTA';
@@ -187,7 +188,7 @@ class OpenAccountForm extends Component
   public function render()
   {
     if (!empty($this->idProvince)) {
-      $this->idCities = City::where('province_id', $this->idProvince)->orderBy('name', 'asc')->get();
+      $this->idCities = City::where('province_id', $this->idProvince)->whereNotIn('ksei_code', array(251))->orderBy('name', 'asc')->get();
     }
     if (!empty($this->idCity)) {
       $this->idDistricts = District::where('city_id', $this->idCity)->orderBy('name', 'asc')->get();
@@ -844,13 +845,9 @@ class OpenAccountForm extends Component
     $phone_number = str_replace("+", "", $this->phoneNumber);
 
     if ($this->idCountry === 'INDONESIA') {
-      //$id_province = $this->idProvince;
       $id_province = Province::where('id', $this->idProvince)->value('ksei_name');
-      //$id_city = $this->idCity;
       $id_city = City::where('id', $this->idCity)->value('ksei_name');
-      //$id_district = $this->idDistrict;
       $id_district = District::where('id', $this->idDistrict)->value('name');
-      //$id_subdistrict = $this->idSubDistrict;
       $id_subdistrict = SubDistrict::where('id', $this->idSubDistrict)->value('name');
     } else {
       $id_province = $this->idProvinceText;
@@ -1070,7 +1067,7 @@ class OpenAccountForm extends Component
     }
 
     if ($currentStep === 1) {
-      $validatedData = $this->validate([
+      $this->validate([
         'fullName' => 'required|min:4',
         'nationality' => 'required',
         'idType' => 'required',
@@ -1082,11 +1079,11 @@ class OpenAccountForm extends Component
         'passportExpiredDay' => 'required_if:idType,Paspor',
         'passportExpiredMonth' => 'required_if:idType,Paspor',
         'passportExpiredYear' => 'required_if:idType,Paspor',
-        'hasKitas' => 'required_unless:nationality,INDONESIA',
-        'kitasNumber' => 'required_if:hasKitas,1',
-        'kitasExpiredDay' => 'required_if:hasKitas,1',
-        'kitasExpiredMonth' => 'required_if:hasKitas,1',
-        'kitasExpiredYear' => 'required_if:hasKitas,1',
+        'hasKitas' => 'exclude_if:nationality,INDONESIAN|required',
+        'kitasNumber' => 'exclude_if:nationality,INDONESIAN|required_if:hasKitas,1',
+        'kitasExpiredDay' => 'exclude_if:nationality,INDONESIAN|required_if:hasKitas,1',
+        'kitasExpiredMonth' => 'exclude_if:nationality,INDONESIAN|required_if:hasKitas,1',
+        'kitasExpiredYear' => 'exclude_if:nationality,INDONESIAN|required_if:hasKitas,1',
         'hasNPWP' => 'required',
         'npwpNumber' => 'required_unless:hasNPWP,1|numeric',
         'npwpIssueDay' => 'required_unless:hasNPWP,1',
@@ -1108,7 +1105,7 @@ class OpenAccountForm extends Component
         'idStreet1' => 'required',
         'idRtRw' => 'required_if:idCountry,INDONESIA',
         'idProvince' => 'required_if:idCountry,INDONESIA',
-        'idProvinceText' => 'required_if:idCountry,INDONESIA',
+        'idProvinceText' => 'required_unless:idCountry,INDONESIA',
         'idCity' => 'required_if:idCountry,INDONESIA',
         'idCityText' => 'required_unless:idCountry,INDONESIA',
         'idDistrict' => 'required_if:idCountry,INDONESIA',
@@ -1118,16 +1115,16 @@ class OpenAccountForm extends Component
         'idZip' => 'required_if:idCountry,INDONESIA',
         'homeCountry' => 'required_if:homeIsId,false',
         'homeStreet1' => 'required_if:homeIsId,false',
-        'homeRtRw' => 'required_if:homeCountry,INDONESIA',
-        'homeProvince' => 'required_if:homeCountry,INDONESIA',
+        'homeRtRw' => 'required_if:homeIsId,false',
+        'homeProvince' => 'required_if:homeIsId,false',
         'homeProvinceText' => 'required_unless:homeCountry,INDONESIA',
-        'homeCity' => 'required_if:homeCountry,INDONESIA',
+        'homeCity' => 'required_if:homeIsId,false',
         'homeCityText' => 'required_unless:homeCountry,INDONESIA',
-        'homeDistrict' => 'required_if:homeCountry,INDONESIA',
+        'homeDistrict' => 'required_if:homeIsId,false',
         'homeDistrictText' => 'required_unless:homeCountry,INDONESIA',
-        'homeSubDistrict' => 'required_if:homeCountry,INDONESIA',
+        'homeSubDistrict' => 'required_if:homeIsId,false',
         'homeSubDistrictText' => 'required_unless:homeCountry,INDONESIA',
-        'homeZip' => 'required_if:homeCountry,INDONESIA',
+        'homeZip' => 'required_if:homeIsId,false',
         'homeStatus' => 'required',
         'postalPreference' => 'required',
         'confirmVia' => 'required',
