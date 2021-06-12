@@ -10,44 +10,53 @@
 
       <div class="flex flex-wrap gap-y-6 md:flex-nowrap md:gap-x-4">
         <div class="w-full md:w-3/5">
-          <label class="form-label">Nama lengkap <span class="form-required">*</span></label>
-          <input type="text" wire:model.lazy="fullName" x-model="fullName"
-            placeholder="Isi nama lengkap Anda sesuai identitas">
-          @error('fullName')
-          <div class="form-validation-error"><small>{{ $message }}</small></div>
-          @enderror
+          <div x-data="{ fullName: localStorage.getItem('fullName') }"
+            x-init="$watch('fullName', (val) => localStorage.setItem('fullName', val))">
+            <label class="form-label">Nama lengkap <span class="form-required">*</span></label>
+            <input type="text" wire:model.lazy="fullName" x-model="fullName"
+              placeholder="Isi nama lengkap Anda sesuai identitas">
+            @error('fullName')
+            <div class="form-validation-error"><small>{{ $message }}</small></div>
+            @enderror
+          </div>
         </div>
         <div class="w-full md:w-2/5">
-          <label class="form-label">Kewarganegaraan <span class="form-required">*</span></label>
-          <div wire:ignore>
-            <select id="nationality" name="nationality">
-              <option></option>
-              @foreach ($countries as $country)
-              <option value="{{ $country->nationality }}"
-                {{ $country->nationality === 'INDONESIAN' ? 'selected' : '' }}>
-                {{ $country->nationality }}
-              </option>
-              @endforeach
-            </select>
+          <div x-data="{ nationality: localStorage.getItem('nationality') }"
+            x-init="$watch('nationality', (val) => localStorage.setItem('nationality', val))">
+            <label class="form-label">Kewarganegaraan <span class="form-required">*</span></label>
+            <div wire:ignore>
+              <select id="nationality" name="nationality" x-model="nationality">
+                <option></option>
+                @foreach ($countries as $country)
+                <option value="{{ $country->nationality }}"
+                  {{ $country->nationality === 'INDONESIAN' ? 'selected' : '' }}>
+                  {{ $country->nationality }}
+                </option>
+                @endforeach
+              </select>
+            </div>
+            @error('nationality')
+            <div class="form-validation-error"><small>{{ $message }}</small></div>
+            @enderror
           </div>
-          @error('nationality')
-          <div class="form-validation-error"><small>{{ $message }}</small></div>
-          @enderror
         </div>
       </div>
 
       <div class="flex flex-wrap gap-y-2 md:flex-nowrap md:gap-x-4">
         {{-- Jenis Identitas --}}
         <div class="w-full md:w-2/12">
-          <label class="form-label">Jenis Kartu ID <span class="form-required">*</span></label>
-          <select id="idType" wire:model="idType" name="idType" class="mb-1">
-            <option value="" disabled>-- Pilih Identitas --</option>
-            <option value="KTP">KTP</option>
-            <option value="Paspor">Paspor</option>
-          </select>
-          @error('idType')
-          <div class="form-validation-error"><small>{{ $message }}</small></div>
-          @enderror
+          <div x-data="{ idType: localStorage.getItem('idType') }"
+            x-init="$watch('idType', (val) => localStorage.setItem('idType', val))">
+            <label class="form-label">Jenis Kartu ID <span class="form-required">*</span></label>
+            <select id="idType" wire:model="idType" x-model="idType" name="idType" class="mb-1">
+              <option value="" disabled>-- Pilih Identitas --</option>
+              <option value="KTP">KTP</option>
+              <option value="Paspor">Paspor</option>
+            </select>
+            @error('idType')
+            <div class="form-validation-error"><small>{{ $message }}</small></div>
+            @enderror
+          </div>
         </div>
 
         {{-- No KTP/Paspor --}}
@@ -826,7 +835,8 @@
         <div class="form-check mt-1 inline-flex">
           <input wire:model="infoQ1" type="checkbox" name="infoQ1" id="infoQ1" class="form-check-input">
           <label class="form-check-label inline-block ml-2" for="infoQ1">
-            Saya atau anggota keluarga Saya bekerja pada Perusahaan Efek, Bursa Efek, perusahaan yang diatur oleh Bursa
+            Saya atau anggota keluarga Saya bekerja pada Perusahaan Efek, Bursa Efek, perusahaan yang diatur oleh
+            Bursa
             Efek/BAPEPAM dan LK, Bank, Asuransi atau Lembaga Keuangan sejenis.
           </label>
         </div>
@@ -903,12 +913,6 @@
     $('#postalAddressCountry').select2({
       placeholder: "-- Pilih --",
     });
-    // let localNationality = localStorage.getItem('nationality');
-    // if (localNationality) {
-    //   $('#nationality').val(localNationality);
-    //   $('#nationality').trigger('change');
-    //   @this.set('nationality', localNationality);
-    // }
     $('#nationality').on('change', function(e) {
       @this.set('nationality', e.target.value);
       localStorage.setItem('nationality', e.target.value);
@@ -956,5 +960,27 @@
       @this.set('phoneCountryCode', countryData.dialCode);
       @this.set('phoneNumber', phoneNumber);
     });
+
+    let localFullName = localStorage.getItem('fullName');
+    if (localFullName) {
+      @this.set('fullName', localFullName);
+    }
+    let localNationality = localStorage.getItem('nationality');
+    if (localNationality) {
+      $('#nationality').val(localNationality);
+      $('#nationality').trigger('change');
+      @this.set('nationality', localNationality);
+    } else {
+      $("#nationality").val('INDONESIAN').trigger('change');
+      localStorage.setItem('nationality', 'INDONESIAN');
+    }
+    let localIdType = localStorage.getItem('idType');
+    if (localIdType) {
+      @this.set('idType', localIdType);
+    } else {
+      $("#idType").val('KTP');
+      localStorage.setItem('idType', 'KTP');
+    }
+
   });
 </script>

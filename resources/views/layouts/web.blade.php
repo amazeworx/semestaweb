@@ -22,6 +22,7 @@
     href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
 
+  @livewireStyles
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -43,6 +44,12 @@
     <x-site-footer />
 
   </div>
+
+  @stack('modals')
+
+  @livewire('livewire-ui-modal')
+  @livewireUIScripts
+  @livewireScripts
 
 </body>
 

@@ -1,6 +1,9 @@
 html {
     scroll-behavior: smooth;
 }
+[x-cloak] {
+    display: none;
+}
 .home-hero {
     background: url("/images/home_hero_3.jpg") center center no-repeat;
     background-size: cover;
@@ -40,7 +43,7 @@ html {
     }
 }
 
-.pagination {
+/* .pagination {
     @apply flex flex-wrap justify-center py-4;
     li {
         @apply inline-block p-2;
@@ -48,4 +51,8 @@ html {
             @apply text-gray-500 hover:text-orange;
         }
     }
+} */
+
+.modal-content p {
+    @apply mb-5;
 }

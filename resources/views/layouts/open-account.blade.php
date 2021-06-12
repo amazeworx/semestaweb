@@ -54,7 +54,8 @@
   </div>
 
   @stack('modals')
-
+  @livewire('livewire-ui-modal')
+  @livewireUIScripts
   @livewireScripts
 
   <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js">

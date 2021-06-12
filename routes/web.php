@@ -7,8 +7,8 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\OurServicesController;
 use App\Http\Controllers\MarketNewsController;
 use App\Http\Controllers\ContactUsController;
-use App\Models\Occupation;
-use App\Models\Position;
+use App\Http\Controllers\DailyMarketController;
+use App\Http\Controllers\ZipDownloadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +31,17 @@ Route::get('/open-account', \App\Http\Livewire\OpenAccount\OpenAccountForm::clas
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
   return view('dashboard');
 })->name('dashboard');
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/accounts', function () {
+//   return view('admin.accounts');
+// })->name('accounts');
+Route::middleware(['auth:sanctum', 'verified'])->get('/accounts', function () {
+  return view('admin.accounts');
+})->name('accounts');
+
+Route::middleware(['auth:sanctum', 'verified'])->resource('daily-market', DailyMarketController::class);
+
+Route::get('download-zip', [ZipDownloadController::class, 'index'])->name('download-zip');
 
 //Route::resource('form', \App\Http\Controllers\FormOpenAccountController::class);
 //Route::get('/form', [FormOpenAccountController::class, 'create']);

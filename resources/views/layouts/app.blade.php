@@ -13,11 +13,14 @@
   <meta name="msapplication-TileImage" content="/images/appicon_semestaindovest.png" />
 
   <!-- Styles -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
   @livewireStyles
 
   <!-- Scripts -->
+  <script src="https://cdn.tiny.cloud/1/c9ejmb2ej69lwq8m38mkrqkvm6qestd5liboxy07xsaq7de9/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
   <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
@@ -44,6 +47,8 @@
 
   @stack('modals')
 
+  @livewire('livewire-ui-modal')
+  @livewireUIScripts
   @livewireScripts
 </body>
 

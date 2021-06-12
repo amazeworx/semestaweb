@@ -25,7 +25,7 @@
           <p class="text-base mb-4 xl:mb-5">We are a member of Indonesia Stock Exchange and are listed on Financial
             Services Authority (OJK). We provide personalized solutions to meet specific financial needs of our clients
             while maximizing return for our investors.</p>
-          <div class="mb-4 lg:mb-0"><a href="/open-account" class="button button-outline button-lg"><span
+          <div class="mb-4 lg:mb-0"><a href="/open-account" class="button button-outline button-md"><span
                 class="mr-1">About Us</span> <span class="material-icons">arrow_right_alt</span></a></div>
       </div>
       <div class="-mx-4 md:mx-0 lg:w-1/2">
@@ -111,15 +111,7 @@
       <div class="flex flex-col w-full md:w-1/2 lg:w-1/3">
         <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">Daily Market</h2>
         <div class="flex-1 w-full border border-gray-200 p-4 lg:p-8 mb-8 md:mb-0">
-          <h3 class="text-xl text-blue font-display font-bold mb-4">Kamis, 22 April 2021</h3>
-          <div>
-            Meski rebound namun kami melihat market belum sepenuhnya pulih, rebound yang terjadi kemarin lebih karena
-            bargain hunting sesaat namun tidak dalam jangka panjang. Investor terlihat masih hati-hati dan indeks berada
-            di bawah ma5. Beberapa sektor bergerak menguat diantaranya; sektor Industri Dasar (+1.81%), Barang Konsumsi
-            (+1.20%), dan Aneka Industri (+0.99%).
-          </div>
-          <div class="mt-4"><a href="/market-news" class="button button-text button-lg"><span class="mr-1">Continue
-                Reading</span> <span class="material-icons">arrow_right_alt</span></a></div>
+          <livewire:featured-daily-market :trimwords="420" />
         </div>
       </div>
       <div class="flex flex-col w-full md:w-1/2 lg:w-2/3">
