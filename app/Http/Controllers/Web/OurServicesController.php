@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class OurServicesController extends Controller
 {
   public function index()
   {
-    return view('our-services');
+    return view('web.our-services');
   }
 }

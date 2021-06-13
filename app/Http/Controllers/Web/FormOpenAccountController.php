@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
 use App\Models\OpenAccount;
-
 use Illuminate\Http\Request;
 
 class FormOpenAccountController extends Controller
@@ -11,7 +11,7 @@ class FormOpenAccountController extends Controller
   // Create Form
   public function index(Request $request)
   {
-    return view('account-opening');
+    return view('web.account-opening');
   }
 
   // Store Form data

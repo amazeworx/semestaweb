@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class MarketNewsController extends Controller
 {
   public function index()
   {
-    return view('market-news');
+    return view('web.market-news');
   }
 }
