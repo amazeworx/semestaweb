@@ -34,10 +34,11 @@
           <div class="w-full max-w-xs">
             <div class="w-full p-8 rounded bg-white shadow">
 
-              <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak class="mb-4">
+              <div x-data="app()" x-init="[initDate('{{ $dailyMarket->post_date }}'), getNoOfDays()]" x-cloak
+                class="mb-4">
                 <label for="datepicker" class="font-bold mb-1 text-gray-700 block">Publish Date</label>
                 <div class="relative">
-                  <input type="hidden" name="post_date" x-ref="date" />
+                  <input type="hidden" name="post_date" x-ref="date" value="{{ $dailyMarket->post_date }}" />
                   <input type="text" x-on:click="showDatepicker = !showDatepicker" x-model="datepickerValue"
                     x-on:keydown.escape="showDatepicker = false"
                     class="w-full pl-4 pr-10 py-3 leading-none rounded-lg shadow-sm focus:outline-none text-gray-600 font-medium focus:ring focus:ring-blue-600 focus:ring-opacity-50"
@@ -115,8 +116,9 @@
 
               <div class="w-full">
                 <input type="submit" name="draft" value="Save as Draft"
-                  class="button button-outline shadow hover:shadow-md">
-                <input type="submit" name="publish" value="Update" class="button button-contained button-orange">
+                  class="button button-outline shadow cursor-pointer hover:shadow-md">
+                <input type="submit" name="publish" value="Update"
+                  class="button button-contained button-orange cursor-pointer">
               </div>
 
             </div>
@@ -197,8 +199,10 @@
               }
               return `${formattedDay} ${formattedDate} ${formattedMonth} ${formattedYear}`;
             },
-            initDate() {
-              let today = new Date();
+            initDate(post_date) {
+              console.log(post_date);
+              let today = new Date(post_date);
+              //let today = $post_date;
               let todayMonth = today.getMonth() + 1;
               this.month = today.getMonth();
               this.year = today.getFullYear();
