@@ -23,7 +23,7 @@
       </div>
       @endif
 
-      <livewire:daily-market-data-table />
+      <livewire:admin.daily-market-data-table />
     </div>
   </div>
 </x-app-layout>

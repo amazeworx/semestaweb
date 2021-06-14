@@ -7,7 +7,7 @@
 
   <div class="py-12">
     <div class="max-w-7xl mx-auto mb-8 sm:px-6 lg:px-8">
-      <livewire:accounts-data-table />
+      <livewire:admin.accounts-data-table />
     </div>
   </div>
 </x-app-layout>

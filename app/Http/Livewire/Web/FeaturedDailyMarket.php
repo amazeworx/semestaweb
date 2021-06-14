@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Web;
 
 use Livewire\Component;
 use App\Models\DailyMarket;
@@ -21,6 +21,6 @@ class FeaturedDailyMarket extends Component
 
   public function render()
   {
-    return view('livewire.featured-daily-market');
+    return view('livewire.web.featured-daily-market');
   }
 }

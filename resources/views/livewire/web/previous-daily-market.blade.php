@@ -3,7 +3,7 @@
     @foreach($previous_posts as $post)
     <div class="w-full border-b border-gray-100 pb-2">
       <button
-        wire:click="$emit('openModal', 'daily-market-modal', {{ json_encode(['post_id' => $post->id, 'post_date' => date('D, d M Y', strtotime($post->post_date)), 'post_content' => $post->content]) }})"
+        wire:click="$emit('openModal', 'web.daily-market-modal', {{ json_encode(['post_id' => $post->id, 'post_date' => date('D, d M Y', strtotime($post->post_date)), 'post_content' => $post->content]) }})"
         type="button"
         class="flex justify-between items-center w-full focus:outline-none text-gray-500 hover:text-orange">
         <span class="text-base font-display font-medium">{{ date('D, d M Y', strtotime($post->post_date)) }}</span>

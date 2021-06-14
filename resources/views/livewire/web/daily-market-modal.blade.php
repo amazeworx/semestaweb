@@ -17,7 +17,7 @@
       {!! $post_content !!}
     </div>
     <div class="modal-footer border-t border-gray-100 px-2 py-2 md:px-6">
-      <livewire:daily-market-modal-footer :current_id="$post_id" />
+      <livewire:web.daily-market-modal-footer :current_id="$post_id" />
     </div>
   </div>
 </div>

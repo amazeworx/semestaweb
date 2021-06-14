@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Web;
 
 use LivewireUI\Modal\ModalComponent;
 
@@ -21,7 +21,7 @@ class DailyMarketModal extends ModalComponent
 
   public function render()
   {
-    return view('livewire.daily-market-modal');
+    return view('livewire.web.daily-market-modal');
   }
 
   public function forceCloseModal()

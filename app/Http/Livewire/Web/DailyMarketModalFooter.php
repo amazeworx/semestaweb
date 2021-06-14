@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Web;
 
 use Livewire\Component;
 use App\Models\DailyMarket;
@@ -43,6 +43,6 @@ class DailyMarketModalFooter extends Component
 
   public function render()
   {
-    return view('livewire.daily-market-modal-footer');
+    return view('livewire.web.daily-market-modal-footer');
   }
 }

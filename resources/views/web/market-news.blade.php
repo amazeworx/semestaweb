@@ -6,13 +6,13 @@
       <div class="w-full mb-8">
         <h1 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">Daily Market</h1>
         <div class="w-full border border-gray-200 py-6 px-4 md:p-8">
-          <livewire:featured-daily-market :trimwords="320" />
+          <livewire:web.featured-daily-market :trimwords="320" />
         </div>
       </div>
 
       <div class="w-full flex flex-col mb-8">
         <h3 class="uppercase text-gray-600 font-bold mb-4">ALL DAILY MARKET POSTS</h3>
-        <livewire:previous-daily-market />
+        <livewire:web.previous-daily-market />
       </div>
 
     </div>

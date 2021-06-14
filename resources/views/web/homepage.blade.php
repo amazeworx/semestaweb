@@ -111,7 +111,7 @@
       <div class="flex flex-col w-full md:w-1/2 lg:w-1/3">
         <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">Daily Market</h2>
         <div class="flex-1 w-full border border-gray-200 p-4 lg:p-8 mb-8 md:mb-0">
-          <livewire:featured-daily-market :trimwords="420" />
+          <livewire:web.featured-daily-market :trimwords="420" />
         </div>
       </div>
       <div class="flex flex-col w-full md:w-1/2 lg:w-2/3">

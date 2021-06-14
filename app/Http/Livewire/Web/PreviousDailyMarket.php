@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Web;
 
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -14,7 +14,7 @@ class PreviousDailyMarket extends Component
   {
     $collection = DailyMarket::where('post_status', 'publish')->orderBy('post_date', 'desc')->paginate(10);
 
-    return view('livewire.previous-daily-market', [
+    return view('livewire.web.previous-daily-market', [
       'previous_posts' => $collection,
     ]);
   }
