@@ -6,7 +6,9 @@
       <div class="w-full max-w-prose text-white text-center">
         <h1 class="font-display text-3xl font-bold xl:text-5xl mb-4">About Semesta Indovest Securities</h1>
         <p class="text-base xl:text-lg">
-          Semesta Indovest is a Member of the Indonesia Stock Exchange (SPAB-18/BEJ.I.2/VIII/1994) and has license to engage in Broker-Dealer (KEP-111/PM/1992) and Underwriters (KEP-01/BL/PEE/2008) from the Financial Services Authority (OJK).
+          Semesta Indovest is a Member of the Indonesia Stock Exchange (SPAB-18/BEJ.I.2/VIII/1994) and has license to
+          engage in Broker-Dealer (KEP-111/PM/1992) and Underwriters (KEP-01/BL/PEE/2008) from the Financial Services
+          Authority (OJK).
         </p>
       </div>
     </div>
@@ -19,7 +21,8 @@
           <h2 class="font-display text-3xl font-bold text-blue xl:text-4xl xl:mb-4">Vision</h2>
         </div>
         <div class="w-full md:w-4/5">
-          <p class="text-base lg:text-xl">To maintain our position as a leading financial services company in Indonesia, providing integrated services in the field of brokerage, Investment Management and Corporate Finance.</p>
+          <p class="text-base lg:text-xl">To maintain our position as a leading financial services company in Indonesia,
+            providing integrated services in the field of brokerage, Investment Management and Corporate Finance.</p>
         </div>
       </div>
       <div class="flex flex-wrap md:flex-nowrap gap-6 xl:gap-8 mb-8 xl:mb-10">
@@ -27,8 +30,10 @@
           <h2 class="font-display text-3xl font-bold text-blue xl:text-4xl xl:mb-4">Mission</h2>
         </div>
         <div class="w-full md:w-4/5">
-          <p class="text-base lg:text-xl mb-4 xl:mb-5">To participate actively in building the Indonesian Capital Market, and at the same time improve standards to the level of global competitiveness.</p>
-          <p class="text-base lg:text-xl">To provide personalized solutions to meet specific financial needs of our clients while maximizing returns on our investors.</p>
+          <p class="text-base lg:text-xl mb-4 xl:mb-5">To participate actively in building the Indonesian Capital
+            Market, and at the same time improve standards to the level of global competitiveness.</p>
+          <p class="text-base lg:text-xl">To provide personalized solutions to meet specific financial needs of our
+            clients while maximizing returns on our investors.</p>
         </div>
       </div>
     </div>
@@ -40,26 +45,10 @@
         <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">Management</h2>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-16">
-        <div class="text-center">
-          <div class="mb-2"><img class="rounded-full w-32 h-32 mx-auto" src="/images/team_hendra_setiono.jpg" alt="Hendra Setiono" width="200" height="200" /></div>
-          <h4 class="text-blue text-base font-bold leading-tight">Hendra Setiono</h4>
-          <p class="text-gray-500 text-sm leading-tight">President Commissioner</p>
-        </div>
-        <div class="text-center">
-          <div class="mb-2"><img class="rounded-full w-32 h-32 mx-auto" src="/images/team_paulus_ridwan.jpg" alt="Paulus Ridwan Purnawinata" width="200" height="200" /></div>
-          <h4 class="text-blue text-base font-bold leading-tight">Paulus Ridwan Purnawinata</h4>
-          <p class="text-gray-500 text-sm leading-tight">Commissioner</p>
-        </div>
-        <div class="text-center">
-          <div class="mb-2"><img class="rounded-full w-32 h-32 mx-auto" src="/images/team_linda_suryani.jpg" alt="Linda Suryani Iskandar" width="200" height="200" /></div>
-          <h4 class="text-blue text-base font-bold leading-tight">Linda Suryani Iskandar</h4>
-          <p class="text-gray-500 text-sm leading-tight">President Director</p>
-        </div>
-        <div class="text-center">
-          <div class="mb-2"><img class="rounded-full w-32 h-32 mx-auto" src="/images/team_sukandar.jpg" alt="Sukandar" width="200" height="200" /></div>
-          <h4 class="text-blue text-base font-bold leading-tight">Sukandar</h4>
-          <p class="text-gray-500 text-sm leading-tight">Director</p>
-        </div>
+        <livewire:web.management-person :personId="1" />
+        <livewire:web.management-person :personId="2" />
+        <livewire:web.management-person :personId="3" />
+        <livewire:web.management-person :personId="4" />
       </div>
     </div>
   </section>

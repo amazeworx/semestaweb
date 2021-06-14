@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDailyMarketsTable extends Migration
+class CreateManagementsTable extends Migration
 {
   /**
    * Run the migrations.
@@ -13,10 +13,12 @@ class CreateDailyMarketsTable extends Migration
    */
   public function up()
   {
-    Schema::create('daily_markets', function (Blueprint $table) {
+    Schema::create('managements', function (Blueprint $table) {
       $table->id();
-      $table->text('content');
-      $table->date('post_date');
+      $table->string('name');
+      $table->string('position');
+      $table->text('biography');
+      $table->string('image_src');
       $table->string('post_status')->default('publish');
       $table->timestamps();
       $table->softDeletes($column = 'deleted_at', $precision = 0);
@@ -30,6 +32,6 @@ class CreateDailyMarketsTable extends Migration
    */
   public function down()
   {
-    Schema::dropIfExists('daily_markets');
+    Schema::dropIfExists('managements');
   }
 }
