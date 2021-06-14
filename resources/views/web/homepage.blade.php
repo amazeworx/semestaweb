@@ -25,8 +25,8 @@
           <p class="text-base mb-4 xl:mb-5">We are a member of Indonesia Stock Exchange and are listed on Financial
             Services Authority (OJK). We provide personalized solutions to meet specific financial needs of our clients
             while maximizing return for our investors.</p>
-          <div class="mb-4 lg:mb-0"><a href="/open-account" class="button button-outline button-md"><span
-                class="mr-1">About Us</span> <span class="material-icons">arrow_right_alt</span></a></div>
+          <div class="mb-4 lg:mb-0"><a href="/about-us" class="button button-outline button-md"><span class="mr-1">About
+                Us</span> <span class="material-icons">arrow_right_alt</span></a></div>
       </div>
       <div class="-mx-4 md:mx-0 lg:w-1/2">
         <img class="md:object-cover md:h-96" src="images/home_about.jpg" alt="about" width="600" height="600">
