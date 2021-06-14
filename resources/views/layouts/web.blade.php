@@ -33,7 +33,7 @@
 
 <body class="font-sans antialiased" x-data="{ menuopen: false }" x-bind:class="{ 'overflow-hidden': menuopen }">
 
-  <div class="min-h-screen">
+  <div class="min-h-screen web-container">
     <x-site-header />
 
     <!-- Page Content -->

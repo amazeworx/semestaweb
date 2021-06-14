@@ -1,8 +1,35 @@
 html {
     scroll-behavior: smooth;
 }
+html,
+body {
+    scroll-padding-top: 80px;
+    @media (min-width: 1024px) {
+        scroll-padding-top: 112px;
+    }
+}
 [x-cloak] {
     display: none;
+}
+
+.web-container {
+    padding-top: 80px;
+    @media (min-width: 1024px) {
+        padding-top: 112px;
+    }
+}
+.headroom {
+    will-change: transform;
+    @apply bg-white fixed top-0 right-0 left-0 z-30 transition transform ease-out duration-300;
+}
+.headroom--pinned {
+    @apply translate-y-0;
+    &.headroom--not-top {
+        @apply shadow-md;
+    }
+}
+.headroom--unpinned {
+    @apply -translate-y-full;
 }
 .home-hero {
     background: url("/images/home_hero_3.jpg") center center no-repeat;
@@ -55,4 +82,13 @@ html {
 
 .modal-content p {
     @apply mb-5;
+}
+
+#corporate-governance {
+    .tab-nav {
+        @apply py-3 px-4 font-bold rounded-md;
+        &.active {
+            @apply bg-blue text-white;
+        }
+    }
 }

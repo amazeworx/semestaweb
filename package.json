@@ -33,6 +33,7 @@
         "vuetify-loader": "^1.7.2"
     },
     "dependencies": {
+        "headroom.js": "^0.12.0",
         "intl-tel-input": "^17.0.12",
         "vee-validate": "^3.4.5",
         "vue-select": "^3.11.2",

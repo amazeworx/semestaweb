@@ -1,22 +1,37 @@
 .header-nav {
-    @apply fixed bg-white shadow-lg w-64 h-full py-10 px-8 right-0 top-0 z-30 transform transition duration-150 ease-out translate-x-full;
-    @apply lg:static lg:shadow-none lg:w-auto lg:h-auto lg:p-0 lg:translate-x-0;
+    @apply hidden lg:block;
+    .nav-main {
+        > ul {
+            @apply flex flex-wrap;
+            @apply flex flex-nowrap gap-8;
+            > li {
+                @apply w-auto;
+                > a {
+                    @apply inline-block font-semibold hover:text-orange py-0;
+                    &.active {
+                        @apply text-orange;
+                    }
+                }
+            }
+        }
+    }
+}
+.mobile-nav {
+    @apply fixed bg-white shadow-lg w-64 h-full py-10 px-8 right-0 top-0 z-50 transform transition duration-150 ease-out translate-x-full;
+    @apply lg:hidden;
     &.menuopen {
         @apply translate-x-0 lg:translate-x-full;
     }
-}
-.nav-main {
-    > ul {
-        @apply flex flex-wrap;
-        @apply lg:flex-nowrap lg:gap-8;
-        > li {
-            @apply w-full;
-            @apply lg:w-auto;
-            > a {
-                @apply inline-block font-semibold hover:text-orange py-2;
-                @apply lg:py-0;
-                &.active {
-                    @apply text-orange;
+    .nav-main {
+        > ul {
+            @apply flex flex-wrap;
+            > li {
+                @apply w-full;
+                > a {
+                    @apply inline-block font-semibold hover:text-orange py-2;
+                    &.active {
+                        @apply text-orange;
+                    }
                 }
             }
         }
@@ -30,7 +45,7 @@
     @apply fixed inset-0 bg-black bg-opacity-25 opacity-0 transition ease-out duration-150;
     z-index: -1;
     &.menuopen {
-        @apply opacity-100 z-20;
+        @apply opacity-100 z-30;
     }
 }
 
