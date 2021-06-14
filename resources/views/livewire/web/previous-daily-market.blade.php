@@ -1,5 +1,5 @@
 <div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 lg:gap-x-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-5 md:grid-flow-col gap-y-3 gap-x-6 lg:gap-x-8">
     @foreach($previous_posts as $post)
     <div class="w-full border-b border-gray-100 pb-2">
       <button
