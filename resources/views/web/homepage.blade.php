@@ -1,7 +1,7 @@
 <x-web-layout>
 
   <section class="home-hero relative">
-    <div class="w-full h-full absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+    <div class="w-full h-full absolute inset-0 bg-black bg-opacity-50 z-0 xl:bg-opacity-25"></div>
     <div class="flex w-full max-w-screen-xl mx-auto px-4 xl:px-12 py-4">
       <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
         <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">Make Your Money Work For You
