@@ -2,7 +2,16 @@
   <div v-if="firstStep">
     <div class="bg-white shadow mb-8">
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap
+          lg:gap-6
+          lg:px-8
+          lg:py-11
+          border-b border-gray-200
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold mb-4">{{ __("Data Identitas") }}</h3>

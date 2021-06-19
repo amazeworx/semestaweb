@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\FormOpenAccountController;
+use App\Http\Controllers\Api\VueOpenAccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,9 @@ use App\Http\Controllers\Api\FormOpenAccountController;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+  return $request->user();
 });
 
 Route::apiResource('countries', CountryController::class);
 Route::apiResource('form-open-account', FormOpenAccountController::class);
+Route::apiResource('vue-open-account', VueOpenAccountController::class);
