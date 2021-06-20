@@ -2110,6 +2110,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       if (this.$v.$error) return;
       this.$store.dispatch("createPost", post); //this.$router.push("/second-step/");
     }
+  },
+  watch: {
+    "post.fullName": function postFullName(newVal, oldVal) {
+      console.log(newVal);
+      this.$store.dispatch("setField", {
+        fullName: newVal
+      });
+    },
+    "post.nationality": function postNationality(newVal, oldVal) {
+      console.log(newVal);
+      this.$store.dispatch("setField", {
+        nationality: newVal
+      });
+    }
   }
 });
 
@@ -2507,24 +2521,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var actions = {
-  createPost: function createPost(_ref, post) {
+  setField: function setField(_ref, payload) {
     var commit = _ref.commit;
+    commit('SET_FIELD', payload);
+  },
+  createPost: function createPost(_ref2, post) {
+    var commit = _ref2.commit;
     axios.post('/api/vue-open-account', post).then(function (res) {
       commit('CREATE_POST', res.data);
     })["catch"](function (err) {
       console.log(err);
     });
   },
-  fetchPosts: function fetchPosts(_ref2) {
-    var commit = _ref2.commit;
+  fetchPosts: function fetchPosts(_ref3) {
+    var commit = _ref3.commit;
     axios.get('/api/vue-open-account').then(function (res) {
       commit('FETCH_POSTS', res.data);
     })["catch"](function (err) {
       console.log(err);
     });
   },
-  deletePost: function deletePost(_ref3, post) {
-    var commit = _ref3.commit;
+  deletePost: function deletePost(_ref4, post) {
+    var commit = _ref4.commit;
     axios["delete"]("/api/vue-open-account/".concat(post.id)).then(function (res) {
       if (res.data === 'ok') commit('DELETE_POST', post);
     })["catch"](function (err) {
@@ -2548,8 +2566,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var getters = {
-  posts: function posts(state) {
-    return state.posts;
+  // posts: state => {
+  //   return state.posts
+  // }
+  fullName: {
+    get: function get() {
+      return this.$store.state.fullName;
+    },
+    set: function set(value) {
+      this.$store.commit('setFullName', value);
+    } //return state.posts.fullName;
+
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getters);
@@ -2568,6 +2595,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var mutations = {
+  setFullName: function setFullName(state, value) {
+    state.fullName = value;
+  },
+  SET_FIELD: function SET_FIELD(state, payload) {
+    state.posts = payload;
+  },
   CREATE_POST: function CREATE_POST(state, post) {
     state.posts.unshift(post);
   },
@@ -2596,8 +2629,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var state = {
-  posts: []
+var state = {//posts: []
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (state);
 

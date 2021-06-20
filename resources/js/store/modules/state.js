@@ -1,5 +1,5 @@
 let state = {
-  posts: []
+  //posts: []
 }
 
 export default state

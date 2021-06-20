@@ -1,4 +1,7 @@
 let actions = {
+  setField: ({ commit }, payload) => {
+    commit('SET_FIELD', payload)
+  },
   createPost({ commit }, post) {
     axios.post('/api/vue-open-account', post)
       .then(res => {

@@ -1,4 +1,10 @@
 let mutations = {
+  setFullName(state, value) {
+    state.fullName = value
+  },
+  SET_FIELD(state, payload) {
+    state.posts = payload
+  },
   CREATE_POST(state, post) {
     state.posts.unshift(post)
   },

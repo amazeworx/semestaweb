@@ -150,6 +150,16 @@ export default {
       this.$store.dispatch("createPost", post);
       //this.$router.push("/second-step/");
     }
+  },
+  watch: {
+    "post.fullName": function(newVal, oldVal) {
+      console.log(newVal);
+      this.$store.dispatch("setField", { fullName: newVal });
+    },
+    "post.nationality": function(newVal, oldVal) {
+      console.log(newVal);
+      this.$store.dispatch("setField", { nationality: newVal });
+    }
   }
 };
 </script>

@@ -14,7 +14,7 @@ require('vuetifyjs-mix-extension');
 
 mix.js("resources/js/app.js", "public/js")
   //.js("resources/js/apps.js", "public/js")
-  //.js("resources/js/open-account.js", "public/js")
+  .js("resources/js/open-account.js", "public/js")
   .js("resources/js/vue-open-account.js", "public/js")
   //.vuetify('', { postcss: true })
   .vue()
