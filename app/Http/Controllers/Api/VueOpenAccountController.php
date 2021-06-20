@@ -8,24 +8,27 @@ use App\Models\OpenAccount;
 
 class VueOpenAccountController extends Controller
 {
+
+  public function get(Request $request)
+  {
+    $data = OpenAccount::orderBy('created_at', 'desc')->get();
+    return response()->json($data);
+  }
+
   public function store(Request $request)
   {
-
-    // Form validation
-    // $this->validate($request, [
-    //   'full_name' => 'required',
-    //   'nationality' => 'required',
-    //   'ktp_number' => 'required',
-    //   'email' => 'required|email',
-    //   'mother_name' => 'required',
-    // ]);
-
-    //  Store data in database
     $storeData = OpenAccount::create([
-      'full_name' => $request->full_name,
+      'full_name' => $request->fullName,
       'nationality' => $request->nationality,
     ]);
-    //return $storeData;
+
     return response()->json($storeData);
+  }
+
+  public function delete($id)
+  {
+    OpenAccount::destroy($id);
+
+    return response()->json("ok");
   }
 }

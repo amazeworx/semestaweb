@@ -34,11 +34,11 @@
                 id="fullName"
                 name="fullName"
                 placeholder="Isi nama lengkap Anda sesuai identitas"
-                v-model="fullName"
-                @change="$v.fullName.$touch()"
+                v-model="post.fullName"
+                @change="$v.post.fullName.$touch()"
               />
               <div
-                v-if="$v.fullName.$error && !$v.fullName.required"
+                v-if="$v.post.fullName.$error && !$v.post.fullName.required"
                 class="form-validation-error"
               >
                 <small>Nama Lengkap wajib diisi.</small>
@@ -49,7 +49,7 @@
                 Kewarganegaraan <span class="form-required">*</span>
               </div>
               <v-select
-                v-model="nationality"
+                v-model="post.nationality"
                 label="nationality"
                 :placeholder="'-- Pilih --'"
                 :options="country_options"
@@ -58,7 +58,9 @@
               >
               </v-select>
               <div
-                v-if="$v.nationality.$error && !$v.nationality.required"
+                v-if="
+                  $v.post.nationality.$error && !$v.post.nationality.required
+                "
                 class="form-validation-error"
               >
                 <small>Kewarganegaraan wajib diisi.</small>
@@ -70,7 +72,7 @@
     </div>
     <div class="flex gap-4 mt-8 justify-center">
       <button
-        @click="navigateNext"
+        @click="navigateNext(post)"
         type="button"
         class="
           px-4
@@ -98,6 +100,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import { required, minLength, requiredIf } from "vuelidate/lib/validators";
 import vSelect from "vue-select";
 
@@ -108,33 +111,22 @@ export default {
       countries: null,
       country_options: [],
       id_valid_dates: [],
-      id_valid_years: []
+      id_valid_years: [],
+      post: {
+        fullName: "",
+        nationality: ""
+      }
     };
   },
   computed: {
-    fullName: {
-      get() {
-        return this.$store.state.fullName;
-      },
-      set(value) {
-        this.$store.commit("setFullName", value);
-      }
-    },
-    nationality: {
-      get() {
-        return this.$store.state.nationality;
-      },
-      set(value) {
-        this.$store.commit("setNationality", value);
-      }
-    }
+    ...mapGetters(["posts"])
   },
   mounted() {
     axios.get("/api/countries").then(response => {
       this.countries = response.data.data;
       this.country_options = response.data.data;
     });
-    this.nationality = "INDONESIAN";
+    this.post.nationality = "INDONESIAN";
     // const date = new Date();
     // const year = date.getFullYear();
     // for (let i = year; i <= year + 10; i++) {
@@ -142,18 +134,21 @@ export default {
     // }
   },
   validations: {
-    fullName: {
-      required
-    },
-    nationality: {
-      required
+    post: {
+      fullName: {
+        required
+      },
+      nationality: {
+        required
+      }
     }
   },
   methods: {
-    navigateNext() {
+    navigateNext(post) {
       this.$v.$touch();
       if (this.$v.$error) return;
-      this.$router.push("/second-step/");
+      this.$store.dispatch("createPost", post);
+      //this.$router.push("/second-step/");
     }
   }
 };

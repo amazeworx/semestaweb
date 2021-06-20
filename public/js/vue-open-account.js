@@ -1950,9 +1950,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2052,6 +2059,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2063,27 +2073,14 @@ __webpack_require__.r(__webpack_exports__);
       countries: null,
       country_options: [],
       id_valid_dates: [],
-      id_valid_years: []
+      id_valid_years: [],
+      post: {
+        fullName: "",
+        nationality: ""
+      }
     };
   },
-  computed: {
-    fullName: {
-      get: function get() {
-        return this.$store.state.fullName;
-      },
-      set: function set(value) {
-        this.$store.commit("setFullName", value);
-      }
-    },
-    nationality: {
-      get: function get() {
-        return this.$store.state.nationality;
-      },
-      set: function set(value) {
-        this.$store.commit("setNationality", value);
-      }
-    }
-  },
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(["posts"])),
   mounted: function mounted() {
     var _this = this;
 
@@ -2091,25 +2088,27 @@ __webpack_require__.r(__webpack_exports__);
       _this.countries = response.data.data;
       _this.country_options = response.data.data;
     });
-    this.nationality = "INDONESIAN"; // const date = new Date();
+    this.post.nationality = "INDONESIAN"; // const date = new Date();
     // const year = date.getFullYear();
     // for (let i = year; i <= year + 10; i++) {
     //   this.id_valid_years.push(i);
     // }
   },
   validations: {
-    fullName: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__.required
-    },
-    nationality: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_1__.required
+    post: {
+      fullName: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
+      },
+      nationality: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
+      }
     }
   },
   methods: {
-    navigateNext: function navigateNext() {
+    navigateNext: function navigateNext(post) {
       this.$v.$touch();
       if (this.$v.$error) return;
-      this.$router.push("/second-step/");
+      this.$store.dispatch("createPost", post); //this.$router.push("/second-step/");
     }
   }
 });
@@ -2458,85 +2457,149 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _modules_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/actions */ "./resources/js/store/modules/actions.js");
+/* harmony import */ var _modules_mutations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mutations */ "./resources/js/store/modules/mutations.js");
+/* harmony import */ var _modules_getters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getters */ "./resources/js/store/modules/getters.js");
+/* harmony import */ var _modules_state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/state */ "./resources/js/store/modules/state.js");
 
 
-vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_1__.default);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_1__.default.Store({
-  state: {
-    fullName: "",
-    nationality: "",
-    email: "",
-    password: "",
-    gender: "",
-    phone: "",
-    birthdate: "",
-    country: "",
-    state: "",
-    city: "",
-    street: "",
-    zipcode: "",
-    facebook: "",
-    google: "",
-    twitter: "",
-    linkedin: "",
-    instagram: ""
-  },
-  mutations: {
-    setFullName: function setFullName(state, value) {
-      state.fullName = value;
-    },
-    setNationality: function setNationality(state, value) {
-      state.nationality = value;
-    },
-    setEmail: function setEmail(state, value) {
-      state.email = value;
-    },
-    setPassword: function setPassword(state, value) {
-      state.password = value;
-    },
-    setGender: function setGender(state, value) {
-      state.gender = value;
-    },
-    setPhone: function setPhone(state, value) {
-      state.phone = value;
-    },
-    setBirthdate: function setBirthdate(state, value) {
-      state.birthdate = value;
-    },
-    setCountry: function setCountry(state, value) {
-      state.country = value;
-    },
-    setState: function setState(state, value) {
-      state.state = value;
-    },
-    setCity: function setCity(state, value) {
-      state.city = value;
-    },
-    setStreet: function setStreet(state, value) {
-      state.street = value;
-    },
-    setZipcode: function setZipcode(state, value) {
-      state.zipcode = value;
-    },
-    setFacebook: function setFacebook(state, value) {
-      state.facebook = value;
-    },
-    setGoogle: function setGoogle(state, value) {
-      state.google = value;
-    },
-    setTwitter: function setTwitter(state, value) {
-      state.twitter = value;
-    },
-    setLinkedin: function setLinkedin(state, value) {
-      state.linkedin = value;
-    },
-    setInstagram: function setInstagram(state, value) {
-      state.instagram = value;
-    }
-  }
+
+
+
+ //import VuexPersistence from 'vuex-persist';
+
+vue__WEBPACK_IMPORTED_MODULE_4__.default.use(vuex__WEBPACK_IMPORTED_MODULE_5__.default); // const vuexPersist = new VuexPersist({
+//   key: 'open-account',
+//   storage: window.localStorage
+// })
+// const vuexLocal = new VuexPersistence({
+//   storage: window.localStorage
+// })
+// const store = {
+//   state,
+//   mutations,
+//   getters,
+//   actions,
+//   plugins: [vuexLocal.plugin]
+// }
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_5__.default.Store({
+  state: _modules_state__WEBPACK_IMPORTED_MODULE_3__.default,
+  mutations: _modules_mutations__WEBPACK_IMPORTED_MODULE_1__.default,
+  getters: _modules_getters__WEBPACK_IMPORTED_MODULE_2__.default,
+  actions: _modules_actions__WEBPACK_IMPORTED_MODULE_0__.default //    plugins: [vuexLocal.plugin]
+
 }));
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/actions.js":
+/*!***********************************************!*\
+  !*** ./resources/js/store/modules/actions.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var actions = {
+  createPost: function createPost(_ref, post) {
+    var commit = _ref.commit;
+    axios.post('/api/vue-open-account', post).then(function (res) {
+      commit('CREATE_POST', res.data);
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  },
+  fetchPosts: function fetchPosts(_ref2) {
+    var commit = _ref2.commit;
+    axios.get('/api/vue-open-account').then(function (res) {
+      commit('FETCH_POSTS', res.data);
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  },
+  deletePost: function deletePost(_ref3, post) {
+    var commit = _ref3.commit;
+    axios["delete"]("/api/vue-open-account/".concat(post.id)).then(function (res) {
+      if (res.data === 'ok') commit('DELETE_POST', post);
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (actions);
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/getters.js":
+/*!***********************************************!*\
+  !*** ./resources/js/store/modules/getters.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var getters = {
+  posts: function posts(state) {
+    return state.posts;
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getters);
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/mutations.js":
+/*!*************************************************!*\
+  !*** ./resources/js/store/modules/mutations.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var mutations = {
+  CREATE_POST: function CREATE_POST(state, post) {
+    state.posts.unshift(post);
+  },
+  FETCH_POSTS: function FETCH_POSTS(state, posts) {
+    return state.posts = posts;
+  },
+  DELETE_POST: function DELETE_POST(state, post) {
+    var index = state.posts.findIndex(function (item) {
+      return item.id === post.id;
+    });
+    state.posts.splice(index, 1);
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mutations);
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/state.js":
+/*!*********************************************!*\
+  !*** ./resources/js/store/modules/state.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var state = {
+  posts: []
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (state);
 
 /***/ }),
 
@@ -20878,8 +20941,8 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.fullName,
-                        expression: "fullName"
+                        value: _vm.post.fullName,
+                        expression: "post.fullName"
                       }
                     ],
                     attrs: {
@@ -20888,21 +20951,21 @@ var render = function() {
                       name: "fullName",
                       placeholder: "Isi nama lengkap Anda sesuai identitas"
                     },
-                    domProps: { value: _vm.fullName },
+                    domProps: { value: _vm.post.fullName },
                     on: {
                       change: function($event) {
-                        return _vm.$v.fullName.$touch()
+                        return _vm.$v.post.fullName.$touch()
                       },
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.fullName = $event.target.value
+                        _vm.$set(_vm.post, "fullName", $event.target.value)
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.$v.fullName.$error && !_vm.$v.fullName.required
+                  _vm.$v.post.fullName.$error && !_vm.$v.post.fullName.required
                     ? _c("div", { staticClass: "form-validation-error" }, [
                         _c("small", [_vm._v("Nama Lengkap wajib diisi.")])
                       ])
@@ -20926,15 +20989,16 @@ var render = function() {
                         clearable: false
                       },
                       model: {
-                        value: _vm.nationality,
+                        value: _vm.post.nationality,
                         callback: function($$v) {
-                          _vm.nationality = $$v
+                          _vm.$set(_vm.post, "nationality", $$v)
                         },
-                        expression: "nationality"
+                        expression: "post.nationality"
                       }
                     }),
                     _vm._v(" "),
-                    _vm.$v.nationality.$error && !_vm.$v.nationality.required
+                    _vm.$v.post.nationality.$error &&
+                    !_vm.$v.post.nationality.required
                       ? _c("div", { staticClass: "form-validation-error" }, [
                           _c("small", [_vm._v("Kewarganegaraan wajib diisi.")])
                         ])
@@ -20956,7 +21020,11 @@ var render = function() {
           staticClass:
             "\n        px-4\n        py-2\n        border\n        rounded\n        text-sm\n        font-bold\n        uppercase\n        bg-orange\n        border-orange\n        text-white\n        hover:bg-orange-light\n        hover:border-orange-light\n        focus:outline-none\n        transition\n        ease-in-out\n        duration-150\n      ",
           attrs: { type: "button" },
-          on: { click: _vm.navigateNext }
+          on: {
+            click: function($event) {
+              return _vm.navigateNext(_vm.post)
+            }
+          }
         },
         [_vm._v("\n      Berikutnya ⟶\n    ")]
       )

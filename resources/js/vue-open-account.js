@@ -5,7 +5,7 @@ import VueRouter from 'vue-router';
 import Vuelidate from 'vuelidate';
 import vSelect from 'vue-select';
 import VueOpenAccount from './components/VueOpenAccount/VueOpenAccount.vue';
-import store from './store/index'
+import store from './store/index';
 
 import FormStepOne from './components/VueOpenAccount/FormStepOne.vue';
 import FormStepTwo from './components/VueOpenAccount/FormStepTwo.vue';

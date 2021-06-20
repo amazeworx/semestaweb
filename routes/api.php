@@ -23,4 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('countries', CountryController::class);
 Route::apiResource('form-open-account', FormOpenAccountController::class);
-Route::apiResource('vue-open-account', VueOpenAccountController::class);
+//Route::apiResource('vue-open-account', VueOpenAccountController::class);
+
+Route::post('vue-open-account', [VueOpenAccountController::class, 'store']);
+
+Route::get('vue-open-account', [VueOpenAccountController::class, 'get']);
+
+Route::delete('vue-open-account/{id}', [VueOpenAccountController::class, 'delete']);
