@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\DailyMarketController;
 use App\Http\Controllers\Admin\ZipDownloadController;
 
 use App\Http\Controllers\Web\FormOpenAccountController;
+use App\Http\Controllers\Web\VueOpenAccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,9 +37,6 @@ Route::get('/open-account', \App\Http\Livewire\OpenAccount\OpenAccountForm::clas
 /*
 | ADMIN
 */
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//   return view('admin.dashboard');
-// })->name('dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->get('/accounts', function () {
   return view('admin.accounts');
 })->name('accounts');
@@ -55,8 +53,16 @@ Route::get('download-zip', [ZipDownloadController::class, 'index'])->name('downl
 // Route::get('/form', [FormOpenAccountController::class, 'index']);
 // Route::post('/form', [FormOpenAccountController::class, 'store'])->name('form-open-account.store');
 //Route::resource('form', [FormOpenAccountController::class]);
-// Route::resource('account-opening', FormOpenAccountController::class);
-// Route::get('/{lang}/account-opening', function ($lang) {
-//   App::setlocale($lang);
-//   return view('form-open-account');
-// });
+
+Route::resource('account-opening', FormOpenAccountController::class);
+
+Route::get('/{lang}/account-opening', function ($lang) {
+  App::setlocale($lang);
+  return view('web.form-open-account');
+});
+
+Route::get('/vue-open-account/{any}', function () {
+  return view('web.vue.vue-open-account');
+})->where('any', '.*');
+
+Route::get('/vue-open-account', [VueOpenAccountController::class, 'index'])->name('vue-open-account');

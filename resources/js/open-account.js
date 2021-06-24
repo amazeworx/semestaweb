@@ -4,7 +4,7 @@ import Vue from "vue";
 import { extend, localize, setInteractionMode } from "vee-validate";
 import en from 'vee-validate/dist/locale/en.json';
 import * as rules from 'vee-validate/dist/rules';
-import store from './store';
+import store from './store-1';
 import AccountOpening from './components/AccountOpening.vue';
 
 Vue.mixin(require('./trans'));
