@@ -83,7 +83,7 @@
 
   </div>
 
-  <div class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200">
+  {{-- <div class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200">
 
     <div class="w-full lg:w-1/4">
       <h3 class="text-xl font-bold mb-4">Tanda Tangan Anda</h3>
@@ -99,12 +99,13 @@
             tekan tombol simpan.</div>
           <x-signature wire:model="uploadSignature" />
           @error('uploadSignature')
-          <div class="form-validation-error"><small>{{ $message }}</small></div>
-          @enderror
-        </div>
-      </div>
-    </div>
+          <div class="form-validation-error"><small>{{ $message }}</small>
+</div>
+@enderror
+</div>
+</div>
+</div>
 
-  </div>
+</div> --}}
 
 </div>
