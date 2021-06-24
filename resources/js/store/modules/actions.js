@@ -1,11 +1,10 @@
 let actions = {
-  setField: ({ commit }, payload) => {
-    commit('SET_FIELD', payload)
-  },
   createPost({ commit }, post) {
+    //console.log(post);
     axios.post('/api/vue-open-account', post)
       .then(res => {
-        commit('CREATE_POST', res.data)
+        //console.log(res.data);
+        //commit('CREATE_POST', res.data)
       }).catch(err => {
         console.log(err)
       })
@@ -13,7 +12,7 @@ let actions = {
   fetchPosts({ commit }) {
     axios.get('/api/vue-open-account')
       .then(res => {
-        commit('FETCH_POSTS', res.data)
+        //commit('FETCH_POSTS', res.data)
       }).catch(err => {
         console.log(err)
       })
@@ -21,8 +20,7 @@ let actions = {
   deletePost({ commit }, post) {
     axios.delete(`/api/vue-open-account/${post.id}`)
       .then(res => {
-        if (res.data === 'ok')
-          commit('DELETE_POST', post)
+        // if (res.data === 'ok') commit('DELETE_POST', post)
       }).catch(err => {
         console.log(err)
       })

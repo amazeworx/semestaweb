@@ -4,26 +4,14 @@ import actions from './modules/actions'
 import mutations from './modules/mutations'
 import getters from './modules/getters'
 import state from "./modules/state";
-//import VuexPersistence from 'vuex-persist';
+import VuexPersistence from 'vuex-persist';
 
 Vue.use(Vuex);
 
-// const vuexPersist = new VuexPersist({
-//   key: 'open-account',
-//   storage: window.localStorage
-// })
-
-// const vuexLocal = new VuexPersistence({
-//   storage: window.localStorage
-// })
-
-// const store = {
-//   state,
-//   mutations,
-//   getters,
-//   actions,
-//   plugins: [vuexLocal.plugin]
-// }
+const vuexLocal = new VuexPersistence({
+  key: 'open-account',
+  storage: window.localStorage
+})
 
 export default new Vuex.Store(
   {
@@ -31,6 +19,6 @@ export default new Vuex.Store(
     mutations,
     getters,
     actions,
-    //    plugins: [vuexLocal.plugin]
+    plugins: [vuexLocal.plugin]
   }
 )
