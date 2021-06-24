@@ -648,10 +648,10 @@ class OpenAccountForm extends Component
     'infoQ3Text' => 'required_if:infoQ3,true',
     'occupation' => 'required',
     'occupationText' => 'required_if:occupationIsOther,true',
-    'jobPosition' => 'required',
-    'jobPositionText' => 'required_if:jobPositionIsOther,true',
-    'businessField' => 'required',
-    'businessFieldText' => 'required_if:businessFieldIsOther,true',
+    'jobPosition' => 'required_if:jobPositionIsText,false',
+    'jobPositionText' => 'required_if:jobPositionIsText,true',
+    'businessField' => 'required_if:businessFieldIsText,false',
+    'businessFieldText' => 'required_if:businessFieldIsText,true',
     'companyName' => 'required',
     'companyAddress' => 'required',
     'companyCountry' => 'required',
@@ -705,7 +705,7 @@ class OpenAccountForm extends Component
     'uploadNpwp' => 'required_unless:hasNPWP,1',
     'applicationTerm' => 'accepted',
     'bcaTerm' => 'accepted',
-    'uploadSignature' => 'required'
+    //'uploadSignature' => 'required'
   ];
 
   public function submit($currentStep)
@@ -1204,7 +1204,7 @@ class OpenAccountForm extends Component
         'uploadNpwp' => 'required_unless:hasNPWP,1',
         'applicationTerm' => 'accepted',
         'bcaTerm' => 'accepted',
-        'uploadSignature' => 'required'
+        //'uploadSignature' => 'required'
       ]);
       $stored_data = OpenAccount::create([
         'full_name' => $this->fullName,
