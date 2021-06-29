@@ -13,14 +13,17 @@ body {
 }
 
 .web-container {
-  padding-top: 80px;
+  /* padding-top: 80px;
   @media (min-width: 1280px) {
     padding-top: 112px;
-  }
+  } */
+}
+#site-header {
+  @apply bg-white;
 }
 .headroom {
   will-change: transform;
-  @apply bg-white fixed top-0 right-0 left-0 z-30 transition transform ease-out duration-300;
+  @apply bg-white fixed top-0 right-0 left-0 z-30 transition transform ease-out duration-300 border-b border-gray-200;
 }
 .headroom--pinned {
   @apply translate-y-0;
