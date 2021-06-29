@@ -32,6 +32,7 @@ Route::get('/about-us', [AboutUsController::class, 'index']);
 Route::get('/our-services', [OurServicesController::class, 'index']);
 Route::get('/market-news', [MarketNewsController::class, 'index']);
 Route::get('/contact-us', [ContactUsController::class, 'index']);
+Route::view('/download', 'web.download');
 Route::get('/open-account', \App\Http\Livewire\OpenAccount\OpenAccountForm::class);
 
 /*

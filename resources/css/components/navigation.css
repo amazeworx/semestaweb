@@ -1,54 +1,54 @@
 .header-nav {
-    @apply hidden lg:block;
-    .nav-main {
-        > ul {
-            @apply flex flex-wrap;
-            @apply flex flex-nowrap gap-8;
-            > li {
-                @apply w-auto;
-                > a {
-                    @apply inline-block font-semibold hover:text-orange py-0;
-                    &.active {
-                        @apply text-orange;
-                    }
-                }
-            }
+  @apply hidden xl:block;
+  .nav-main {
+    > ul {
+      @apply flex flex-wrap;
+      @apply flex flex-nowrap gap-6;
+      > li {
+        @apply w-auto;
+        > a {
+          @apply text-sm uppercase inline-block font-semibold whitespace-nowrap hover:text-orange py-0;
+          &.active {
+            @apply text-orange;
+          }
         }
+      }
     }
+  }
 }
 .mobile-nav {
-    @apply fixed bg-white shadow-lg w-64 h-full py-10 px-8 right-0 top-0 z-50 transform transition duration-150 ease-out translate-x-full;
-    @apply lg:hidden;
-    &.menuopen {
-        @apply translate-x-0 lg:translate-x-full;
-    }
-    .nav-main {
-        > ul {
-            @apply flex flex-wrap;
-            > li {
-                @apply w-full;
-                > a {
-                    @apply inline-block font-semibold hover:text-orange py-2;
-                    &.active {
-                        @apply text-orange;
-                    }
-                }
-            }
+  @apply fixed bg-white shadow-lg w-64 h-full py-10 px-8 right-0 top-0 z-50 transform transition duration-150 ease-out translate-x-full;
+  @apply xl:hidden;
+  &.menuopen {
+    @apply translate-x-0 xl:translate-x-full;
+  }
+  .nav-main {
+    > ul {
+      @apply flex flex-wrap;
+      > li {
+        @apply w-full;
+        > a {
+          @apply inline-block font-semibold hover:text-orange py-2;
+          &.active {
+            @apply text-orange;
+          }
         }
+      }
     }
+  }
 }
 .menu-close-button {
-    @apply absolute top-3 right-3;
-    @apply lg:hidden;
+  @apply absolute top-3 right-3;
+  @apply xl:hidden;
 }
 .menuoverlay {
-    @apply fixed inset-0 bg-black bg-opacity-25 opacity-0 transition ease-out duration-150;
-    z-index: -1;
-    &.menuopen {
-        @apply opacity-100 z-30;
-    }
+  @apply fixed inset-0 bg-black bg-opacity-25 opacity-0 transition ease-out duration-150;
+  z-index: -1;
+  &.menuopen {
+    @apply opacity-100 z-30;
+  }
 }
 
 [x-cloak] {
-    display: none;
+  display: none;
 }
