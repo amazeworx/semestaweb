@@ -1,73 +1,115 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 html,
 body {
-    scroll-padding-top: 80px;
-    @media (min-width: 1024px) {
-        scroll-padding-top: 112px;
-    }
+  scroll-padding-top: 80px;
+  @media (min-width: 1024px) {
+    scroll-padding-top: 112px;
+  }
 }
 [x-cloak] {
-    display: none;
+  display: none;
 }
 
 .web-container {
-    padding-top: 80px;
-    @media (min-width: 1024px) {
-        padding-top: 112px;
-    }
+  padding-top: 80px;
+  @media (min-width: 1280px) {
+    padding-top: 112px;
+  }
 }
 .headroom {
-    will-change: transform;
-    @apply bg-white fixed top-0 right-0 left-0 z-30 transition transform ease-out duration-300;
+  will-change: transform;
+  @apply bg-white fixed top-0 right-0 left-0 z-30 transition transform ease-out duration-300;
 }
 .headroom--pinned {
-    @apply translate-y-0;
-    &.headroom--not-top {
-        @apply shadow-md;
-    }
+  @apply translate-y-0;
+  &.headroom--not-top {
+    @apply shadow-md;
+  }
 }
 .headroom--unpinned {
-    @apply -translate-y-full;
+  @apply -translate-y-full;
 }
-.home-hero {
-    background: url("/images/home_hero_3.jpg") center center no-repeat;
-    background-size: cover;
-    min-height: calc(100vh - 80px);
-    @apply flex items-center;
-    @media (min-width: 1024px) {
-        min-height: 648px;
+.home-slider {
+  @apply relative bg-blue-800;
+  min-height: calc(100vh - 80px);
+  .swiper-container {
+    width: 100%;
+    //height: 100%;
+    height: calc(100vh - 80px);
+    .slide {
+      @apply hidden relative items-center;
+      background-size: cover;
+      &.slide-1 {
+        //background: url("/images/home_hero_3.jpg") center center no-repeat;
+      }
+      &.slide-2 {
+        background: url("/images/home_hero_2.jpg") center center no-repeat;
+      }
+      &.slide-3 {
+        background: url("/images/home_hero_1.jpg") center center no-repeat;
+      }
     }
+    &.swiper-container-initialized {
+      .slide {
+        @apply flex;
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    height: 648px;
+    min-height: none;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-white text-opacity-50 hidden lg:block;
+    &:hover {
+      @apply text-opacity-100;
+    }
+  }
+  .swiper-pagination-bullet {
+    @apply bg-white;
+  }
+}
+
+.home-hero {
+  background: url("/images/home_hero_3.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 80px);
+  @apply flex items-center;
+  @media (min-width: 1024px) {
+    min-height: 648px;
+  }
 }
 .hero-overlay {
-    @apply absolute w-full h-full top-0 left-0 right-0 bottom-0 bg-blue-dark bg-opacity-80 z-0;
+  @apply absolute w-full h-full top-0 left-0 right-0 bottom-0 bg-blue-dark bg-opacity-80 z-0;
 }
 
 .about-hero {
-    background: url("/images/about_hero.jpg") center center no-repeat;
-    background-size: cover;
-    @apply flex items-center relative;
+  background: url("/images/about_hero.jpg") center center no-repeat;
+  background-size: cover;
+  @apply flex items-center relative;
 }
 .services-hero {
-    background: url("/images/services_hero.jpg") center center no-repeat;
-    background-size: cover;
-    @apply flex items-center relative;
+  background: url("/images/services_hero.jpg") center center no-repeat;
+  background-size: cover;
+  @apply flex items-center relative;
 }
 .contact-hero {
-    background: url("/images/contact_hero.jpg") center center no-repeat;
-    background-size: cover;
-    @apply flex items-center relative;
+  background: url("/images/contact_hero.jpg") center center no-repeat;
+  background-size: cover;
+  @apply flex items-center relative;
 }
 .section-services {
-    p {
-        @apply mb-4;
-    }
+  p {
+    @apply mb-4;
+  }
 }
 .list-border-b {
-    li {
-        @apply border-b border-gray-200 py-4;
-    }
+  li {
+    @apply border-b border-gray-200 py-4;
+  }
 }
 
 /* .pagination {
@@ -81,14 +123,14 @@ body {
 } */
 
 .modal-content p {
-    @apply mb-5;
+  @apply mb-5;
 }
 
 #corporate-governance {
-    .tab-nav {
-        @apply py-3 px-4 font-bold rounded-md;
-        &.active {
-            @apply bg-blue text-white;
-        }
+  .tab-nav {
+    @apply py-3 px-4 font-bold rounded-md;
+    &.active {
+      @apply bg-blue text-white;
     }
+  }
 }

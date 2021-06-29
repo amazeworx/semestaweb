@@ -1,4 +1,4 @@
-<svg class="w-6 h-6 fill-current text-blue mr-2" xmlns="http://www.w3.org/2000/svg"
+<svg class="flex-none w-6 h-6 fill-current text-blue mr-2" xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 482.14 482.14">
   <path d="M142.024,310.194c0-8.007-5.556-12.782-15.359-12.782c-4.003,0-6.714,0.395-8.132,0.773v25.69
 c1.679,0.378,3.743,0.504,6.588,0.504C135.57,324.379,142.024,319.1,142.024,310.194z" />

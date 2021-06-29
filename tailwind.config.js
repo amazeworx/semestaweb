@@ -26,6 +26,14 @@ module.exports = {
         display: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
     },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1440px',
+      '3xl': '1536px',
+    },
     fontSize: {
       '3xs': ['10px', '1.5'],
       '2xs': ['11px', '1.5'],
