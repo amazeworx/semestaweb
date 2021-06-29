@@ -20,21 +20,9 @@ import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 SwiperCore.use([Navigation, Pagination]);
 const swiper = new Swiper('.swiper-container', {
   loop: true,
-  // autoplay: {
-  //   delay: 8000,
-  // },
-  // effect: 'fade',
-  // fadeEffect: {
-  //   crossFade: true
-  // },
-  // effect: 'flip',
-  // flipEffect: {
-  //   slideShadows: false,
-  // },
-  // effect: 'cube',
-  // cubeEffect: {
-  //   slideShadows: false,
-  // },
+  autoplay: {
+    delay: 8000,
+  },
   pagination: {
     el: '.swiper-pagination',
   },
