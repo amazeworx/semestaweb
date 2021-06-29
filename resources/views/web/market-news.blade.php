@@ -1,6 +1,6 @@
 <x-web-layout>
 
-  <div class="flex flex-wrap lg:flex-nowrap w-full max-w-screen-xl mx-auto px-4 py-12 xl:px-12 xl:pt-16 xl:pb-16">
+  <div class="flex flex-wrap lg:flex-nowrap w-full max-w-screen-xl mx-auto px-4 xl:px-12 pt-36 xl:pt-48 pb-16 xl:pb-12">
     <div class="flex flex-col w-full lg:pr-4 lg:w-3/5 xl:pr-10">
 
       <div class="w-full mb-8">

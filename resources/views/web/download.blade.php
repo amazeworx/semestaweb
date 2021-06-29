@@ -2,9 +2,10 @@
 
   <section class="about-hero">
     <div class="hero-overlay"></div>
-    <div class="relative flex w-full max-w-screen-xl justify-center mx-auto z-10 px-4 py-16 xl:px-12 xl:pt-40 xl:pb-12">
+    <div
+      class="relative flex w-full max-w-screen-xl justify-center mx-auto z-10 px-4 xl:px-12 pt-36 xl:pt-48 pb-16 xl:pb-12">
       <div class="w-full max-w-prose text-white text-center">
-        <h1 class="font-display text-3xl font-bold xl:text-5xl mb-4">
+        <h1 class="font-display text-4xl font-bold xl:text-5xl mb-4">
           Download
         </h1>
       </div>
