@@ -53,6 +53,8 @@ class VueOpenAccountController extends Controller
       $id_subdistrict = $request->id_subdistrict_text;
     }
 
+    $upload_ktp = $request->upload_ktp;
+
     $storeData = OpenAccount::create([
       'full_name' => $request->full_name,
       'nationality' => $request->nationality,
@@ -71,6 +73,10 @@ class VueOpenAccountController extends Controller
       'id_subdistrict' => $id_subdistrict,
       'id_zip' => $request->id_zip,
     ]);
+
+    // if ($this->uploadKtp) {
+    //   $this->uploadKtp->storePubliclyAs('files/' . $stored_data->id, 'KTP.' . $this->uploadKtp->extension(), 'public');
+    // }
 
     return response()->json($storeData);
   }

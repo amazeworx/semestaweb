@@ -48,6 +48,7 @@
         "vue-filepond": "^6.0.3",
         "vue-router": "^3.5.1",
         "vue-select": "^3.11.2",
+        "vue-signature-pad": "^2.0.2",
         "vuelidate": "^0.7.6",
         "vuetify": "^2.4.11",
         "vuetifyjs-mix-extension": "0.0.20",

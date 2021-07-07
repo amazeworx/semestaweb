@@ -161,7 +161,39 @@
           </div>
         </div>
       </div>
+
+      <div
+        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+      >
+        <div class="w-full lg:w-1/4">
+          <h3 class="text-xl font-bold mb-4">Tanda Tangan Anda</h3>
+        </div>
+
+        <div class="w-full grid grid-cols-1 gap-6 lg:w-3/4">
+          <div class="flex flex-wrap gap-y-6 md:flex-nowrap md:gap-x-4">
+            <div class="w-full">
+              <label class="form-label"
+                >Tanda Tangan <span class="form-required">*</span></label
+              >
+              <div class="text-sm text-gray-500 italic leading-tight mt-1 mb-2">
+                Harap tanda tangan formulir registrasi di tengah kotak dan
+                jangan melewati garis lalu tekan tombol simpan.
+              </div>
+              <VueSignaturePad
+                width="500px"
+                height="500px"
+                ref="signaturePad"
+              />
+              <div>
+                <button @click="saveSignature">Save</button>
+                <button @click="clearSignature">Clear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="flex gap-4 mt-8 justify-center">
       <button
         @click="navigatePrev()"
@@ -347,9 +379,17 @@ export default {
         });
     },
     handleFilePondInit: function() {
-      console.log("FilePond has initialized");
+      //console.log("FilePond has initialized");
       // FilePond instance methods are available on `this.$refs.pond`
       this.$refs.pond.getFiles();
+    },
+    clearSignature() {
+      this.$refs.signaturePad.clearSignature();
+    },
+    saveSignature() {
+      const { isEmpty, data } = this.$refs.signaturePad.saveSignature();
+      console.log(isEmpty);
+      console.log(data);
     },
     navigatePrev() {
       this.$router.push("/first-step/");

@@ -6,6 +6,7 @@ import Vuelidate from 'vuelidate';
 import vSelect from 'vue-select';
 import VueOpenAccount from './components/VueOpenAccount/VueOpenAccount.vue';
 import store from './store/index';
+import VueSignaturePad from "vue-signature-pad";
 
 import FormStepOne from './components/VueOpenAccount/FormStepOne.vue';
 import FormStepTwo from './components/VueOpenAccount/FormStepTwo.vue';
@@ -14,6 +15,7 @@ import FormStepThree from './components/VueOpenAccount/FormStepThree.vue';
 
 Vue.use(VueRouter);
 Vue.use(Vuelidate);
+Vue.use(VueSignaturePad);
 Vue.component('v-select', vSelect);
 
 const routes = [
