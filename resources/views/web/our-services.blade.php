@@ -5,7 +5,7 @@
     <div
       class="relative flex w-full max-w-screen-xl justify-center mx-auto z-10 px-4 xl:px-12 pt-36 xl:pt-48 pb-16 xl:pb-12">
       <div class="w-full max-w-prose text-white text-center">
-        <h1 class="font-display text-4xl font-bold xl:text-5xl xl:mb-4">Our Services</h1>
+        <h1 class="font-display text-4xl font-bold xl:text-5xl xl:mb-4">{{ __('services.pageTitle') }}</h1>
       </div>
     </div>
   </section>
@@ -23,14 +23,7 @@
           <h2 class="font-display text-2xl font-bold uppercase text-blue xl:text-2xl xl:mb-4">Brokerage</h2>
         </div>
         <div class="w-full lg:w-3/4 text-base lg:text-xl">
-          <p>PT. Semesta Indovest offers corporate and individual investors direct access to a wide range of stocks that
-            listed on Indonesia Stock Exchage. The Steady rise of our market share over the years reflects our active
-            involvement in the equity market.</p>
-          <p>Our experienced and skilled team is committed to delivering quality services to our client base, and
-            drawing upon our comprehensive and well-structured information system, provides up-to-date information on
-            investment portfolio position. We are as well equipped to deliver equity financing solutions tailored to
-            your particular needs, from origination to distribution to aftermarket support.</p>
-          <p>With Remote Trading System, our opportunity for growth in equity trading is virtually unlimited.</p>
+          {!! __('services.brokerageText') !!}
         </div>
       </div>
 
@@ -44,13 +37,7 @@
           <h2 class="font-display text-2xl font-bold uppercase text-blue xl:text-2xl xl:mb-4">Investment Management</h2>
         </div>
         <div class="w-full lg:w-3/4 text-base lg:text-xl">
-          <p>The professional management of various securities (shares, bonds and other securities) and assets in order
-            to meet specified investment goals for the benefit of our investors.</p>
-          <p>Investors can be institutions (insurance companies, pension funds, corporations etc.) or private investors
-            (both directly via investment contracts and more commonly via collective investment schemes e.g. mutual
-            funds or exchange-traded funds).</p>
-          <p>We have experience and skillful Fund manager who specialize in advisory or discretionary management that
-            can fulfill your needs of investment.</p>
+          {!! __('services.investmentManagementText') !!}
         </div>
       </div>
 
@@ -63,12 +50,7 @@
           <h2 class="font-display text-2xl font-bold uppercase text-blue xl:text-2xl xl:mb-4">Corporate Finance</h2>
         </div>
         <div class="w-full lg:w-3/4 text-base lg:text-xl">
-          <p>Our team of professionals is devoted to providing clients with the most effective range of services to
-            raise capital through IPO and arrange financing through debt market.</p>
-          <p>They firmly believe that a thorough understanding of the client's business and industry is critical to
-            effectively position the company to maximize its value.</p>
-          <p>Our commitment to clients in IPO's extends well into the secondary market, where we provide advisory
-            support for future corporate action to enhance shareholder value.</p>
+          {!! __('services.investmentCorporateFinanceText') !!}
         </div>
       </div>
 

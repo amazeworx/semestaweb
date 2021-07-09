@@ -16,6 +16,13 @@
     }
   }
 }
+.lang-switcher {
+  a {
+    &.active {
+      @apply text-blue font-semibold;
+    }
+  }
+}
 .mobile-nav {
   @apply fixed bg-white shadow-lg w-64 h-full py-10 px-8 right-0 top-0 z-50 transform transition duration-150 ease-out translate-x-full;
   @apply xl:hidden;

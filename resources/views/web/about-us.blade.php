@@ -5,11 +5,9 @@
     <div
       class="relative flex w-full max-w-screen-xl justify-center mx-auto z-10 px-4 xl:px-12 pt-36 xl:pt-48 pb-16 xl:pb-12">
       <div class="w-full max-w-prose text-white text-center">
-        <h1 class="font-display text-3xl font-bold xl:text-5xl mb-4">About Semesta Indovest Securities</h1>
+        <h1 class="font-display text-3xl font-bold xl:text-5xl mb-4">{{ __('about.pageTitle') }}</h1>
         <p class="text-base xl:text-lg">
-          Semesta Indovest is a Member of the Indonesia Stock Exchange (SPAB-18/BEJ.I.2/VIII/1994) and has license to
-          engage in Broker-Dealer (KEP-111/PM/1992) and Underwriters (KEP-01/BL/PEE/2008) from the Financial Services
-          Authority (OJK).
+          {{ __('about.pageIntro') }}
         </p>
       </div>
     </div>
@@ -19,22 +17,19 @@
     <div class="w-full max-w-4xl mx-auto px-4 xl:px-12 py-10 xl:py-16">
       <div class="flex flex-wrap md:flex-nowrap gap-6 xl:gap-8 mb-8 xl:mb-10">
         <div class="w-full md:w-1/5">
-          <h2 class="font-display text-3xl font-bold text-blue xl:text-4xl xl:mb-4">Vision</h2>
+          <h2 class="font-display text-3xl font-bold text-blue xl:text-4xl xl:mb-4">{{ __('about.vision') }}</h2>
         </div>
         <div class="w-full md:w-4/5">
-          <p class="text-base lg:text-xl">To maintain our position as a leading financial services company in Indonesia,
-            providing integrated services in the field of brokerage, Investment Management and Corporate Finance.</p>
+          <p class="text-base lg:text-xl">{{ __('about.visionText') }}</p>
         </div>
       </div>
       <div class="flex flex-wrap md:flex-nowrap gap-6 xl:gap-8 mb-8 xl:mb-10">
         <div class="w-full md:w-1/5">
-          <h2 class="font-display text-3xl font-bold text-blue xl:text-4xl xl:mb-4">Mission</h2>
+          <h2 class="font-display text-3xl font-bold text-blue xl:text-4xl xl:mb-4">{{ __('about.mission') }}</h2>
         </div>
         <div class="w-full md:w-4/5">
-          <p class="text-base lg:text-xl mb-4 xl:mb-5">To participate actively in building the Indonesian Capital
-            Market, and at the same time improve standards to the level of global competitiveness.</p>
-          <p class="text-base lg:text-xl">To provide personalized solutions to meet specific financial needs of our
-            clients while maximizing returns on our investors.</p>
+          <p class="text-base lg:text-xl mb-4 xl:mb-5">{{ __('about.missionText1') }}</p>
+          <p class="text-base lg:text-xl">{{ __('about.missionText2') }}</p>
         </div>
       </div>
     </div>
@@ -43,7 +38,8 @@
   <section class="about-management">
     <div class="w-full max-w-5xl mx-auto px-4 xl:px-12 py-4 xl:py-16">
       <div class="w-full">
-        <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">Management</h2>
+        <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">
+          {{ __('about.management') }}</h2>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-16">
         <livewire:web.management-person :personId="1" />
@@ -77,8 +73,8 @@
   <section class="about-organization-structure">
     <div class="w-full max-w-5xl mx-auto px-4 xl:px-12 py-10 lg:py-16">
       <div class="w-full">
-        <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">Organization
-          Structure
+        <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">
+          {{ __('about.organizationStructure') }}
         </h2>
       </div>
       <div class="w-full rounded-lg shadow overflow-hidden mb-4"><a href="/images/organization_structure.png"
@@ -295,49 +291,6 @@
 
           </ul>
         </div>
-
-        <!-- <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'code-of-ethics' }" id="corporate-governance">
-
-          <div class="flex">
-            <div class="w-1/4">
-              <nav class="flex flex-col">
-                <a :class="{ 'active': tab === 'code-of-ethics' }" @click.prevent="tab = 'code-of-ethics'; window.location.hash = 'code-of-ethics'" href="#" class="tab-nav">Code of Ethics</a>
-                <a :class="{ 'active': tab === 'management-guidelines' }" @click.prevent="tab = 'management-guidelines'; window.location.hash = 'management-guidelines'" href="#" class="tab-nav">Management Guidelines</a>
-                <a :class="{ 'active': tab === 'risk-management' }" @click.prevent="tab = 'risk-management'; window.location.hash = 'risk-management'" href="#" class="tab-nav">Risk Management</a>
-                <a :class="{ 'active': tab === 'compliance-audit' }" @click.prevent="tab = 'compliance-audit'; window.location.hash = 'compliance-audit'" href="#" class="tab-nav">Compliance & Audit</a>
-                <a :class="{ 'active': tab === 'whistleblowing' }" @click.prevent="tab = 'whistleblowing'; window.location.hash = 'whistleblowing'" href="#" class="tab-nav">Whistleblowing System</a>
-                <a :class="{ 'active': tab === 'financial-statements' }" @click.prevent="tab = 'financial-statements'; window.location.hash = 'financial-statements'" href="#" class="tab-nav">Financial Statements</a>
-                <a :class="{ 'active': tab === 'rups-decision' }" @click.prevent="tab = 'rups-decision'; window.location.hash = 'rups-decision'" href="#" class="tab-nav">RUPS Decision</a>
-              </nav>
-            </div>
-            <div class="w-2/4">
-              <div class="py-3 px-8">
-                <div x-cloak x-show="tab === 'code-of-ethics'">
-                  Code of Ethics
-                </div>
-                <div x-cloak x-show="tab === 'management-guidelines'">
-                  Management Guidelines
-                </div>
-                <div x-cloak x-show="tab === 'risk-management'">
-                  Risk Management
-                </div>
-                <div x-cloak x-show="tab === 'compliance-audit'">
-                  Compliance & Audit
-                </div>
-                <div x-cloak x-show="tab === 'whistleblowing'">
-                  Whistleblowing System
-                </div>
-                <div x-cloak x-show="tab === 'financial-statements'">
-                  Financial Statements
-                </div>
-                <div x-cloak x-show="tab === 'rups-decision'">
-                  RUPS Decision
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div> -->
 
       </div>
 

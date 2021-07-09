@@ -21,11 +21,19 @@
         </div>
         <div class="w-full md:w-2/3 md:pl-12">
           <h2 class="font-display text-2xl font-bold text-blue mb-4 lg:text-3xl">
-            Semesta Online Trading Desktop
+            Semesta Online Trading
           </h2>
-          <a href="/storage/downloads/sonline/SOL.exe" download class="button button-contained button-orange">
-            <x-svg-icon-windows /> Download for Windows
-          </a>
+          <p><a href="/storage/downloads/sonline/SOL.exe" download class="button button-contained button-orange">
+              <x-svg-icon-windows /> Download for Windows
+            </a></p>
+          <p class="mt-2">
+            <a href="https://play.google.com/store/apps/details?id=com.mobile.mg&hl=en&gl=US" class="inline-flex">
+              <img src="/images/download_google_play.png" />
+            </a>
+            <a href="https://apps.apple.com/us/app/semesta-online/id1352865274" class="inline-flex">
+              <img src="/images/download_app_store.png" />
+            </a>
+          </p>
         </div>
       </div>
     </div>
@@ -36,12 +44,12 @@
       <div class="border border-gray-100 shadow rounded p-4 lg:p-8">
         <h2
           class="font-display text-2xl text-center border-b-2 border-gray-100 pb-8 font-bold text-blue mb-4 lg:text-3xl">
-          Opening Account
+          {{ __('download.openingAccount') }}
         </h2>
         <div class="flex flex-wrap md:flex-nowrap py-4 lg:py-4">
           <div class="w-full md:w-1/4">
             <h3 class="font-display text-2xl text-left font-semibold text-blue mb-4 lg:text-2xl">
-              For Individual
+              {{ __('download.forIndividual') }}
             </h3>
           </div>
           <div class="w-full md:w-3/4 md:pl-10">
@@ -78,7 +86,7 @@
         <div class="flex flex-wrap md:flex-nowrap py-4 lg:py-4">
           <div class="w-full md:w-1/4">
             <h3 class="font-display text-2xl text-left font-semibold text-blue mb-4 lg:text-2xl">
-              For Institution
+              {{ __('download.forInstitution') }}
             </h3>
           </div>
           <div class="w-full md:w-3/4 md:pl-10">
