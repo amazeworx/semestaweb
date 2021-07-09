@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\AboutUsController;
 use App\Http\Controllers\Web\OurServicesController;
 use App\Http\Controllers\Web\MarketNewsController;
 use App\Http\Controllers\Web\ContactUsController;
+use App\Http\Controllers\Web\LocalizationController;
 use App\Http\Controllers\Admin\DailyMarketController;
 use App\Http\Controllers\Admin\ZipDownloadController;
 
@@ -23,10 +24,11 @@ use App\Http\Controllers\Web\VueOpenAccountController;
 |
 */
 
+Route::get('lang/{lang}', [LocalizationController::class, 'switch'])->name('localization.switch');
+
 /*
 | WEB
 */
-
 Route::get('/', [HomepageController::class, 'index']);
 Route::get('/about-us', [AboutUsController::class, 'index']);
 Route::get('/our-services', [OurServicesController::class, 'index']);

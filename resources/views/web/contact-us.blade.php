@@ -5,7 +5,7 @@
     <div
       class="relative flex w-full max-w-screen-xl justify-center mx-auto z-10 px-4 xl:px-12 pt-36 xl:pt-48 pb-16 xl:pb-12">
       <div class="w-full max-w-prose text-white text-center">
-        <h1 class="font-display text-4xl font-bold xl:text-5xl xl:mb-4">Contact Us</h1>
+        <h1 class="font-display text-4xl font-bold xl:text-5xl xl:mb-4">{{ __('contact.contactUs') }}</h1>
       </div>
     </div>
   </section>
@@ -14,7 +14,7 @@
     <div class="w-full max-w-screen-xl mx-auto px-4 xl:px-12 py-12 xl:py-16">
       <div class="flex flex-wrap xl:flex-nowrap xl:gap-12">
         <div class="w-full mb-8 lg:w-1/3">
-          <h2 class="font-bold uppercase text-orange mb-4">Headquarter</h2>
+          <h2 class="font-bold uppercase text-orange mb-4">{{ __('contact.headquarter') }}</h2>
           <p>Lippo St.Moritz 15th Floor<br />
             Jl. Puri Indah Raya Blok U1-3<br />
             Jakarta Barat 11610<br />
@@ -26,7 +26,7 @@
           </p>
         </div>
         <div class="w-full lg:w-2/3">
-          <h2 class="font-bold uppercase text-orange mb-4">Branch Office</h2>
+          <h2 class="font-bold uppercase text-orange mb-4">{{ __('contact.branchOffice') }}</h2>
           <div class="w-full grid grid-cols-1 gap-8 lg:grid-cols-2 xl:gap-x-12 xl:gap-y-8">
             <div>
               <h3 class="font-bold text-gray-500 uppercase mb-2">Surabaya</h3>

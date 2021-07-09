@@ -7,7 +7,7 @@
         Jl. Puri Indah Raya Blok U1-3, CBD Jakarta Barat<br />
         T: +62 21 3049 5900 F: +62 21 3049 5901</p>
       <div class="mt-3">
-        <a href="https://twitter.com/semestaindovest" target="_blank" class="inline-block">
+        <a href="https://twitter.com/semesta_mg" target="_blank" class="inline-block">
           <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             enable-background="new 0 0 24 24" viewBox="0 0 24 24">
             <path
@@ -39,8 +39,7 @@
       </div>
     </div>
     <div class="w-full md:w-1/2 md:pl-3 lg:pl-0 lg:w-1/3 text-sm text-gray-600 mb-4 lg:mb-0">
-      <p>PT Semesta Indovest Sekuritas is Securities Company Member of the Indonesia Stock Exchange, licensed,
-        registered and supervised by the Indonesia Financial Services Authority.</p>
+      <p>{{ __('footer.about') }}</p>
     </div>
     <div class="w-full lg:w-1/3">
       <div class="grid grid-cols-2 gap-4 mt-6 md:grid-cols-4 lg:mt-0 lg:grid-cols-2">
