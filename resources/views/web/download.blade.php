@@ -64,8 +64,8 @@
                 <li class="flex mb-4">
                   <x-svg-icon-pdf />
                   <a href="/storage/downloads/individual/fprdnid.pdf" download
-                    class="text-blue hover:underline"><span>Account Opening Application CIMB
-                      Niaga</span>&nbsp;&nbsp;<span class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    class="text-blue hover:underline"><span>Account Opening Application BCA</span>&nbsp;&nbsp;<span
+                      class="material-icons text-sm text-gray-500">open_in_new</span></a>
                 </li>
                 <li class="flex mb-4">
                   <x-svg-icon-pdf />
@@ -74,8 +74,8 @@
                       class="material-icons text-sm text-gray-500">open_in_new</span></a>
                 </li>
                 <li class="flex mb-4">
-                  <x-svg-icon-doc />
-                  <a href="/storage/downloads/individual/ifdf.doc" download
+                  <x-svg-icon-pdf />
+                  <a href="/storage/downloads/individual/fatcaBCA.pdf" download
                     class="text-blue hover:underline"><span>Individual FATCA Declaration Form</span>&nbsp;&nbsp;<span
                       class="material-icons text-sm text-gray-500">open_in_new</span></a>
                 </li>
