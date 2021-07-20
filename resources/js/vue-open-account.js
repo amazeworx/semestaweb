@@ -17,6 +17,7 @@ Vue.use(Vuelidate);
 Vue.component('v-select', vSelect);
 
 const routes = [
+  { path: '/', name: 'firstStep', component: FormStepOne },
   { path: '/first-step', name: 'firstStep', component: FormStepOne },
   { path: '/second-step', name: 'secondStep', component: FormStepTwo },
   { path: '/third-step', name: 'thirdStep', component: FormStepThree }
