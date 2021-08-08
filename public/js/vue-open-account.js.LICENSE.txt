@@ -23,8 +23,13 @@
  */
 
 /*!
- * Vue.js v2.6.14
- * (c) 2014-2021 Evan You
+ * Signature Pad v3.0.0-beta.4 | https://github.com/szimek/signature_pad
+ * (c) 2020 Szymon Nowak | Released under the MIT license
+ */
+
+/*!
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
  * Released under the MIT License.
  */
 
@@ -53,4 +58,13 @@
  * Released under MIT license <https://lodash.com/license>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/**
+ * [js-sha256]{@link https://github.com/emn178/js-sha256}
+ *
+ * @version 0.9.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2014-2017
+ * @license MIT
  */
