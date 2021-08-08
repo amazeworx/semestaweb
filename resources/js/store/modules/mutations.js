@@ -1,11 +1,26 @@
 let mutations = {
   // synchronous
-  // decreaseStep(state, payload) {
-  //   state.step -= payload;
-  // },
-  // increaseStep(state, payload) {
-  //   state.step += payload;
-  // },
+  decreaseStep(state, payload) {
+    state.step -= payload;
+  },
+  increaseStep(state, payload) {
+    state.step += payload;
+  },
+  SET_STEP(state, payload) {
+    state.step = payload;
+  },
+  SET_DB_LOADED(state, payload) {
+    state.db_loaded = payload
+  },
+  SET_VALIDATED_STEP(state, payload) {
+    state.step_validated = payload;
+  },
+  SET_OTP_SENT(state, payload) {
+    state.otp_sent = payload
+  },
+  SET_OTP_UID(state, payload) {
+    state.otp_unique_id = payload
+  },
   // setSuccess(state, payload) {
   //   state.success = payload;
   // },
@@ -17,6 +32,9 @@ let mutations = {
       state.fields[key] = payload[key]
     })
   },
+  RESET_STATE(state) {
+    Object.assign(state, getDefaultState())
+  }
   // CREATE_POST(state, post) {
   //   state.fields.unshift(post)
   // },

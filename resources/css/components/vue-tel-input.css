@@ -1,0 +1,36 @@
+.open-account {
+  .vue-tel-input {
+    @apply rounded-md border border-gray-300 shadow-sm;
+    &:focus-within {
+      @apply border border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    }
+    .vti__dropdown {
+      @apply rounded-l-md;
+    }
+    [type="tel"] {
+      @apply mt-0 rounded-r-md focus:border-transparent focus:ring focus:ring-transparent focus:ring-opacity-0;
+    }
+    .vti__selection .vti__country-code {
+      @apply mr-0.5;
+    }
+    .vti__dropdown {
+      @apply mr-0;
+      &:hover,
+      &.open {
+        @apply bg-white;
+      }
+    }
+    .vti__dropdown-list {
+      @apply text-sm;
+    }
+    .vti__dropdown-item {
+      padding: 5px 10px;
+      strong {
+        font-weight: normal;
+      }
+      span {
+        @apply text-gray-500;
+      }
+    }
+  }
+}

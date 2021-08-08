@@ -22,7 +22,7 @@ class OpenAccountForm extends Component
 {
   use WithFileUploads;
 
-  public $currentStep = 1;
+  public $currentStep = 4;
   public $countries, $provinces, $cities, $districts, $subDistricts;
 
   // Step 1
