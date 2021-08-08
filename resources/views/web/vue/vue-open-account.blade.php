@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
   <!-- Scripts -->
+  {{-- <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+  </script> --}}
   <script src="{{ mix('js/vue-open-account.js') }}" defer></script>
 </head>
 

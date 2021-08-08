@@ -35,7 +35,7 @@ Route::get('/our-services', [OurServicesController::class, 'index']);
 Route::get('/market-news', [MarketNewsController::class, 'index']);
 Route::get('/contact-us', [ContactUsController::class, 'index']);
 Route::view('/download', 'web.download');
-Route::get('/open-account', \App\Http\Livewire\OpenAccount\OpenAccountForm::class);
+Route::get('/lw-open-account', \App\Http\Livewire\OpenAccount\OpenAccountForm::class);
 
 /*
 | ADMIN
@@ -64,8 +64,8 @@ Route::get('/{lang}/account-opening', function ($lang) {
   return view('web.form-open-account');
 });
 
-Route::get('/vue-open-account/{any}', function () {
+Route::get('/open-account/{any}', function () {
   return view('web.vue.vue-open-account');
 })->where('any', '.*');
 
-Route::get('/vue-open-account', [VueOpenAccountController::class, 'index'])->name('vue-open-account');
+Route::get('/open-account', [VueOpenAccountController::class, 'index'])->name('open-account');
