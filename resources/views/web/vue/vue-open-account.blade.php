@@ -19,14 +19,9 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
 
-  {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> --}}
-
   <!-- Styles -->
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-  <!-- Scripts -->
-  {{-- <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
-  </script> --}}
   <script src="{{ mix('js/vue-open-account.js') }}" defer></script>
 </head>
 
@@ -36,7 +31,7 @@
     <x-site-header />
 
     <!-- Page Content -->
-    <base href="http://localhost:3000/vue-open-account/" />
+    <base href="https://semestaindovest.co.id/open-account/" />
     <div id="app">
     </div>
 
