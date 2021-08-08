@@ -32,6 +32,7 @@
 
     <!-- Page Content -->
     <base href="https://semestaindovest.co.id/open-account/" />
+    {{-- <base href="http://localhost:3000/open-account/" /> --}}
     <div id="app">
     </div>
 
