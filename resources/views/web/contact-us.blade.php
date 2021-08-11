@@ -40,24 +40,6 @@
               </p>
             </div>
             <div>
-              <h3 class="font-bold text-gray-500 uppercase mb-2">Semarang</h3>
-              <p>Jl MH Thamrin No.152<br />
-                Semarang 50134<br />
-                <strong>Phone</strong> <a class="text-blue-300 hover:underline" href="tel:+622476442338">+62 24
-                  76442338</a>
-              </p>
-            </div>
-            <div>
-              <h3 class="font-bold text-gray-500 uppercase mb-2">Serpong</h3>
-              </p>
-              Ruko BSD Sektor 7 Blok RN No.60<br />
-              Serpong 15321<br />
-              <strong>Phone</strong> <a class="text-blue-300 hover:underline" href="tel:+62215379545">+62 21 537
-                9545</a><br />
-              <strong>Fax</strong> <a class="text-blue-300 hover:underline" href="tel:+62215379967">+62 21 537 9967</a>
-              </p>
-            </div>
-            <div>
               <h3 class="font-bold text-gray-500 uppercase mb-2">Jakarta</h3>
               <p>Menara Imperium 18th Floor<br />
                 Jl. HR Rasuna Said Kav.1<br />
@@ -68,6 +50,16 @@
                 <strong>Fax</strong> <a class="text-blue-300 hover:underline" href="tel:+622183703787">+62 21 8370
                   3787</a>
               </p>
+              </p>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-500 uppercase mb-2">Serpong</h3>
+              </p>
+              Ruko BSD Sektor 7 Blok RN No.60<br />
+              Serpong 15321<br />
+              <strong>Phone</strong> <a class="text-blue-300 hover:underline" href="tel:+62215379545">+62 21 537
+                9545</a><br />
+              <strong>Fax</strong> <a class="text-blue-300 hover:underline" href="tel:+62215379967">+62 21 537 9967</a>
               </p>
             </div>
           </div>
