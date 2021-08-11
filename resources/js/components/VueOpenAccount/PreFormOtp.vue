@@ -13,27 +13,28 @@
         <div class="w-full">
           <div class="max-w-sm mx-auto text-center">
             <h3 class="w-full text-2xl font-bold mb-2">
-              One Time Password
+              Verifikasi alamat email Anda
             </h3>
             <p class="text-sm text-gray-500 mb-4">
-              4 digit OTP telah dikirim ke email Anda. Harap masukkan OTP pada
-              kolom di bawah ini.
+              Masukkan 6 digit kode yang telah dikirimkan ke email Anda pada
+              kolom di bawah ini. Jika Anda tidak menerimanya, harap periksa
+              folder Spam/Junk.
             </p>
             <input
               type="text"
               name="otp_code"
-              placeholder=""
+              placeholder="Kode Verifikasi"
               v-model="otp_code"
               @change="$v.otp_code.$touch()"
               class="mb-4 text-center"
               style="font-size: 1.5rem; padding: 0.75rem 1rem"
             />
-            <button
+            <!-- <button
               @click="resendOtp"
               class="text-xs text-gray-400 hover:text-orange-500"
             >
               KIRIM ULANG OTP
-            </button>
+            </button> -->
             <div v-if="resend_otp_message">
               <small>{{ resend_otp_message }}</small>
             </div>

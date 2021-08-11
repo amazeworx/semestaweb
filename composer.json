@@ -23,6 +23,7 @@
     "livewire-ui/modal": "^0.1.6",
     "livewire/livewire": "^2.4",
     "mediconesystems/livewire-datatables": "^0.4.3",
+    "shvetsgroup/laravel-email-database-log": "^8.0",
     "spatie/laravel-medialibrary": "^9.0.0",
     "willvincent/feeds": "^2.2"
   },
