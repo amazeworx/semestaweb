@@ -826,7 +826,7 @@
                 name="family_extra_income_yearly"
                 class="mb-1"
               >
-                <option disabled value="">-- Pilih --</option>
+                <option value="">-- Pilih --</option>
                 <option value="1">&lt; 10 Juta</option>
                 <option value="2">10-50 Juta </option>
                 <option value="3">50 - 100 Juta</option>
@@ -844,7 +844,7 @@
                 name="family_extra_income_source"
                 class="mb-1"
               >
-                <option disabled value="">-- Pilih --</option>
+                <option value="">-- Pilih --</option>
                 <option value="2">Gaji</option>
                 <option value="3">Hasil Usaha</option>
                 <option value="4">Bunga</option>
