@@ -513,7 +513,7 @@
                 name="expenses_monthly"
                 class="mb-1"
               >
-                <option disabled value="">-- Pilih --</option>
+                <option value="">-- Pilih --</option>
                 <option value="1"> &lt; 5 Juta</option>
                 <option value="2">5-10 Juta </option>
                 <option value="3">10 - 25 Juta</option>
