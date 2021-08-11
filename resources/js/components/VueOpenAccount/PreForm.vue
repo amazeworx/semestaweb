@@ -185,7 +185,7 @@
 </template>
 
 <script>
-import { required } from "vuelidate/lib/validators";
+import { required, requiredIf } from "vuelidate/lib/validators";
 import { mutateFields } from "../../helpers/helpers.js";
 import { sha256 } from "js-sha256";
 import VueRecaptcha from "vue-recaptcha";
@@ -231,13 +231,19 @@ export default {
       required
     },
     has_bca: {
-      required
+      required: requiredIf(function() {
+        return this.wni == "1";
+      })
     },
     bca_account_number: {
-      required
+      required: requiredIf(function() {
+        return this.has_bca == "1";
+      })
     },
     bca_account_name: {
-      required
+      required: requiredIf(function() {
+        return this.has_bca == "1";
+      })
     },
     email: {
       required
