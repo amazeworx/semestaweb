@@ -12,15 +12,18 @@ require('vuetifyjs-mix-extension');
  |
  */
 
-mix.js("resources/js/app.js", "public/js")
+mix.js("resources/js/web.js", "public/js")
+  .js("resources/js/app.js", "public/js")
   //.js("resources/js/apps.js", "public/js")
-  .js("resources/js/open-account.js", "public/js")
+  //.js("resources/js/open-account.js", "public/js")
   .js("resources/js/vue-open-account.js", "public/js")
   //.vuetify('', { postcss: true })
   .vue()
   .version();
 
+mix.postCss("resources/css/web.css", "public/css").version();
 mix.postCss("resources/css/app.css", "public/css").version();
+mix.postCss("resources/css/page.css", "public/css").version();
 
 mix.options({
   postCss: [

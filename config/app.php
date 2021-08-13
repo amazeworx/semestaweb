@@ -177,6 +177,7 @@ return [
     App\Providers\FortifyServiceProvider::class,
     App\Providers\JetstreamServiceProvider::class,
     App\Providers\TranslationServiceProvider::class,
+    Barryvdh\DomPDF\ServiceProvider::class,
 
   ],
 
@@ -231,6 +232,7 @@ return [
     'Validator' => Illuminate\Support\Facades\Validator::class,
     'View' => Illuminate\Support\Facades\View::class,
     'Helper' => App\Helpers\Helper::class,
+    'PDF' => Barryvdh\DomPDF\Facade::class,
 
   ],
 

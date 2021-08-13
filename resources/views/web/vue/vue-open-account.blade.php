@@ -20,7 +20,7 @@
     rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  <link rel="stylesheet" href="{{ mix('css/web.css') }}">
 
   <script src="{{ mix('js/vue-open-account.js') }}" defer></script>
 </head>

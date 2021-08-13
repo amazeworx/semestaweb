@@ -19,8 +19,8 @@ class AccountsDataTable extends LivewireDatatable
   {
     return [
       NumberColumn::name('id'),
-      Column::callback(['id', 'full_name'], function ($id, $full_name) {
-        return view('admin.accounts-tableactions', ['id' => $id, 'full_name' => $full_name]);
+      Column::callback(['id', 'email'], function ($id, $email) {
+        return view('admin.accounts.column-actions', ['id' => $id, 'email' => $email]);
       })->label('Actions'),
       Column::name('full_name')->label('Full Name')->searchable(),
       Column::name('nationality')->label('Nationality'),

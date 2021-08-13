@@ -25,10 +25,10 @@
   @livewireStyles
 
   <!-- Styles -->
-  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  <link rel="stylesheet" href="{{ mix('css/web.css') }}">
 
   <!-- Scripts -->
-  <script src="{{ mix('js/app.js') }}" defer></script>
+  <script src="{{ mix('js/web.js') }}" defer></script>
 </head>
 
 <body class="font-sans antialiased" x-data="{ menuopen: false }" x-bind:class="{ 'overflow-hidden': menuopen }">
