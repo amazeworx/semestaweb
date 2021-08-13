@@ -9,6 +9,7 @@ use App\Http\Controllers\Web\ContactUsController;
 use App\Http\Controllers\Web\LocalizationController;
 use App\Http\Controllers\Admin\DailyMarketController;
 use App\Http\Controllers\Admin\ZipDownloadController;
+use App\Http\Controllers\Admin\PdfFormController;
 
 use App\Http\Controllers\Web\FormOpenAccountController;
 use App\Http\Controllers\Web\VueOpenAccountController;
@@ -45,6 +46,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/accounts', function () {
 })->name('accounts');
 Route::middleware(['auth:sanctum', 'verified'])->resource('daily-market', DailyMarketController::class);
 Route::get('download-zip', [ZipDownloadController::class, 'index'])->name('download-zip');
+Route::get('view-form/{id}', [PdfFormController::class, 'view']);
+Route::get('/pdf/{id}', [PdfFormController::class, 'createPDF']);
 
 /*
 | EXPERIMENTAL

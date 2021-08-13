@@ -1,0 +1,86 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  font-family: "Times New Roman";
+  font-size: 10pt;
+}
+page {
+  background: white;
+  display: block;
+  margin: 1cm auto;
+  padding: 0.75cm 1cm 1cm 1cm;
+  @apply shadow-md;
+}
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+page[size="A4"][layout="landscape"] {
+  width: 29.7cm;
+  height: 21cm;
+}
+
+.text-title {
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+}
+table {
+  @apply w-full;
+  &.table-box {
+    @apply border border-orange;
+    thead {
+      tr {
+        @apply bg-orange;
+        td {
+          font-size: 12pt;
+          font-weight: bold;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+  }
+  td {
+    @apply p-1 align-bottom;
+    &.shrink {
+      @apply whitespace-nowrap;
+    }
+    &.expand {
+      width: 99%;
+    }
+    &.field-name {
+      width: 20%;
+      @apply whitespace-nowrap;
+    }
+    &.field-colon {
+      width: 3%;
+    }
+    &.field-entry {
+      width: 77%;
+      table {
+        td {
+          padding: 0;
+        }
+      }
+    }
+    &.fill-box {
+      @apply p-0.5 w-5 h-5 border border-black leading-none;
+      &.fill-box-lg {
+        @apply w-7 h-7;
+      }
+    }
+    &.ver-align-middle {
+      @apply align-middle;
+    }
+  }
+}
+@media print {
+  body,
+  page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}

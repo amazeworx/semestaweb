@@ -930,26 +930,32 @@ class VueOpenAccountController extends Controller
       $company_city = $company_city_text;
     }
 
-    if ($request->company_phone_number) {
+    if ($request->company_phone_number_formatted) {
       $company_phone_country_code = str_replace("+", "", $request->company_phone_country_code);
-      $company_phone_number = str_replace([' ', '-', '+'], "", $request->company_phone_number);
+      $company_phone_number_formatted = $request->company_phone_number_formatted;
+      $company_phone_number = str_replace([' ', '-', '+'], "", $request->company_phone_number_formatted);
     } else {
       $company_phone_country_code = NULL;
+      $company_phone_number_formatted = NULL;
       $company_phone_number = NULL;
     }
-    if (strlen($company_phone_number) < 4) {
+    if (strlen($request->company_phone_number_formatted) < 4) {
       $company_phone_country_code = NULL;
+      $company_phone_number_formatted = NULL;
       $company_phone_number = NULL;
     }
 
-    if ($request->company_fax_number) {
+    if ($request->company_fax_number_formatted) {
+      $company_fax_number_formatted = $request->company_fax_number_formatted;
       $company_fax_country_code = str_replace("+", "", $request->company_fax_country_code);
-      $company_fax_number = str_replace([' ', '-', '+'], "", $request->company_fax_number);
+      $company_fax_number = str_replace([' ', '-', '+'], "", $request->company_fax_number_formatted);
     } else {
+      $company_fax_number_formatted = NULL;
       $company_fax_country_code = NULL;
       $company_fax_number = NULL;
     }
     if (strlen($company_fax_number) < 4) {
+      $company_fax_number_formatted = NULL;
       $company_fax_country_code = NULL;
       $company_fax_number = NULL;
     }
@@ -988,9 +994,9 @@ class VueOpenAccountController extends Controller
     }
     $heir_email = $request->heir_email;
 
-    $bank_2_name = $request->bank_2_name;
-    $bank_2_accname = $request->bank_2_accname;
-    $bank_2_accnumber = $request->bank_2_accnumber;
+    // $bank_2_name = $request->bank_2_name;
+    // $bank_2_accname = $request->bank_2_accname;
+    // $bank_2_accnumber = $request->bank_2_accnumber;
     $bank_3_name = $request->bank_3_name;
     $bank_3_accname = $request->bank_3_accname;
     $bank_3_accnumber = $request->bank_3_accnumber;
@@ -1282,8 +1288,10 @@ class VueOpenAccountController extends Controller
       'company_zip' => $company_zip,
       'company_phone_country_code' => $company_phone_country_code,
       'company_phone_number' => $company_phone_number,
+      'company_phone_number_formatted' => $company_phone_number_formatted,
       'company_fax_country_code' => $company_fax_country_code,
       'company_fax_number' => $company_fax_number,
+      'company_fax_number_formatted' => $company_fax_number_formatted,
       'company_email' => $company_email,
       'work_year' => $work_year,
       'work_month' => $work_month,
@@ -1305,9 +1313,9 @@ class VueOpenAccountController extends Controller
       'heir_mobile_number' => $heir_mobile_number,
       'heir_mobile_number_formatted' => $heir_mobile_number_formatted,
       'heir_email' => $heir_email,
-      'bank_2_name' => strtoupper($bank_2_name),
-      'bank_2_accname' => strtoupper($bank_2_accname),
-      'bank_2_accnumber' => $bank_2_accnumber,
+      // 'bank_2_name' => strtoupper($bank_2_name),
+      // 'bank_2_accname' => strtoupper($bank_2_accname),
+      // 'bank_2_accnumber' => $bank_2_accnumber,
       'bank_3_name' => strtoupper($bank_3_name),
       'bank_3_accname' => strtoupper($bank_3_accname),
       'bank_3_accnumber' => $bank_3_accnumber,

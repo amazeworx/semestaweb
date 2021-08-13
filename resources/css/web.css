@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./components/button.css";
+@import "./components/navigation.css";
+@import "./components/filepond.css";
+@import "./components/signature-pad.css";
+@import "./components/terms.css";
+@import "./pages/pages.css";
+@import "./pages/open-account.css";
+
+@import "vue-select/dist/vue-select.css";
+@import "./components/vue-select.css";
+@import "./components/vue-tel-input.css";

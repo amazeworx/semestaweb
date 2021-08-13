@@ -107,7 +107,7 @@
               >
                 <option disabled value="">-- Pilih --</option>
                 <option value="KTP">KTP</option>
-                <option value="Paspor">Paspor</option>
+                <option value="PASPOR">Paspor</option>
               </select>
 
               <div
@@ -1043,7 +1043,7 @@ export default {
       return false;
     },
     familyIdTypeIsPassport() {
-      if (this.$store.getters.fields.family_id_type === "Paspor") return true;
+      if (this.$store.getters.fields.family_id_type === "PASPOR") return true;
       return false;
     },
     familyKtpExpiredIsLifetime() {

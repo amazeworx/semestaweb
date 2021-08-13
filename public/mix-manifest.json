@@ -1,6 +1,8 @@
 {
-    "/js/app.js": "/js/app.js?id=6ff93b9af918e60110b7",
-    "/js/open-account.js": "/js/open-account.js?id=67938af10dc1be031dc3",
-    "/js/vue-open-account.js": "/js/vue-open-account.js?id=de45775e12efea60c7b2",
-    "/css/app.css": "/css/app.css?id=5bf64420d28846102f2d"
+    "/js/web.js": "/js/web.js?id=8e47d300118644ce1a77",
+    "/js/app.js": "/js/app.js?id=76cdf09462a047ca5020",
+    "/js/vue-open-account.js": "/js/vue-open-account.js?id=e248f9cb1f164ce43f78",
+    "/css/page.css": "/css/page.css?id=6ae33cbb95c90e7698a4",
+    "/css/app.css": "/css/app.css?id=6c90dd65fdcd5273d9aa",
+    "/css/web.css": "/css/web.css?id=aa7824e6cae8b5843e59"
 }

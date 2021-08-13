@@ -75,7 +75,7 @@
               >
                 <option disabled value="">-- Pilih --</option>
                 <option value="KTP">KTP</option>
-                <option value="Paspor">Paspor</option>
+                <option value="PASPOR">Paspor</option>
               </select>
 
               <div
@@ -641,12 +641,12 @@
               </div>
               <select v-model="religion" name="religion" class="mb-1">
                 <option disabled value="">-- Pilih --</option>
-                <option value="Islam">Islam</option>
-                <option value="Katolik">Katolik</option>
-                <option value="Kristen">Kristen</option>
-                <option value="Hindu">Hindu</option>
-                <option value="Budha">Budha</option>
-                <option value="Kepercayaan">Aliran Kepercayaan</option>
+                <option value="ISLAM">Islam</option>
+                <option value="KATOLIK">Katolik</option>
+                <option value="KRISTEN">Kristen</option>
+                <option value="HINDU">Hindu</option>
+                <option value="BUDHA">Budha</option>
+                <option value="KEPERCAYAAN">Aliran Kepercayaan</option>
               </select>
               <div
                 v-if="$v.religion.$error && !$v.religion.required"
@@ -1393,11 +1393,11 @@
                   </div>
                   <select v-model="home_status" name="home_status" class="mb-1">
                     <option disabled value="">-- Pilih --</option>
-                    <option value="Milik Keluarga">Milik Keluarga</option>
-                    <option value="Milik Sendiri">Milik Sendiri</option>
-                    <option value="Milik Suami/Istri">Milik Suami/Istri</option>
-                    <option value="Rumah Dinas">Rumah Dinas</option>
-                    <option value="Sewa/Kontrak">Sewa/Kontrak</option>
+                    <option value="MILIK KELUARGA">Milik Keluarga</option>
+                    <option value="MILIK SENDIRI">Milik Sendiri</option>
+                    <option value="MILIK SUAMI/ISTRI">Milik Suami/Istri</option>
+                    <option value="RUMAH DINAS">Rumah Dinas</option>
+                    <option value="SEWA/KONTRAK">Sewa/Kontrak</option>
                   </select>
                   <div
                     v-if="$v.home_status.$error && !$v.home_status.required"
@@ -1443,13 +1443,13 @@
                     class="mb-1"
                   >
                     <option disabled value="">-- Pilih --</option>
-                    <option value="Alamat Identitas"
+                    <option value="ALAMAT IDENTITAS"
                       >Sesuai Alamat Identitas</option
                     >
-                    <option value="Alamat Tempat Tinggal"
+                    <option value="ALAMAT TEMPAT TINGGAL"
                       >Alamat Tempat Tinggal</option
                     >
-                    <option value="Alamat Kantor">Alamat Kantor</option>
+                    <option value="ALAMAT KANTOR">Alamat Kantor</option>
                   </select>
                   <div
                     v-if="
@@ -1680,11 +1680,7 @@ export default {
       this.id_province_options = response.data;
       this.home_province_options = response.data;
     });
-    //const account_id = 149;
-    //const account_id = 150;
     const account_id = this.account_id;
-    //console.log(this.$store.getters.fields.account_id);
-    //console.log(this.account_id);
     if (account_id) {
       this.isLoading = true;
       axios
@@ -1726,6 +1722,8 @@ export default {
     axios.get("/api/city/ksei_cities").then(response => {
       this.birth_places_options = response.data;
     });
+    // console.log("Home is ID:", this.home_is_id);
+    // console.log("KTP :", this.ktp_expired_lifetime);
   },
   computed: {
     ...mutateFields({
@@ -1942,7 +1940,7 @@ export default {
       return false;
     },
     idTypeIsPassport() {
-      if (this.$store.getters.fields.id_type === "Paspor") return true;
+      if (this.$store.getters.fields.id_type === "PASPOR") return true;
       return false;
     },
     ktpExpiredIsLifetime() {
@@ -1958,7 +1956,7 @@ export default {
       return false;
     },
     homeIsId() {
-      if (this.$store.getters.fields.home_is_id === true) return true;
+      if (this.$store.getters.fields.home_is_id == 1) return true;
       return false;
     }
   },
