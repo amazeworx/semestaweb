@@ -206,6 +206,9 @@ export default {
     };
   },
   mounted() {
+    window.onbeforeunload = function() {
+      localStorage.removeItem("open-account");
+    };
     this.$store.commit("SET_STEP", "0");
   },
   computed: {
