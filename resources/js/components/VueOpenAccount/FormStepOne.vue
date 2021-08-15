@@ -723,6 +723,7 @@
                 placeholder="Isi alamat email Anda"
                 v-model="email"
                 @change="$v.email.$touch()"
+                disabled
               />
               <div
                 v-if="$v.email.$error && !$v.email.required"
@@ -1681,6 +1682,7 @@ export default {
       this.home_province_options = response.data;
     });
     const account_id = this.account_id;
+    //const account_id = 151;
     if (account_id) {
       this.isLoading = true;
       axios

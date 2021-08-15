@@ -35,10 +35,11 @@ export default {
     vLottiePlayer: VueLottiePlayer
   },
   mounted() {
+    this.$store.dispatch("resetFormState");
     localStorage.removeItem("open-account");
-    //TODO
-    //Reset Vuex State
-    //this.$store.dispatch("resetFormState");
+    window.onload = function() {
+      localStorage.removeItem("open-account");
+    };
   }
 };
 </script>

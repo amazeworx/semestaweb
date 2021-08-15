@@ -26,16 +26,10 @@
               placeholder="Kode Verifikasi"
               v-model="otp_code"
               @change="$v.otp_code.$touch()"
-              class="mb-4 text-center"
+              class="mb-4 text-center font-bold"
               style="font-size: 1.5rem; padding: 0.75rem 1rem"
             />
-            <!-- <button
-              @click="resendOtp"
-              class="text-xs text-gray-400 hover:text-orange-500"
-            >
-              KIRIM ULANG OTP
-            </button> -->
-            <div v-if="resend_otp_message">
+            <div v-if="resend_otp_message" class="mb-4 text-green-500">
               <small>{{ resend_otp_message }}</small>
             </div>
             <div
@@ -44,8 +38,21 @@
             >
               <small>OTP wajib diisi.</small>
             </div>
-            <div v-if="validated_otp_message" class="form-validation-error">
+            <div
+              v-if="validated_otp_message"
+              class="form-validation-error mb-4"
+            >
               <small>{{ validated_otp_message }}</small>
+            </div>
+            <button
+              v-if="!redirectTrigger"
+              @click="resendOtp"
+              class="text-xs text-gray-400 hover:text-orange-500"
+            >
+              KIRIM KODE BARU
+            </button>
+            <div v-if="redirectTrigger" class="mb-4">
+              <small>Mengalihkan dalam {{ redirectCount }} detik...</small>
             </div>
           </div>
         </div>
@@ -93,7 +100,9 @@ export default {
       isLoading: false,
       otp_code: "",
       validated_otp_message: null,
-      resend_otp_message: null
+      resend_otp_message: null,
+      redirectCount: 5,
+      redirectTrigger: false
     };
   },
   mounted() {
@@ -125,21 +134,71 @@ export default {
     }
   },
   methods: {
-    async resendOtp() {
-      this.isLoading = true;
-      const resendOtpPayload = {
-        otp_unique_id: this.otp_unique_id
+    async requestOtp() {
+      const requestOtpPayload = {
+        email: this.$store.getters.fields.email,
+        lead_id: this.$store.getters.fields.lead_id
       };
       await this.$store
-        .dispatch("resendOtp", resendOtpPayload)
+        .dispatch("requestOtp", requestOtpPayload)
         .then(response => {
           //console.log(response);
-          this.resend_otp_message = response.message;
-          this.$store.commit("SET_OTP_UID", response.uniqueId);
           this.isLoading = false;
+          //this.otp_unique_id = response.uniqueId;
+          this.$store.commit("SET_OTP_SENT", true);
+          this.$store.commit("SET_OTP_UID", response.uniqueId);
+          //console.log(this.otp_unique_id);
+          //this.$router.push("/otp/");
         });
     },
+    async resendOtp() {
+      this.isLoading = true;
+      this.resend_otp_message = null;
+      this.validated_otp_message = null;
+      const resendOtpPayload = {
+        otp_unique_id: this.$store.getters.otp_unique_id
+      };
+      if (this.$store.getters.otp_unique_id) {
+        await this.$store
+          .dispatch("resendOtp", resendOtpPayload)
+          .then(response => {
+            //console.log(response);
+            if (response.code == 201) {
+              this.resend_otp_message =
+                "Kode baru telah dikirimkan ke email Anda";
+              this.$store.commit("SET_OTP_UID", response.uniqueId);
+              this.isLoading = false;
+            } else {
+              this.resend_otp_message = response.message;
+              this.$store.commit("SET_OTP_UID", response.uniqueId);
+              this.isLoading = false;
+            }
+          });
+      } else {
+        this.isLoading = false;
+        this.validated_otp_message =
+          "Gagal mengirim kode baru. Harap mengulang kembali";
+        this.redirectBack();
+      }
+    },
+    redirectBack() {
+      this.redirectTrigger = true;
+      this.redirectCountDown();
+      setTimeout(() => {
+        this.$router.push("/");
+      }, 5000);
+    },
+    redirectCountDown() {
+      if (this.redirectCount > 0) {
+        setTimeout(() => {
+          this.redirectCount -= 1;
+          this.redirectCountDown();
+        }, 1000);
+      }
+    },
     async validateOtp() {
+      this.resend_otp_message = null;
+      this.validated_otp_message = null;
       const otpPayload = {
         otp_code: this.otp_code,
         otp_unique_id: this.$store.getters.otp_unique_id
@@ -151,9 +210,20 @@ export default {
           this.createAccount().then(() => {
             this.$router.push("/step-1/");
           });
+        } else if (response.code == 404) {
+          this.$store.commit("SET_OTP_RESENDID", response.resendId);
+          this.validated_otp_message = "Kode Expired/Timeout";
+        } else if (response.code == 400) {
+          this.$store.commit("SET_OTP_RESENDID", response.resendId);
+          this.validated_otp_message = "Kode Invalid";
+        } else if (response.code == 413) {
+          this.$store.commit("SET_OTP_RESENDID", response.resendId);
+          this.validated_otp_message =
+            "Anda sudah 3x salah memasukkan kode. Harap mengulang kembali.";
+          this.redirectBack();
         } else {
+          this.$store.commit("SET_OTP_RESENDID", response.resendId);
           this.validated_otp_message = response.message;
-          return;
         }
       });
     },
@@ -185,6 +255,18 @@ export default {
       //console.log(this.otp_code);
       this.isLoading = true;
       this.validateOtp();
+    }
+  },
+  watch: {
+    timerCount: {
+      handler(value) {
+        if (value > 0) {
+          setTimeout(() => {
+            this.timerCount--;
+          }, 1000);
+        }
+      },
+      immediate: true // This ensures the watcher is triggered upon creation
     }
   }
 };

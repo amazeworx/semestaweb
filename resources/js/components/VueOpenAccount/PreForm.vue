@@ -206,8 +206,11 @@ export default {
     };
   },
   mounted() {
-    window.onbeforeunload = function() {
+    this.$store.dispatch("resetFormState");
+    localStorage.removeItem("open-account");
+    window.onload = function() {
       localStorage.removeItem("open-account");
+      //console.log("Storage cleared");
     };
     this.$store.commit("SET_STEP", "0");
   },
@@ -421,12 +424,18 @@ export default {
         .dispatch("requestOtp", requestOtpPayload)
         .then(response => {
           //console.log(response);
-          this.isLoading = false;
-          //this.otp_unique_id = response.uniqueId;
-          this.$store.commit("SET_OTP_SENT", true);
-          this.$store.commit("SET_OTP_UID", response.uniqueId);
-          //console.log(this.otp_unique_id);
-          this.$router.push("/otp/");
+          if (response.code == 201) {
+            this.isLoading = false;
+            //this.otp_unique_id = response.uniqueId;
+            this.$store.commit("SET_OTP_SENT", true);
+            this.$store.commit("SET_OTP_UID", response.uniqueId);
+            //console.log(this.otp_unique_id);
+            this.$router.push("/otp/");
+          } else {
+            this.isLoading = false;
+            this.$store.commit("SET_OTP_SENT", false);
+            console.log(response.message);
+          }
         });
     },
     async createAccount() {

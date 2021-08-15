@@ -22,10 +22,10 @@
           <h3 class="text-xl font-bold mb-2 tracking-tight">
             Identitas
             <span
-              v-if="family_relation === 'Suami' || family_relation === 'Istri'"
+              v-if="family_relation === 'SUAMI' || family_relation === 'ISTRI'"
               >Pasangan</span
             ><span
-              v-if="family_relation === 'Ayah' || family_relation === 'Ibu'"
+              v-if="family_relation === 'AYAH' || family_relation === 'IBU'"
               >Orang Tua</span
             ><span v-if="!family_relation">Pasangan / Orang Tua</span>
           </h3>
@@ -57,10 +57,10 @@
               </div>
               <select v-model="family_relation" name="family_relation">
                 <option disabled value="">-- Pilih --</option>
-                <option value="Suami">Suami</option>
-                <option value="Istri">Istri</option>
-                <option value="Ayah">Ayah</option>
-                <option value="Ibu">Ibu</option>
+                <option value="SUAMI">Suami</option>
+                <option value="ISTRI">Istri</option>
+                <option value="AYAH">Ayah</option>
+                <option value="IBU">Ibu</option>
               </select>
               <div
                 v-if="$v.family_relation.$error && !$v.family_relation.required"
@@ -345,10 +345,10 @@
           <h3 class="text-xl font-bold mb-4">
             Data Pekerjaan
             <span
-              v-if="family_relation === 'Suami' || family_relation === 'Istri'"
+              v-if="family_relation === 'SUAMI' || family_relation === 'ISTRI'"
               >Pasangan</span
             ><span
-              v-if="family_relation === 'Ayah' || family_relation === 'Ibu'"
+              v-if="family_relation === 'AYAH' || family_relation === 'IBU'"
               >Orang Tua</span
             ><span v-if="!family_relation">Pasangan / Orang Tua</span>
           </h3>
@@ -728,10 +728,10 @@
           <h3 class="text-xl font-bold mb-4">
             Data Keuangan
             <span
-              v-if="family_relation === 'Suami' || family_relation === 'Istri'"
+              v-if="family_relation === 'SUAMI' || family_relation === 'ISTRI'"
               >Pasangan</span
             ><span
-              v-if="family_relation === 'Ayah' || family_relation === 'Ibu'"
+              v-if="family_relation === 'AYAH' || family_relation === 'IBU'"
               >Orang Tua</span
             ><span v-if="!family_relation">Pasangan / Orang Tua</span>
           </h3>

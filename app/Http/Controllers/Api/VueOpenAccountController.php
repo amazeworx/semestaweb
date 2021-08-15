@@ -1316,9 +1316,9 @@ class VueOpenAccountController extends Controller
       // 'bank_2_name' => strtoupper($bank_2_name),
       // 'bank_2_accname' => strtoupper($bank_2_accname),
       // 'bank_2_accnumber' => $bank_2_accnumber,
-      'bank_3_name' => strtoupper($bank_3_name),
-      'bank_3_accname' => strtoupper($bank_3_accname),
-      'bank_3_accnumber' => $bank_3_accnumber,
+      // 'bank_3_name' => strtoupper($bank_3_name),
+      // 'bank_3_accname' => strtoupper($bank_3_accname),
+      // 'bank_3_accnumber' => $bank_3_accnumber,
       'fatca_holder' => $fatca_holder,
       'tin_ssn_number' => $tin_ssn_number,
       'other_taxpayer' => $other_taxpayer,
@@ -1871,6 +1871,7 @@ class VueOpenAccountController extends Controller
       $bca_term_timestamp = NULL;
     }
 
+
     // STORE
     $storeData = OpenAccount::create([
       'full_name' => $full_name,
@@ -2010,8 +2011,8 @@ class VueOpenAccountController extends Controller
       $storeData->addMedia(storage_path('app/public/uploads/tmp/' . $request->upload_ktp . '/' . $temporaryKtp->filename))
         ->withCustomProperties(['mime-type' => 'image/jpeg'])
         ->toMediaCollection('uploads', 'uploads');
-      rmdir(storage_path('app/public/uploads/tmp/' . $request->upload_ktp));
-      $temporaryKtp->delete();
+      //rmdir(storage_path('app/public/uploads/tmp/' . $request->upload_ktp));
+      //$temporaryKtp->delete();
     }
 
     $temporaryPassport = TemporaryFile::where('folder', $request->upload_passport)->first();
@@ -2019,8 +2020,8 @@ class VueOpenAccountController extends Controller
       $storeData->addMedia(storage_path('app/public/uploads/tmp/' . $request->upload_passport . '/' . $temporaryPassport->filename))
         ->withCustomProperties(['mime-type' => 'image/jpeg'])
         ->toMediaCollection('uploads', 'uploads');
-      rmdir(storage_path('app/public/uploads/tmp/' . $request->upload_passport));
-      $temporaryPassport->delete();
+      //rmdir(storage_path('app/public/uploads/tmp/' . $request->upload_passport));
+      //$temporaryPassport->delete();
     }
 
     $temporaryNpwp = TemporaryFile::where('folder', $request->upload_npwp)->first();
@@ -2028,8 +2029,8 @@ class VueOpenAccountController extends Controller
       $storeData->addMedia(storage_path('app/public/uploads/tmp/' . $request->upload_npwp . '/' . $temporaryNpwp->filename))
         ->withCustomProperties(['mime-type' => 'image/jpeg'])
         ->toMediaCollection('uploads', 'uploads');
-      rmdir(storage_path('app/public/uploads/tmp/' . $request->upload_npwp));
-      $temporaryNpwp->delete();
+      //rmdir(storage_path('app/public/uploads/tmp/' . $request->upload_npwp));
+      //$temporaryNpwp->delete();
     }
 
     if ($request->upload_signature) {

@@ -286,7 +286,7 @@ export default {
       this.$router.push("/step-3/");
     }
     if (this.status == "complete") {
-      if (this.upload_ktp == 1) {
+      if (this.upload_ktp) {
         this.uploadKtp = [
           {
             source: "/storage/uploads/" + this.account_id + "/KTP.jpg",
@@ -297,7 +297,7 @@ export default {
         ];
       }
     } else {
-      if (this.upload_ktp && this.upload_ktp != 1) {
+      if (this.upload_ktp) {
         this.uploadKtp = [
           {
             source: "/storage/uploads/tmp/" + this.upload_ktp + "/KTP.jpg",
@@ -309,7 +309,7 @@ export default {
       }
     }
     if (this.status == "complete") {
-      if (this.upload_passport == 1) {
+      if (this.upload_passport) {
         this.uploadPassport = [
           {
             source: "/storage/uploads/" + this.account_id + "/Passport.jpg",
@@ -320,7 +320,7 @@ export default {
         ];
       }
     } else {
-      if (this.upload_passport && this.upload_passport != 1) {
+      if (this.upload_passport) {
         this.uploadPassport = [
           {
             source:
@@ -334,7 +334,7 @@ export default {
     }
 
     if (this.status == "complete") {
-      if (this.upload_npwp == 1) {
+      if (this.upload_npwp) {
         this.uploadNpwp = [
           {
             source: "/storage/uploads/" + this.account_id + "/NPWP.jpg",
@@ -345,7 +345,7 @@ export default {
         ];
       }
     } else {
-      if (this.upload_npwp && this.upload_npwp != 1) {
+      if (this.upload_npwp) {
         this.uploadNpwp = [
           {
             source: "/storage/uploads/tmp/" + this.upload_npwp + "/NPWP.jpg",
@@ -403,10 +403,10 @@ export default {
       required
     },
     application_term: {
-      sameAs: sameAs(() => true)
+      sameAs: sameAs(() => 1)
     },
     bca_term: {
-      sameAs: sameAs(() => true)
+      sameAs: sameAs(() => 1)
     }
   },
   methods: {

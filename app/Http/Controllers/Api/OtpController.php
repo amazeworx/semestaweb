@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Ferdous\OtpValidator\Object\OtpRequestObject;
-use Ferdous\OtpValidator\Object\OtpValidateRequestObject;
-use Ferdous\OtpValidator\OtpValidator;
 use Illuminate\Http\Request;
+use Ferdous\OtpValidator\Object\OtpRequestObject;
+use Ferdous\OtpValidator\OtpValidator;
+use Ferdous\OtpValidator\Object\OtpValidateRequestObject;
 
 class OtpController extends Controller
 {
@@ -17,11 +17,11 @@ class OtpController extends Controller
     $number = null;
     $email = $request->email;
 
-    $otp_req = OtpValidator::requestOtp(
+    $otp_request = OtpValidator::requestOtp(
       new OtpRequestObject($lead_id, $type, $number, $email)
     );
 
-    return response()->json($otp_req);
+    return response()->json($otp_request);
   }
 
   public function validateOtp(Request $request)
