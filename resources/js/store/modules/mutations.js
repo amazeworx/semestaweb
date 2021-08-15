@@ -1,3 +1,5 @@
+import { getDefaultState } from './state.js'
+
 let mutations = {
   // synchronous
   decreaseStep(state, payload) {
@@ -21,6 +23,9 @@ let mutations = {
   SET_OTP_UID(state, payload) {
     state.otp_unique_id = payload
   },
+  SET_OTP_RESENDID(state, payload) {
+    state.otp_resend_id = payload
+  },
   // setSuccess(state, payload) {
   //   state.success = payload;
   // },
@@ -33,7 +38,8 @@ let mutations = {
     })
   },
   RESET_STATE(state) {
-    Object.assign(state, getDefaultState())
+    Object.assign(state, getDefaultState());
+    //console.log("State cleared")
   }
   // CREATE_POST(state, post) {
   //   state.fields.unshift(post)

@@ -1,4 +1,4 @@
-const getDefaultState = () => {
+export const getDefaultState = () => {
   return {
     fields: {
       status: "draft",
@@ -183,6 +183,7 @@ const getDefaultState = () => {
     db_loaded: false,
     otp_sent: false,
     otp_unique_id: "",
+    otp_resend_id: "",
   }
 }
 

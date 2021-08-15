@@ -427,7 +427,6 @@
             <div class="w-full">
               <div class="form-label">
                 Penghasilan Tambahan/Kotor/thn
-                <span class="form-required">*</span>
               </div>
               <select
                 v-model="extra_income_yearly"
@@ -442,19 +441,10 @@
                 <option value="5">500 Juta - 1 Miliar</option>
                 <option value="6">&gt; 1 Miliar</option>
               </select>
-              <div
-                v-if="
-                  $v.extra_income_yearly.$error &&
-                    !$v.extra_income_yearly.required
-                "
-                class="form-validation-error"
-              >
-                <small>Penghasilan Tambahan wajib diisi.</small>
-              </div>
             </div>
             <div class="w-full">
               <div class="form-label">
-                Sumber Penghasilan Tambahan <span class="form-required">*</span>
+                Sumber Penghasilan Tambahan
               </div>
               <select
                 v-model="extra_income_source"
@@ -476,32 +466,14 @@
                 <option value="13">Pinjaman</option>
                 <option value="1">Lainnya</option>
               </select>
-              <div
-                v-if="
-                  $v.extra_income_source.$error &&
-                    !$v.extra_income_source.required
-                "
-                class="form-validation-error"
-              >
-                <small>Sumber Penghasilan Tambahan wajib diisi.</small>
-              </div>
               <div v-if="extra_income_source == '1'">
                 <input
                   type="text"
                   v-model="extra_income_source_other"
                   @change="$v.extra_income_source_other.$touch()"
                   name="income_source_other"
-                  placeholder="Isi Sumber Penghasilan Tambahan Anda *"
+                  placeholder="Isi Sumber Penghasilan Tambahan Anda"
                 />
-                <div
-                  v-if="
-                    $v.extra_income_source_other.$error &&
-                      !$v.extra_income_source_other.required
-                  "
-                  class="form-validation-error"
-                >
-                  <small>Sumber Penghasilan Tambahan wajib diisi.</small>
-                </div>
               </div>
             </div>
           </div>
@@ -783,60 +755,6 @@
                 placeholder="Isi email ahli waris Anda"
                 v-model="heir_email"
               />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bank Data -->
-      <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
-      >
-        <div class="w-full lg:w-1/4">
-          <h3 class="text-xl font-bold mb-4">Referensi Bank</h3>
-        </div>
-        <div class="w-full grid grid-cols-1 gap-6 lg:w-3/4">
-          <div class="w-full">
-            <div class="w-full">
-              <h4 class="font-bold text-base mb-2">
-                Referensi Rekening Selain Bank BCA
-              </h4>
-            </div>
-            <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2">
-              <div class="w-full">
-                <div class="form-label">Nama Bank & Cabang</div>
-                <v-select
-                  v-model="bank_3_name"
-                  label="name"
-                  :placeholder="'-- Pilih --'"
-                  :options="bank_name_options"
-                  :reduce="bank => bank.name"
-                  :clearable="true"
-                >
-                </v-select>
-              </div>
-              <div class="w-full">
-                <div class="form-label">
-                  Nama Pemilik Rekening
-                </div>
-                <input
-                  type="text"
-                  v-model="bank_3_accname"
-                  name="bank_3_accname"
-                  placeholder="Isi nama pemilik rekening"
-                />
-              </div>
-              <div class="w-full">
-                <div class="form-label">
-                  Nama Pemilik Rekening
-                </div>
-                <input
-                  type="text"
-                  v-model="bank_3_accnumber"
-                  name="bank_3_accnumber"
-                  placeholder="Isi nomor rekening"
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -1156,17 +1074,6 @@ export default {
     income_source_other: {
       required: requiredIf(function() {
         return this.income_source == "1";
-      })
-    },
-    extra_income_yearly: {
-      required
-    },
-    extra_income_source: {
-      required
-    },
-    extra_income_source_other: {
-      required: requiredIf(function() {
-        return this.extra_income_source == "1";
       })
     },
     objectives: {
