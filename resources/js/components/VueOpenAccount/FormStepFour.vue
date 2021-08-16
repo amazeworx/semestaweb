@@ -381,7 +381,7 @@ export default {
       return false;
     },
     idTypeIsPassport() {
-      if (this.$store.getters.fields.id_type === "Paspor") return true;
+      if (this.$store.getters.fields.id_type === "PASPOR") return true;
       return false;
     },
     hasNpwp() {
