@@ -377,11 +377,11 @@ export default {
       mutation: "UPDATE_FIELD"
     }),
     idTypeIsKtp() {
-      if (this.$store.getters.fields.id_type === "KTP") return true;
+      if (this.$store.getters.fields.id_type == "KTP") return true;
       return false;
     },
     idTypeIsPassport() {
-      if (this.$store.getters.fields.id_type === "PASPOR") return true;
+      if (this.$store.getters.fields.id_type == "PASPOR") return true;
       return false;
     },
     hasNpwp() {
