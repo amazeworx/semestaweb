@@ -403,7 +403,17 @@ class VueOpenAccountController extends Controller
     $family_extra_income_source = $data->family_extra_income_source;
     $family_extra_income_source_other = $data->family_extra_income_source_other;
     $application_term = $data->application_term;
+    if ($application_term == 1) {
+      $application_term = true;
+    } else {
+      $application_term = false;
+    }
     $bca_term = $data->bca_term;
+    if ($bca_term == 1) {
+      $bca_term = true;
+    } else {
+      $bca_term = false;
+    }
     $upload_ktp = $data->upload_ktp;
     $upload_passport = $data->upload_passport;
     $upload_npwp = $data->upload_npwp;

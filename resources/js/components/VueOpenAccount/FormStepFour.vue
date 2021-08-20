@@ -403,10 +403,10 @@ export default {
       required
     },
     application_term: {
-      sameAs: sameAs(() => 1)
+      sameAs: sameAs(() => true)
     },
     bca_term: {
-      sameAs: sameAs(() => 1)
+      sameAs: sameAs(() => true)
     }
   },
   methods: {
