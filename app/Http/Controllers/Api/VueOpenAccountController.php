@@ -597,10 +597,10 @@ class VueOpenAccountController extends Controller
       $bank_2_accname = $request->bca_account_name;
       $bank_2_accnumber = $request->bca_account_number;
     } else {
-      $bca_existing_account = "";
-      $bank_2_name = "";
-      $bank_2_accname = "";
-      $bank_2_accnumber = "";
+      $bca_existing_account = NULL;
+      $bank_2_name = NULL;
+      $bank_2_accname = NULL;
+      $bank_2_accnumber = NULL;
     }
 
     $accountExist = OpenAccount::where('lead_id', '=', $lead_id)
