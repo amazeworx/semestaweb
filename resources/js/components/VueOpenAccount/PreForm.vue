@@ -288,10 +288,10 @@ export default {
       });
       const config = {
         method: "post",
-        url: "https://devapi.klikbca.com/api/oauth/token",
+        url: "https://devapi.klikbca.com:9443/api/oauth/token",
         headers: {
           Authorization:
-            "Basic YjY2OTI1ZGUtZDhlYy00NzZlLWExNzAtNmNmMDZjODYzYjc4OmVmYzcxY2VkLWIwZTctNGI0Ny04MjcwLTNjMjQ4Mjk3NjRhYQ==",
+            "Basic ZTMwNWE3NmEtNzhkMy00ZjkyLWI3MzQtYzIzYWU1OGM5N2Q4OjA0MDMxNzQzLTk2NDUtNGJjNy04NGU1LWM4OTQzNjE4YzJjOA==",
           "Content-Type": "application/x-www-form-urlencoded"
         },
         data: data
@@ -307,8 +307,8 @@ export default {
     },
     async getValidationBCA(token, account_name, account_number) {
       const access_token = token;
-      const apiKey = "34bec438-9911-494c-9e29-d0041f941eec";
-      const apiSecret = "f6068d37-0fd8-456a-bced-61ac35af53da";
+      const apiKey = "a16c5bb4-49d1-4a12-9194-db3df367d893";
+      const apiSecret = "2ad77de8-7f0e-4379-bce5-71d70529a611";
       const accountName = account_name;
       const accountNumber = account_number;
       const date = new Date();
@@ -316,9 +316,9 @@ export default {
       const requestBody =
         "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
       const httpMethod = "GET";
-      const baseUrl = "https://devapi.klikbca.com";
+      const baseUrl = "https://devapi.klikbca.com:9443";
       const relativeUrl =
-        "/banking/general/corporates/h2hauto009/accounts/" +
+        "/banking/general/corporates/UATCORP001/accounts/" +
         accountNumber +
         "/validation?Action=validate&By=name&Value=" +
         accountName;
@@ -343,7 +343,9 @@ export default {
           "Content-Type": "application/json",
           "X-BCA-Key": apiKey,
           "X-BCA-Timestamp": timestamp,
-          "X-BCA-Signature": signature
+          "X-BCA-Signature": signature,
+          "Access-Control-Allow-Origin": "*"
+          //"Access-Control-Allow-Credentials": true
         },
         data: ""
       };
