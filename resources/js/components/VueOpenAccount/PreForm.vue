@@ -316,7 +316,8 @@ export default {
       const requestBody =
         "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
       const httpMethod = "GET";
-      const baseUrl = "https://devapi.klikbca.com:9443";
+      const baseUrl =
+        "https://glacial-ridge-82805.herokuapp.com/https://devapi.klikbca.com:9443";
       const relativeUrl =
         "/banking/general/corporates/UATCORP001/accounts/" +
         accountNumber +
@@ -343,9 +344,7 @@ export default {
           "Content-Type": "application/json",
           "X-BCA-Key": apiKey,
           "X-BCA-Timestamp": timestamp,
-          "X-BCA-Signature": signature,
-          "Access-Control-Allow-Origin": "*"
-          //"Access-Control-Allow-Credentials": true
+          "X-BCA-Signature": signature
         },
         data: ""
       };
