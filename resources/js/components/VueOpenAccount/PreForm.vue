@@ -289,6 +289,7 @@ export default {
       const config = {
         method: "post",
         url: "https://devapi.klikbca.com:9443/api/oauth/token",
+        //url: "/api/oauth/token",
         headers: {
           Authorization:
             "Basic ZTMwNWE3NmEtNzhkMy00ZjkyLWI3MzQtYzIzYWU1OGM5N2Q4OjA0MDMxNzQzLTk2NDUtNGJjNy04NGU1LWM4OTQzNjE4YzJjOA==",
@@ -305,6 +306,34 @@ export default {
           //console.log(error);
         });
     },
+    async getValidateBca(token, account_name, account_number) {
+      const date = new Date();
+      const timestamp = date.toISOString();
+      await axios
+        .get(
+          "/api/bca/" +
+            token +
+            "/" +
+            account_name +
+            "/" +
+            account_number +
+            "/" +
+            timestamp
+        )
+        .then(response => {
+          console.log(response);
+          if (response.data.ErrorMessage) {
+            this.validated_bca = false;
+            this.validated_bca_message = response.data.ErrorMessage.Indonesian;
+          } else {
+            this.validated_bca = true;
+            this.validated_bca_message = null;
+          }
+        })
+        .catch(error => {
+          //this.validated_bca_message = error.response.data.ErrorMessage.Indonesian;
+        });
+    },
     async getValidationBCA(token, account_name, account_number) {
       const access_token = token;
       const apiKey = "a16c5bb4-49d1-4a12-9194-db3df367d893";
@@ -316,14 +345,17 @@ export default {
       const requestBody =
         "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
       const httpMethod = "GET";
-      const baseUrl =
-        "https://glacial-ridge-82805.herokuapp.com/https://devapi.klikbca.com:9443";
+      const baseUrl = "https://devapi.klikbca.com:9443";
+      //const baseUrl = "http://localhost:3000";
       const relativeUrl =
         "/banking/general/corporates/UATCORP001/accounts/" +
         accountNumber +
         "/validation?Action=validate&By=name&Value=" +
         accountName;
+      //let examineUri = "";
       let examineUri = baseUrl;
+      //let examineUri = "https://glacial-ridge-82805.herokuapp.com/https://devapi.klikbca.com:9443";
+      //let examineUri = "https://cors-anywhere.herokuapp.com/https://devapi.klikbca.com:9443";
       examineUri += relativeUrl;
       const stringToSign =
         httpMethod +
@@ -337,11 +369,12 @@ export default {
         timestamp;
       const signature = sha256.hmac(apiSecret, stringToSign);
       const config = {
-        method: "get",
+        method: "GET",
         url: examineUri,
         headers: {
           Authorization: "Bearer " + access_token,
-          "Content-Type": "application/json",
+          //"Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
           "X-BCA-Key": apiKey,
           "X-BCA-Timestamp": timestamp,
           "X-BCA-Signature": signature
@@ -388,16 +421,19 @@ export default {
           const access_token = this.access_token;
           const bca_account_name = encodeURI(this.bca_account_name);
           const bca_account_number = this.bca_account_number;
-          this.getValidationBCA(
+          // this.getValidationBCA(
+          //   access_token,
+          //   bca_account_name,
+          //   bca_account_number
+          // )
+          this.getValidateBca(
             access_token,
             bca_account_name,
             bca_account_number
           )
-            .then(response => {
-              //console.log(this.validated_bca);
+            .then(() => {
+              //return;
               if (this.validated_bca) {
-                //this.storeData();
-                //this.$router.push("/step-1/");
                 this.createLead().then(() => {
                   this.requestOtp();
                 });

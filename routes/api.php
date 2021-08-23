@@ -16,6 +16,7 @@ use App\Http\Controllers\Api\FormOpenAccountController;
 use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\VueOpenAccountController;
 use App\Http\Controllers\Api\OtpController;
+use App\Http\Controllers\Api\BcaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,8 @@ Route::post('vue-open-account/draft', [VueOpenAccountController::class, 'storeDr
 Route::post('vue-open-account/update', [VueOpenAccountController::class, 'updateDraft']);
 Route::delete('vue-open-account/{id}', [VueOpenAccountController::class, 'delete']);
 
+Route::get('bca/token', [BcaController::class, 'getToken']);
+Route::get('bca/{token}/{account_name}/{account_number}/{timestamp}', [BcaController::class, 'validationBca']);
 
 
 //Route::get('/test/purchase', 'OtpController@confirmationPage');
