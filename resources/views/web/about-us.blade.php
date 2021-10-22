@@ -36,16 +36,17 @@
   </section>
 
   <section class="about-management">
-    <div class="w-full max-w-5xl mx-auto px-4 xl:px-12 py-4 xl:py-16">
+    <div class="w-full max-w-6xl mx-auto px-4 xl:px-12 py-4 xl:py-16">
       <div class="w-full">
         <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">
           {{ __('about.management') }}</h2>
       </div>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-16">
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 xl:gap-16">
         <livewire:web.management-person :personId="1" />
         <livewire:web.management-person :personId="2" />
         <livewire:web.management-person :personId="3" />
         <livewire:web.management-person :personId="4" />
+        <livewire:web.management-person :personId="5" />
       </div>
     </div>
   </section>
@@ -71,7 +72,7 @@
   </section>
 
   <section class="about-organization-structure">
-    <div class="w-full max-w-5xl mx-auto px-4 xl:px-12 py-10 lg:py-16">
+    <div class="w-full max-w-6xl mx-auto px-4 xl:px-12 py-10 lg:py-16">
       <div class="w-full">
         <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">
           {{ __('about.organizationStructure') }}
