@@ -2,7 +2,8 @@
   <!-- TradingView Widget BEGIN -->
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+      async>
       {
         "colorTheme": "light",
         "dateRange": "1M",
@@ -139,5 +140,6 @@
       }
     </script>
   </div>
+  <div style="text-align:center; margin-top: 10px; font-size: 14px;">Pasar Finansial oleh Trading View</div>
   <!-- TradingView Widget END -->
 </div>
