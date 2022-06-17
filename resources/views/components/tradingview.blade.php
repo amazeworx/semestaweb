@@ -141,6 +141,6 @@
     </script>
   </div>
   <div style="text-align:center; margin-top: 10px; font-size: 14px;">Pasar Finansial oleh <a
-      href="https://id.tradingview.com/" target="_blank">TradingView</a></div>
+      href="https://id.tradingview.com/" target="_blank" class="text-blue hover:underline">TradingView</a></div>
   <!-- TradingView Widget END -->
 </div>
