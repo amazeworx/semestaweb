@@ -19,19 +19,20 @@
           <nav class="nav-main">
             <ul>
               <li><a class="{{ (request()->is('/')) ? 'active' : '' }}" href="/">{{ __('header.navHome') }}</a></li>
-              <li><a class="{{ (request()->is('about-us*')) ? 'active' : '' }}"
-                  href="/about-us">{{ __('header.navAboutUs') }}</a></li>
-              <li><a class="{{ (request()->is('our-services*')) ? 'active' : '' }}"
-                  href="/our-services">{{ __('header.navServices') }}</a>
+              <li><a class="{{ (request()->is('about-us*')) ? 'active' : '' }}" href="/about-us">{{
+                  __('header.navAboutUs') }}</a></li>
+              <li><a class="{{ (request()->is('our-services*')) ? 'active' : '' }}" href="/our-services">{{
+                  __('header.navServices') }}</a>
               </li>
-              <li><a class="{{ (request()->is('market-news*')) ? 'active' : '' }}"
-                  href="/market-news">{{ __('header.navMarketNews') }}</a>
+              <li><a class="{{ (request()->is('market-news*')) ? 'active' : '' }}" href="/market-news">{{
+                  __('header.navMarketNews') }}</a>
               </li>
-              <li><a class="{{ (request()->is('download*')) ? 'active' : '' }}"
-                  href="/download">{{ __('header.navDownload') }}</a></li>
-              <li><a href="https://www.e-ipo.co.id/" target="_blank">{{ __('header.navEIPO') }}</a></li>
-              <li><a class="{{ (request()->is('contact-us*')) ? 'active' : '' }}"
-                  href="/contact-us">{{ __('header.navContact') }}</a></li>
+              <li><a class="{{ (request()->is('download*')) ? 'active' : '' }}" href="/download">{{
+                  __('header.navDownload') }}</a></li>
+              <li><a href="https://www.e-ipo.co.id/en/ipo/93/trgu-pt-cerestar-indonesia-tbk" target="_blank">{{
+                  __('header.navEIPO') }}</a></li>
+              <li><a class="{{ (request()->is('contact-us*')) ? 'active' : '' }}" href="/contact-us">{{
+                  __('header.navContact') }}</a></li>
             </ul>
           </nav>
         </div>
@@ -46,8 +47,8 @@
                 <span>081211372872</span></a>
             </div>
             <div>
-              <a href="/download#opening-account"
-                class="button button-contained button-orange button-md">{{ __('header.buttonOpenAccount') }}</a>
+              <a href="/download#opening-account" class="button button-contained button-orange button-md">{{
+                __('header.buttonOpenAccount') }}</a>
             </div>
           </div>
         </div>
@@ -67,23 +68,24 @@
   <nav class="nav-main">
     <ul>
       <li><a class="{{ (request()->is('/')) ? 'active' : '' }}" href="/">{{ __('header.navHome') }}</a></li>
-      <li><a class="{{ (request()->is('about-us*')) ? 'active' : '' }}"
-          href="/about-us">{{ __('header.navAboutUs') }}</a></li>
-      <li><a class="{{ (request()->is('our-services*')) ? 'active' : '' }}"
-          href="/our-services">{{ __('header.navServices') }}</a>
+      <li><a class="{{ (request()->is('about-us*')) ? 'active' : '' }}" href="/about-us">{{ __('header.navAboutUs')
+          }}</a></li>
+      <li><a class="{{ (request()->is('our-services*')) ? 'active' : '' }}" href="/our-services">{{
+          __('header.navServices') }}</a>
       </li>
-      <li><a class="{{ (request()->is('market-news*')) ? 'active' : '' }}"
-          href="/market-news">{{ __('header.navMarketNews') }}</a></li>
-      <li><a class="{{ (request()->is('download*')) ? 'active' : '' }}"
-          href="/download">{{ __('header.navDownload') }}</a></li>
-      <li><a href="https://www.e-ipo.co.id/" target="_blank">{{ __('header.navEIPO') }}</a></li>
-      <li><a class="{{ (request()->is('contact-us*')) ? 'active' : '' }}"
-          href="/contact-us">{{ __('header.navContact') }}</a></li>
+      <li><a class="{{ (request()->is('market-news*')) ? 'active' : '' }}" href="/market-news">{{
+          __('header.navMarketNews') }}</a></li>
+      <li><a class="{{ (request()->is('download*')) ? 'active' : '' }}" href="/download">{{ __('header.navDownload')
+          }}</a></li>
+      <li><a href="https://www.e-ipo.co.id/en/ipo/93/trgu-pt-cerestar-indonesia-tbk" target="_blank">{{
+          __('header.navEIPO') }}</a></li>
+      <li><a class="{{ (request()->is('contact-us*')) ? 'active' : '' }}" href="/contact-us">{{ __('header.navContact')
+          }}</a></li>
     </ul>
   </nav>
   <div class="mt-8">
-    <a href="/download#opening-account"
-      class="w-full justify-center button button-contained button-orange button-md">{{ __('header.buttonOpenAccount') }}</a>
+    <a href="/download#opening-account" class="w-full justify-center button button-contained button-orange button-md">{{
+      __('header.buttonOpenAccount') }}</a>
     <a href="https://wa.me/6281211372872" target="_blank"
       class="mt-4 w-full justify-center button button-outline button-md">
       <span class="material-icons mr-1">

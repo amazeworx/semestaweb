@@ -10,7 +10,13 @@
       />
       <!-- Uploads -->
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11
+          border-b border-gray-200
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold mb-4">Uploads</h3>
@@ -90,7 +96,13 @@
 
       <!-- Terms -->
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11
+          border-b border-gray-200
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold mb-4">Persyaratan &amp; Ketentuan</h3>
@@ -158,7 +170,13 @@
 
       <!-- Signature -->
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11
+          border-b border-gray-200
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold mb-4">Tanda Tangan Anda</h3>
@@ -218,14 +236,46 @@
       <button
         @click="navigatePrev()"
         type="button"
-        class="px-4 py-2 border rounded text-sm font-bold uppercase bg-orange border-orange text-white hover:bg-orange-light hover:border-orange-light focus:outline-none transition ease-in-out duration-150"
+        class="
+          px-4
+          py-2
+          border
+          rounded
+          text-sm
+          font-bold
+          uppercase
+          bg-orange
+          border-orange
+          text-white
+          hover:bg-orange-light hover:border-orange-light
+          focus:outline-none
+          transition
+          ease-in-out
+          duration-150
+        "
       >
         ⟵ Kembali
       </button>
       <button
         @click="navigateNext()"
         type="button"
-        class="px-4 py-2 border rounded text-sm font-bold uppercase bg-orange border-orange text-white hover:bg-orange-light hover:border-orange-light focus:outline-none transition ease-in-out duration-150"
+        class="
+          px-4
+          py-2
+          border
+          rounded
+          text-sm
+          font-bold
+          uppercase
+          bg-orange
+          border-orange
+          text-white
+          hover:bg-orange-light hover:border-orange-light
+          focus:outline-none
+          transition
+          ease-in-out
+          duration-150
+        "
       >
         Berikutnya ⟶
       </button>
@@ -260,7 +310,7 @@ export default {
     Loading,
     FormProgress,
     "statement-application": StatementApplication,
-    "statement-bca": StatementBCA
+    "statement-bca": StatementBCA,
   },
   data() {
     return {
@@ -273,10 +323,10 @@ export default {
         load: (source, load) => {
           // simulates loading a file from the server
           fetch(source)
-            .then(res => res.blob())
+            .then((res) => res.blob())
             .then(load);
-        }
-      }
+        },
+      },
     };
   },
   mounted() {
@@ -291,9 +341,9 @@ export default {
           {
             source: "/storage/uploads/" + this.account_id + "/KTP.jpg",
             options: {
-              type: "local"
-            }
-          }
+              type: "local",
+            },
+          },
         ];
       }
     } else {
@@ -302,9 +352,9 @@ export default {
           {
             source: "/storage/uploads/tmp/" + this.upload_ktp + "/KTP.jpg",
             options: {
-              type: "local"
-            }
-          }
+              type: "local",
+            },
+          },
         ];
       }
     }
@@ -314,9 +364,9 @@ export default {
           {
             source: "/storage/uploads/" + this.account_id + "/Passport.jpg",
             options: {
-              type: "local"
-            }
-          }
+              type: "local",
+            },
+          },
         ];
       }
     } else {
@@ -326,9 +376,9 @@ export default {
             source:
               "/storage/uploads/tmp/" + this.upload_passport + "/Passport.jpg",
             options: {
-              type: "local"
-            }
-          }
+              type: "local",
+            },
+          },
         ];
       }
     }
@@ -339,9 +389,9 @@ export default {
           {
             source: "/storage/uploads/" + this.account_id + "/NPWP.jpg",
             options: {
-              type: "local"
-            }
-          }
+              type: "local",
+            },
+          },
         ];
       }
     } else {
@@ -350,9 +400,9 @@ export default {
           {
             source: "/storage/uploads/tmp/" + this.upload_npwp + "/NPWP.jpg",
             options: {
-              type: "local"
-            }
-          }
+              type: "local",
+            },
+          },
         ];
       }
     }
@@ -371,10 +421,10 @@ export default {
         "application_term",
         "bca_term",
         "status",
-        "account_id"
+        "account_id",
       ],
       base: "fields",
-      mutation: "UPDATE_FIELD"
+      mutation: "UPDATE_FIELD",
     }),
     idTypeIsKtp() {
       if (this.$store.getters.fields.id_type == "KTP") return true;
@@ -387,27 +437,27 @@ export default {
     hasNpwp() {
       if (this.$store.getters.fields.has_npwp != "1") return true;
       return false;
-    }
+    },
   },
   validations: {
     upload_ktp: {
-      required: requiredIf("idTypeIsKtp")
+      required: requiredIf("idTypeIsKtp"),
     },
     upload_passport: {
-      required: requiredIf("idTypeIsPassport")
+      required: requiredIf("idTypeIsPassport"),
     },
     upload_npwp: {
-      required: requiredIf("hasNpwp")
+      required: requiredIf("hasNpwp"),
     },
     upload_signature: {
-      required
+      required,
     },
     application_term: {
-      sameAs: sameAs(() => true)
+      sameAs: sameAs(() => true),
     },
     bca_term: {
-      sameAs: sameAs(() => true)
-    }
+      sameAs: sameAs(() => true),
+    },
   },
   methods: {
     processKtp(error, file) {
@@ -449,12 +499,12 @@ export default {
     async storeData() {
       await this.$store
         .dispatch("updateDraftAccount", this.$store.getters.fields)
-        .then(response => {
+        .then((response) => {
           console.log(response);
           this.$store.commit("SET_VALIDATED_STEP", 4);
           this.$router.push("/complete/");
         });
-    }
-  }
+    },
+  },
 };
 </script>

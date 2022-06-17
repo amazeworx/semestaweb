@@ -10,7 +10,13 @@
       />
       <!-- Data Identitas -->
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11
+          border-b border-gray-200
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold mb-4">Data Identitas</h3>
@@ -47,7 +53,7 @@
                 label="nationality"
                 :placeholder="'-- Pilih --'"
                 :options="country_options"
-                :reduce="country => country.nationality"
+                :reduce="(country) => country.nationality"
                 :clearable="false"
               >
               </v-select>
@@ -87,7 +93,12 @@
             </div>
 
             <div
-              class="w-full flex flex-wrap gap-y-2 md:flex-nowrap md:w-10/12 md:gap-x-4"
+              class="
+                w-full
+                flex flex-wrap
+                gap-y-2
+                md:flex-nowrap md:w-10/12 md:gap-x-4
+              "
             >
               <div
                 v-show="idTypeIsKtp"
@@ -183,7 +194,7 @@
                   <div
                     v-if="
                       $v.ktp_expired_month.$error &&
-                        !$v.ktp_expired_month.required
+                      !$v.ktp_expired_month.required
                     "
                     class="form-validation-error"
                   >
@@ -192,7 +203,7 @@
                   <div
                     v-if="
                       $v.ktp_expired_year.$error &&
-                        !$v.ktp_expired_year.required
+                      !$v.ktp_expired_year.required
                     "
                     class="form-validation-error"
                   >
@@ -269,7 +280,7 @@
                   <div
                     v-if="
                       $v.passport_expired_day.$error &&
-                        !$v.passport_expired_day.required
+                      !$v.passport_expired_day.required
                     "
                     class="form-validation-error"
                   >
@@ -278,7 +289,7 @@
                   <div
                     v-if="
                       $v.passport_expired_month.$error &&
-                        !$v.passport_expired_month.required
+                      !$v.passport_expired_month.required
                     "
                     class="form-validation-error"
                   >
@@ -287,7 +298,7 @@
                   <div
                     v-if="
                       $v.passport_expired_year.$error &&
-                        !$v.passport_expired_year.required
+                      !$v.passport_expired_year.required
                     "
                     class="form-validation-error"
                   >
@@ -392,7 +403,7 @@
               <div
                 v-if="
                   $v.kitas_expired_month.$error &&
-                    !$v.kitas_expired_month.required
+                  !$v.kitas_expired_month.required
                 "
                 class="form-validation-error"
               >
@@ -401,7 +412,7 @@
               <div
                 v-if="
                   $v.kitas_expired_year.$error &&
-                    !$v.kitas_expired_year.required
+                  !$v.kitas_expired_year.required
                 "
                 class="form-validation-error"
               >
@@ -430,7 +441,12 @@
             </div>
 
             <div
-              class="w-full flex flex-wrap gap-y-2 md:flex-nowrap md:w-10/12 md:gap-x-4"
+              class="
+                w-full
+                flex flex-wrap
+                gap-y-2
+                md:flex-nowrap md:w-10/12 md:gap-x-4
+              "
             >
               <div class="w-full md:w-1/2">
                 <div class="form-label">
@@ -453,9 +469,7 @@
                 </div>
               </div>
               <div class="w-full md:w-1/2">
-                <div class="form-label">
-                  Tanggal Penerbitan NPWP
-                </div>
+                <div class="form-label">Tanggal Penerbitan NPWP</div>
                 <div class="flex flex-nowrap gap-2">
                   <select
                     v-model="npwp_issue_day"
@@ -507,7 +521,7 @@
                 label="name"
                 :placeholder="'-- Pilih --'"
                 :options="country_options"
-                :reduce="country => country.name"
+                :reduce="(country) => country.name"
                 :clearable="false"
               >
               </v-select>
@@ -528,7 +542,7 @@
                   label="ksei_name"
                   :placeholder="'-- Pilih --'"
                   :options="birth_places_options"
-                  :reduce="city => city.ksei_name"
+                  :reduce="(city) => city.ksei_name"
                   :clearable="false"
                 >
                 </v-select>
@@ -705,7 +719,13 @@
 
       <!-- Data Kontak -->
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11
+          border-b border-gray-200
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold mb-4">Data Kontak</h3>
@@ -747,7 +767,7 @@
               <div
                 v-if="
                   $v.mobile_number_formatted.$error &&
-                    !$v.mobile_number_formatted.required
+                  !$v.mobile_number_formatted.required
                 "
                 class="form-validation-error"
               >
@@ -773,7 +793,13 @@
 
       <!-- Data Alamat -->
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11 border-b border-gray-200"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11
+          border-b border-gray-200
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold mb-4">Data Alamat</h3>
@@ -823,9 +849,7 @@
                   />
                 </div>
                 <div class="w-full" v-if="idCountryIsIndonesia">
-                  <div class="form-label">
-                    RT/RW
-                  </div>
+                  <div class="form-label">RT/RW</div>
                   <input
                     type="text"
                     v-model="id_rt_rw"
@@ -842,7 +866,7 @@
                     label="name"
                     :placeholder="'-- Pilih --'"
                     :options="country_options"
-                    :reduce="country => country.name"
+                    :reduce="(country) => country.name"
                     :clearable="false"
                     @input="clearAddressRegions('id')"
                   >
@@ -895,7 +919,7 @@
                     <div
                       v-if="
                         $v.id_province_text.$error &&
-                          !$v.id_province_text.required
+                        !$v.id_province_text.required
                       "
                       class="form-validation-error"
                     >
@@ -990,7 +1014,7 @@
                     <div
                       v-if="
                         $v.id_district_text.$error &&
-                          !$v.id_district_text.required
+                        !$v.id_district_text.required
                       "
                       class="form-validation-error"
                     >
@@ -1040,7 +1064,7 @@
                     <div
                       v-if="
                         $v.id_subdistrict_text.$error &&
-                          !$v.id_subdistrict_text.required
+                        !$v.id_subdistrict_text.required
                       "
                       class="form-validation-error"
                     >
@@ -1131,9 +1155,7 @@
                   />
                 </div>
                 <div class="w-full" v-if="homeCountryIsIndonesia">
-                  <div class="form-label">
-                    RT/RW
-                  </div>
+                  <div class="form-label">RT/RW</div>
                   <input
                     type="text"
                     v-model="home_rt_rw"
@@ -1150,7 +1172,7 @@
                     label="name"
                     :placeholder="'-- Pilih --'"
                     :options="country_options"
-                    :reduce="country => country.name"
+                    :reduce="(country) => country.name"
                     :clearable="false"
                     @input="clearAddressRegions('home')"
                   >
@@ -1205,7 +1227,7 @@
                     <div
                       v-if="
                         $v.home_province_text.$error &&
-                          !$v.home_province_text.required
+                        !$v.home_province_text.required
                       "
                       class="form-validation-error"
                     >
@@ -1304,7 +1326,7 @@
                     <div
                       v-if="
                         $v.home_district_text.$error &&
-                          !$v.home_district_text.required
+                        !$v.home_district_text.required
                       "
                       class="form-validation-error"
                     >
@@ -1334,7 +1356,7 @@
                     <div
                       v-if="
                         $v.home_subdistrict.$error &&
-                          !$v.home_subdistrict.required
+                        !$v.home_subdistrict.required
                       "
                       class="form-validation-error"
                     >
@@ -1355,7 +1377,7 @@
                     <div
                       v-if="
                         $v.home_subdistrict_text.$error &&
-                          !$v.home_subdistrict_text.required
+                        !$v.home_subdistrict_text.required
                       "
                       class="form-validation-error"
                     >
@@ -1444,18 +1466,18 @@
                     class="mb-1"
                   >
                     <option disabled value="">-- Pilih --</option>
-                    <option value="ALAMAT IDENTITAS"
-                      >Sesuai Alamat Identitas</option
-                    >
-                    <option value="ALAMAT TEMPAT TINGGAL"
-                      >Alamat Tempat Tinggal</option
-                    >
+                    <option value="ALAMAT IDENTITAS">
+                      Sesuai Alamat Identitas
+                    </option>
+                    <option value="ALAMAT TEMPAT TINGGAL">
+                      Alamat Tempat Tinggal
+                    </option>
                     <option value="ALAMAT KANTOR">Alamat Kantor</option>
                   </select>
                   <div
                     v-if="
                       $v.postal_preference.$error &&
-                        !$v.postal_preference.required
+                      !$v.postal_preference.required
                     "
                     class="form-validation-error"
                   >
@@ -1470,7 +1492,12 @@
 
       <!-- Additional Information -->
       <div
-        class="flex flex-wrap px-4 py-6 lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11"
+        class="
+          flex flex-wrap
+          px-4
+          py-6
+          lg:flex-nowrap lg:gap-6 lg:px-8 lg:py-11
+        "
       >
         <div class="w-full lg:w-1/4">
           <h3 class="text-xl font-bold">Informasi Tambahan</h3>
@@ -1582,7 +1609,23 @@
       <button
         @click="navigatePrev()"
         type="button"
-        class="px-4 py-2 border rounded text-sm font-bold uppercase bg-orange border-orange text-white hover:bg-orange-light hover:border-orange-light focus:outline-none transition ease-in-out duration-150"
+        class="
+          px-4
+          py-2
+          border
+          rounded
+          text-sm
+          font-bold
+          uppercase
+          bg-orange
+          border-orange
+          text-white
+          hover:bg-orange-light hover:border-orange-light
+          focus:outline-none
+          transition
+          ease-in-out
+          duration-150
+        "
       >
         ⟵ Kembali
       </button>
@@ -1600,8 +1643,7 @@
           bg-orange
           border-orange
           text-white
-          hover:bg-orange-light
-          hover:border-orange-light
+          hover:bg-orange-light hover:border-orange-light
           focus:outline-none
           transition
           ease-in-out
@@ -1651,8 +1693,8 @@ export default {
         enabledCountryCode: false,
         autocomplete: "off",
         inputOptions: {
-          showDialCode: true
-        }
+          showDialCode: true,
+        },
       },
       phone_props: {
         inputId: "phone_number_formatted",
@@ -1664,20 +1706,20 @@ export default {
         enabledCountryCode: false,
         autocomplete: "off",
         inputOptions: {
-          showDialCode: true
-        }
-      }
+          showDialCode: true,
+        },
+      },
     };
   },
   mounted() {
     this.$store.commit("SET_STEP", "1");
     //console.log(this.$store.getters.fields.account_id);
     //const account_id = this.$store.getters.fields.account_id;
-    axios.get("/api/countries").then(response => {
+    axios.get("/api/countries").then((response) => {
       this.countries = response.data;
       this.country_options = response.data;
     });
-    axios.get("/api/province").then(response => {
+    axios.get("/api/province").then((response) => {
       this.id_province_options = response.data;
       this.home_province_options = response.data;
     });
@@ -1687,7 +1729,7 @@ export default {
       this.isLoading = true;
       axios
         .get("/api/vue-open-account/" + account_id)
-        .then(response => {
+        .then((response) => {
           //console.log(response.data);
           //console.log(response.data.account_id);
           this.$store.commit("SET_DB_LOADED", true);
@@ -1721,7 +1763,7 @@ export default {
       this.$store.commit("SET_DB_LOADED", false);
       this.$router.push("/");
     }
-    axios.get("/api/city/ksei_cities").then(response => {
+    axios.get("/api/city/ksei_cities").then((response) => {
       this.birth_places_options = response.data;
     });
     // console.log("Home is ID:", this.home_is_id);
@@ -1900,10 +1942,10 @@ export default {
         "upload_ktp",
         "upload_passport",
         "upload_npwp",
-        "upload_signature"
+        "upload_signature",
       ],
       base: "fields",
-      mutation: "UPDATE_FIELD"
+      mutation: "UPDATE_FIELD",
     }),
     step: {
       get() {
@@ -1911,7 +1953,7 @@ export default {
       },
       set(value) {
         this.$store.commit("SET_STEP", value);
-      }
+      },
     },
     db_loaded: {
       get() {
@@ -1919,7 +1961,7 @@ export default {
       },
       set(value) {
         this.$store.commit("SET_DB_LOADED", value);
-      }
+      },
     },
     idCardYears() {
       const year = new Date().getFullYear();
@@ -1960,220 +2002,220 @@ export default {
     homeIsId() {
       if (this.$store.getters.fields.home_is_id == 1) return true;
       return false;
-    }
+    },
   },
   validations: {
     full_name: {
-      required
+      required,
     },
     nationality: {
-      required
+      required,
     },
     id_type: {
-      required
+      required,
     },
     ktp_number: {
-      required: requiredIf("idTypeIsKtp")
+      required: requiredIf("idTypeIsKtp"),
     },
     ktp_expired_day: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.idTypeIsKtp && !this.ktpExpiredIsLifetime;
-      })
+      }),
     },
     ktp_expired_month: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.idTypeIsKtp && !this.ktpExpiredIsLifetime;
-      })
+      }),
     },
     ktp_expired_year: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.idTypeIsKtp && !this.ktpExpiredIsLifetime;
-      })
+      }),
     },
     passport_number: {
-      required: requiredIf("idTypeIsPassport")
+      required: requiredIf("idTypeIsPassport"),
     },
     passport_expired_day: {
-      required: requiredIf("idTypeIsPassport")
+      required: requiredIf("idTypeIsPassport"),
     },
     passport_expired_month: {
-      required: requiredIf("idTypeIsPassport")
+      required: requiredIf("idTypeIsPassport"),
     },
     passport_expired_year: {
-      required: requiredIf("idTypeIsPassport")
+      required: requiredIf("idTypeIsPassport"),
     },
     has_npwp: {
-      required
+      required,
     },
     npwp_number: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.has_npwp != "1";
-      })
+      }),
     },
     kitas_expired_day: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.has_kitas == "1";
-      })
+      }),
     },
     kitas_expired_month: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.has_kitas == "1";
-      })
+      }),
     },
     kitas_expired_year: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.has_kitas == "1";
-      })
+      }),
     },
     kitas_number: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.has_kitas == "1";
-      })
+      }),
     },
     birth_country: {
-      required
+      required,
     },
     birth_place: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.birth_country == "INDONESIA";
-      })
+      }),
     },
     birth_day: {
-      required
+      required,
     },
     birth_month: {
-      required
+      required,
     },
     birth_year: {
-      required
+      required,
     },
     gender: {
-      required
+      required,
     },
     marital_status: {
-      required
+      required,
     },
     religion: {
-      required
+      required,
     },
     education: {
-      required
+      required,
     },
     mother_name: {
-      required
+      required,
     },
     email: {
-      required
+      required,
     },
     mobile_country_code: {
-      required
+      required,
     },
     mobile_number_formatted: {
-      required
+      required,
     },
     id_country: {
-      required
+      required,
     },
     id_street_1: {
-      required
+      required,
     },
     id_province: {
-      required: requiredIf("idCountryIsIndonesia")
+      required: requiredIf("idCountryIsIndonesia"),
     },
     id_city: {
-      required: requiredIf("idCountryIsIndonesia")
+      required: requiredIf("idCountryIsIndonesia"),
     },
     id_district: {
-      required: requiredIf("idCountryIsIndonesia")
+      required: requiredIf("idCountryIsIndonesia"),
     },
     id_subdistrict: {
-      required: requiredIf("idCountryIsIndonesia")
+      required: requiredIf("idCountryIsIndonesia"),
     },
     id_province_text: {
-      required: requiredUnless("idCountryIsIndonesia")
+      required: requiredUnless("idCountryIsIndonesia"),
     },
     id_city_text: {
-      required: requiredUnless("idCountryIsIndonesia")
+      required: requiredUnless("idCountryIsIndonesia"),
     },
     id_district_text: {
-      required: requiredUnless("idCountryIsIndonesia")
+      required: requiredUnless("idCountryIsIndonesia"),
     },
     id_subdistrict_text: {
-      required: requiredUnless("idCountryIsIndonesia")
+      required: requiredUnless("idCountryIsIndonesia"),
     },
     id_zip: {
-      required
+      required,
     },
     home_country: {
-      required: requiredUnless("homeIsId")
+      required: requiredUnless("homeIsId"),
     },
     home_street_1: {
-      required: requiredUnless("homeIsId")
+      required: requiredUnless("homeIsId"),
     },
     home_province: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_city: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_district: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_subdistrict: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_province_text: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && !this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_city_text: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && !this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_district_text: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && !this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_subdistrict_text: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return !this.homeIsId && !this.homeCountryIsIndonesia;
-      })
+      }),
     },
     home_zip: {
-      required: requiredUnless("homeIsId")
+      required: requiredUnless("homeIsId"),
     },
     home_status: {
-      required
+      required,
     },
     postal_preference: {
-      required
+      required,
     },
     info_q1_text: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.info_q1;
-      })
+      }),
     },
     info_q2_text: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.info_q2;
-      })
+      }),
     },
     info_q3_text: {
-      required: requiredIf(function() {
+      required: requiredIf(function () {
         return this.info_q3;
-      })
-    }
+      }),
+    },
   },
   methods: {
     setFieldsData(data) {
@@ -2348,7 +2390,7 @@ export default {
         "upload_ktp",
         "upload_passport",
         "upload_npwp",
-        "upload_signature"
+        "upload_signature",
       ];
       for (let x = 0; x < fields.length; x++) {
         const field = fields[x];
@@ -2408,7 +2450,7 @@ export default {
       this.clearAddressSelects(prefix);
     },
     getCityOptions(prefix) {
-      axios.get("/api/city/" + this[prefix + "_province"]).then(response => {
+      axios.get("/api/city/" + this[prefix + "_province"]).then((response) => {
         this[prefix + "_city_options"] = response.data;
       });
     },
@@ -2422,12 +2464,12 @@ export default {
 
       this.clearAddressText(prefix);
 
-      axios.get("/api/city/" + e.target.value).then(response => {
+      axios.get("/api/city/" + e.target.value).then((response) => {
         this[prefix + "_city_options"] = response.data;
       });
     },
     getDistrictOptions(prefix) {
-      axios.get("/api/district/" + this[prefix + "_city"]).then(response => {
+      axios.get("/api/district/" + this[prefix + "_city"]).then((response) => {
         this[prefix + "_district_options"] = response.data;
       });
     },
@@ -2439,14 +2481,14 @@ export default {
 
       this.clearAddressText(prefix);
 
-      axios.get("/api/district/" + e.target.value).then(response => {
+      axios.get("/api/district/" + e.target.value).then((response) => {
         this[prefix + "_district_options"] = response.data;
       });
     },
     getSubDistrictOptions(prefix) {
       axios
         .get("/api/subdistrict/" + this[prefix + "_district"])
-        .then(response => {
+        .then((response) => {
           this[prefix + "_subdistrict_options"] = response.data;
         });
     },
@@ -2456,7 +2498,7 @@ export default {
 
       this.clearAddressText(prefix);
 
-      axios.get("/api/subdistrict/" + e.target.value).then(response => {
+      axios.get("/api/subdistrict/" + e.target.value).then((response) => {
         this[prefix + "_subdistrict_options"] = response.data;
       });
     },
@@ -2472,12 +2514,12 @@ export default {
     async storeData() {
       await this.$store
         .dispatch("updateDraftAccount", this.$store.getters.fields)
-        .then(response => {
+        .then((response) => {
           //console.log(response);
           this.$store.commit("SET_VALIDATED_STEP", "1");
           this.$router.push("/step-2/");
         });
-    }
-  }
+    },
+  },
 };
 </script>

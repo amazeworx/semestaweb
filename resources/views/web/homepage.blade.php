@@ -36,7 +36,7 @@
               <img src="/images/home_hero_4.jpg" class="w-full h-full object-cover" />
             </div>
             <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-10"></div>
-            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 py-4 xl:pt-36">
+            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
               <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
                 <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
                   {{ __('homepage.slide1Title') }}
@@ -44,8 +44,8 @@
                 <p class="text-lg md:text-xl xl:text-xl mb-4 xl:mb-6">
                   {{ __('homepage.slide1Description') }}
                 </p>
-                <div><a href="/download#opening-account"
-                    class="button button-contained button-orange button-xl">{{ __('homepage.slide1ButtonText') }}</a>
+                <div><a href="/download#opening-account" class="button button-contained button-orange button-xl">{{
+                    __('homepage.slide1ButtonText') }}</a>
                 </div>
               </div>
             </div>
@@ -55,10 +55,36 @@
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
+              <img src="/images/CerestarIPO.jpg" class="w-full h-full object-cover object-left-top" />
+            </div>
+            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-30 z-20 xl:bg-opacity-20"></div>
+            <div
+              class="flex h-full w-full items-center justify-end max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
+              <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
+                <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
+                  TRGU<br>
+                  PT Cerestar Indonesia Tbk
+                </h1>
+                <p class="text-lg md:text-xl xl:text-xl mb-4 xl:mb-6">
+                  Book Building<br>
+                  17 Jun - 23 Jun 2022<br>
+                  Price Range IDR 200 - IDR 210<br>
+                </p>
+                <div><a href="https://www.e-ipo.co.id/en/ipo/93/trgu-pt-cerestar-indonesia-tbk" target="_blank"
+                    class="button button-contained button-orange button-xl">Place Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{-- <div class="swiper-slide">
+          <div class="slide relative h-full w-full">
+            <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/home_hero_2.jpg" class="w-full h-full object-cover" />
             </div>
             <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25"></div>
-            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 py-4 xl:pt-36">
+            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
               <div class="relative w-full md:w-2/3 lg:w-7/12 text-white">
                 <h1 class="font-display font-bold leading-tight text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
                   {{ __('homepage.slide2Title') }}
@@ -66,13 +92,13 @@
                 <p class="text-lg md:text-xl xl:text-2xl mb-4 xl:mb-6">
                   {{ __('homepage.slide2Description') }}
                 </p>
-                <div><a href="/about-us"
-                    class="button button-contained button-orange button-xl">{{ __('homepage.slide2ButtonText') }}</a>
+                <div><a href="/about-us" class="button button-contained button-orange button-xl">{{
+                    __('homepage.slide2ButtonText') }}</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
@@ -80,7 +106,7 @@
               <img src="/images/home_hero_5.jpg" class="w-full h-full object-cover" />
             </div>
             <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-40"></div>
-            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 py-4 xl:pt-36">
+            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
               <div class="relative w-full md:w-2/3 lg:w-7/12 text-white">
                 <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
                   {{ __('homepage.slide3Title') }}
@@ -146,7 +172,8 @@
   </section> --}}
 
   {{-- <section class="home-about">
-    <div class="flex flex-wrap md:flex-nowrap items-center w-full max-w-screen-xl mx-auto px-4 xl:px-12 pt-12 pb-0 md:py-12 xl:py-24 md:gap-8 xl:gap-16">
+    <div
+      class="flex flex-wrap md:flex-nowrap items-center w-full max-w-screen-xl mx-auto px-4 xl:px-12 pt-12 pb-0 md:py-12 xl:py-24 md:gap-8 xl:gap-16">
       <div class="w-full lg:w-1/2">
         <h2 class="font-display text-3xl font-bold text-blue xl:text-4xl mb-4">Welcome to Semesta Indovest Securities
         </h2>
@@ -187,8 +214,8 @@
           </div>
           <div class="p-4">
             <p class="text-gray-600">{{ __('homepage.brokerageDescription') }}</p>
-            <div class="mt-2"><a href="/our-services/#brokerage"
-                class="button button-text"><span>{{ __('homepage.learnMore') }}</span></a>
+            <div class="mt-2"><a href="/our-services/#brokerage" class="button button-text"><span>{{
+                  __('homepage.learnMore') }}</span></a>
             </div>
           </div>
         </div>
@@ -205,8 +232,8 @@
           </div>
           <div class="p-4">
             <p class="text-gray-600">{{ __('homepage.investmentManagementDescription') }}</p>
-            <div class="mt-2"><a href="/our-services/#investment-management"
-                class="button button-text"><span>{{ __('homepage.learnMore') }}</span></a></div>
+            <div class="mt-2"><a href="/our-services/#investment-management" class="button button-text"><span>{{
+                  __('homepage.learnMore') }}</span></a></div>
           </div>
         </div>
 
@@ -222,8 +249,8 @@
           </div>
           <div class="p-4">
             <p class="text-gray-600">{{ __('homepage.corporateFinanceDescription') }}</p>
-            <div class="mt-2"><a href="/our-services/#corporate-finance"
-                class="button button-text"><span>{{ __('homepage.learnMore') }}</span></a></div>
+            <div class="mt-2"><a href="/our-services/#corporate-finance" class="button button-text"><span>{{
+                  __('homepage.learnMore') }}</span></a></div>
           </div>
         </div>
 
@@ -248,9 +275,8 @@
         <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">{{ __('homepage.marketNews') }}</h2>
         <div class="flex-1 w-full border border-gray-200 px-4 py-4 md:px-8">
           <x-market-news per-page="5" text-size="text-base lg:text-lg" />
-          <div class="mt-4"><a href="/market-news" class="button button-text button-lg"><span
-                class="mr-1">{{ __('homepage.viewMore') }}</span> <span
-                class="material-icons">arrow_right_alt</span></a></div>
+          <div class="mt-4"><a href="/market-news" class="button button-text button-lg"><span class="mr-1">{{
+                __('homepage.viewMore') }}</span> <span class="material-icons">arrow_right_alt</span></a></div>
         </div>
       </div>
     </div>

@@ -16,3 +16,4 @@ yarn-error.log
 server.php
 **/*.bak
 /cors-anywhere
+resources/js/components/VueOpenAccount/PreForm copy.vue
