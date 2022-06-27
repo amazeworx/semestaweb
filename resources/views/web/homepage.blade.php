@@ -60,8 +60,8 @@
             <div class="w-full h-full absolute inset-0 bg-black bg-opacity-30 z-20 xl:bg-opacity-20"></div>
             <div
               class="flex h-full w-full items-center justify-end max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
-              <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
-                <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
+              <div class="relative w-full md:w-2/3 lg:w-3/5 text-white">
+                <h1 class="font-display font-bold text-4xl md:text-4xl xl:text-5xl mb-3 md:mb-4">
                   TRGU<br>
                   PT Cerestar Indonesia Tbk
                 </h1>

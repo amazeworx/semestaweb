@@ -142,11 +142,18 @@
                   <ul>
                     <li class="flex mb-4">
                       <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Pedoman Kerja dan Kode Etik Direksi dan Dewan Komisaris SIS.pdf"
+                        target="_blank" class="text-blue hover:underline"><span>Pedoman Kerja dan Kode Etik Direksi dan
+                          Dewan Komisaris SIS.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    {{-- <li class="flex mb-4">
+                      <x-svg-icon-pdf />
                       <a href="/storage/downloads/Pedoman Kerja dan Kode Etik Direksi dan Dewan Komisaris.pdf"
                         target="_blank" class="text-blue hover:underline"><span>Pedoman Kerja dan Kode Etik Direksi dan
                           Dewan Komisaris.pdf</span>&nbsp;&nbsp;<span
                           class="material-icons text-sm text-gray-500">open_in_new</span></a>
-                    </li>
+                    </li> --}}
                   </ul>
                 </div>
               </div>
@@ -242,6 +249,27 @@
                   <ul>
                     <li class="flex mb-4">
                       <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Laporan Keuangan SIS Audited 2021.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Laporan Keuangan SIS Audited
+                          2021.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Laporan Keuangan SIS Audited 2020.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Laporan Keuangan SIS Audited
+                          2020.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Laporan Keuangan SIS Audited 2019.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Laporan Keuangan SIS Audited
+                          2019.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
                       <a href="/storage/downloads/Laporan Keuangan Tengah Tahunan - Induk 2019.pdf" target="_blank"
                         class="text-blue hover:underline"><span>Laporan Keuangan Tengah Tahunan - Induk
                           2019.pdf</span>&nbsp;&nbsp;<span
@@ -279,6 +307,24 @@
                 x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''">
                 <div class="px-4 pt-2 pb-4 md:px-8">
                   <ul>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Hasil RUPS SIS 2022.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Hasil RUPS SIS 2022.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Hasil RUPS SIS 2021.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Hasil RUPS SIS 2021.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Hasil RUPS SIS 2020.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Hasil RUPS SIS 2020.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
                     <li class="flex mb-4">
                       <x-svg-icon-pdf />
                       <a href="/storage/downloads/Hasil RUPS 2019.pdf" target="_blank"
