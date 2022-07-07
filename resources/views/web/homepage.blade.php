@@ -52,7 +52,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide">
+        {{-- <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/CerestarIPO.jpg" class="w-full h-full object-cover object-left-top" />
@@ -76,9 +76,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
-        {{-- <div class="swiper-slide">
+        <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/home_hero_2.jpg" class="w-full h-full object-cover" />
@@ -98,7 +98,7 @@
               </div>
             </div>
           </div>
-        </div> --}}
+        </div>
 
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
