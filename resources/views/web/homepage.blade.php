@@ -52,33 +52,33 @@
           </div>
         </div>
 
-        {{-- <div class="swiper-slide">
+        <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
-              <img src="/images/CerestarIPO.jpg" class="w-full h-full object-cover object-left-top" />
+              <img src="/images/primadaya.jpg" class="w-full h-full object-cover object-right-top" />
             </div>
             <div class="w-full h-full absolute inset-0 bg-black bg-opacity-30 z-20 xl:bg-opacity-20"></div>
             <div
-              class="flex h-full w-full items-center justify-end max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
-              <div class="relative w-full md:w-2/3 lg:w-3/5 text-white">
+              class="flex h-full w-full items-center justify-start max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
+              <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
                 <h1 class="font-display font-bold text-4xl md:text-4xl xl:text-5xl mb-3 md:mb-4">
-                  TRGU<br>
-                  PT Cerestar Indonesia Tbk
+                  PDPP<br>
+                  PT Primadaya Plastisindo Tbk
                 </h1>
                 <p class="text-lg md:text-xl xl:text-xl mb-4 xl:mb-6">
                   Book Building<br>
-                  17 Jun - 23 Jun 2022<br>
-                  Price Range IDR 200 - IDR 210<br>
+                  13 Oct - 20 Oct 2022<br>
+                  Price Range IDR 195 - IDR 200<br>
                 </p>
-                <div><a href="https://www.e-ipo.co.id/en/ipo/93/trgu-pt-cerestar-indonesia-tbk" target="_blank"
+                <div><a href="https://www.e-ipo.co.id/id/ipo/150/pdpp-pt-primadaya-plastisindo-tbk" target="_blank"
                     class="button button-contained button-orange button-xl">Place Order</a>
                 </div>
               </div>
             </div>
           </div>
-        </div> --}}
+        </div>
 
-        <div class="swiper-slide">
+        {{-- <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/home_hero_2.jpg" class="w-full h-full object-cover" />
@@ -98,7 +98,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">

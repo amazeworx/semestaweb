@@ -77,7 +77,7 @@
           __('header.navMarketNews') }}</a></li>
       <li><a class="{{ (request()->is('download*')) ? 'active' : '' }}" href="/download">{{ __('header.navDownload')
           }}</a></li>
-      <li><a href="https://www.e-ipo.co.id/en/ipo/93/trgu-pt-cerestar-indonesia-tbk" target="_blank">{{
+      <li><a href="https://www.e-ipo.co.id/id/ipo/150/pdpp-pt-primadaya-plastisindo-tbk" target="_blank">{{
           __('header.navEIPO') }}</a></li>
       <li><a class="{{ (request()->is('contact-us*')) ? 'active' : '' }}" href="/contact-us">{{ __('header.navContact')
           }}</a></li>
