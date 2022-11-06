@@ -3,7 +3,7 @@
 return [
   'slide1Title' => 'Welcome to Semesta Indovest Sekuritas',
   'slide1Description' => 'Semesta Indovest Sekuritas is a leading financial services company in Indonesia, providing integrated services ranging from Brokerage, Investment Management and Corporate Finance.',
-  'slide1ButtonText' => 'Open New Account',
+  'slide1ButtonText' => 'OPEN ACCOUNT<br/>ONLINE',
   'slide2Title' => 'Member of the Indonesia Stock Exchange',
   'slide2Description' => 'With license to engage in Broker-Dealer and Underwriters from the Financial Services Authority (OJK)',
   'slide2ButtonText' => 'About Us',

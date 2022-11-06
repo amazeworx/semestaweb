@@ -3,7 +3,7 @@
 return [
   'slide1Title' => 'Welcome to Semesta Indovest Sekuritas',
   'slide1Description' => 'Kami adalah perusahaan jasa keuangan yang menyediakan layanan terintegrasi mulai dari Brokerage, Manajemen Investasi dan Corporate Finance.',
-  'slide1ButtonText' => 'Buka Rekening Baru',
+  'slide1ButtonText' => 'BUKA REKENING<br/>ONLINE',
   'slide2Title' => 'Anggota Bursa Efek Indonesia',
   'slide2Description' => 'Memiliki izin usaha Perantara Pedagang Efek dan Penjamin Emisi Efek dari Otoritas Jasa Keuangan (OJK)',
   'slide2ButtonText' => 'Tentang Kami',

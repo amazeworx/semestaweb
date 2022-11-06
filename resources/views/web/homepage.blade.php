@@ -30,7 +30,7 @@
           </div>
         </div> --}}
 
-        <div class="swiper-slide">
+        {{-- <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/home_hero_4.jpg" class="w-full h-full object-cover" />
@@ -48,6 +48,33 @@
                     __('homepage.slide1ButtonText') }}</a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div> --}}
+
+        <div class="swiper-slide">
+          <div class="slide relative h-full w-full">
+            <div class="w-full h-full absolute inset-0 z-10">
+              <img src="/images/home_hero_4.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-10"></div>
+            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
+              <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
+                <h1 class="font-display font-bold text-3xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
+                  {{ __('homepage.slide1Title') }}
+                </h1>
+                <p class="text-base md:text-xl xl:text-xl mb-4 xl:mb-6">
+                  {{ __('homepage.slide1Description') }}
+                </p>
+                <div><a href="https://join.semestaindovest.co.id/"
+                    class="button button-contained button-orange button-xl text-center">{!!
+                    __('homepage.slide1ButtonText') !!}</a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute left-4 bottom-4 text-xs text-left text-white z-30 md:text-right md:right-4 lg:text-sm lg:right-6">
+              T&C : WNI, Individu, Rekening BCA dan min. deposit 100jt.
             </div>
           </div>
         </div>
