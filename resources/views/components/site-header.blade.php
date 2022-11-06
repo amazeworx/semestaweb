@@ -84,7 +84,8 @@
     </ul>
   </nav>
   <div class="mt-8">
-    <a href="/download#opening-account" class="w-full justify-center button button-contained button-orange button-md">{{
+    <a href="https://join.semestaindovest.co.id/"
+      class="w-full justify-center button button-contained button-orange button-md">{{
       __('header.buttonOpenAccount') }}</a>
     <a href="https://wa.me/6281211372872" target="_blank"
       class="mt-4 w-full justify-center button button-outline button-md">
