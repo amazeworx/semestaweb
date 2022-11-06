@@ -47,7 +47,7 @@
                 <span>081211372872</span></a>
             </div>
             <div>
-              <a href="/download#opening-account" class="button button-contained button-orange button-md">{{
+              <a href="https://join.semestaindovest.co.id/" class="button button-contained button-orange button-md">{{
                 __('header.buttonOpenAccount') }}</a>
             </div>
           </div>
