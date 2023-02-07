@@ -6,52 +6,6 @@
 
       <div class="swiper-wrapper">
 
-        {{-- <div class="swiper-slide">
-          <div class="slide relative h-full w-full">
-            <div class="w-full h-full absolute inset-0 z-10">
-              <img src="/images/home_hero_3.jpg" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25"></div>
-            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 py-4 xl:pt-36">
-              <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
-                <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">Make Your Money Work
-                  For
-                  You
-                </h1>
-                <p class="text-lg md:text-xl xl:text-2xl mb-4 xl:mb-6">We provide solutions to meet your specific
-                  financial
-                  needs while
-                  maximizing returns</p>
-                <div><a href="/download#opening-account" class="button button-contained button-orange button-xl">Open
-                    New
-                    Account</a></div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-
-        {{-- <div class="swiper-slide">
-          <div class="slide relative h-full w-full">
-            <div class="w-full h-full absolute inset-0 z-10">
-              <img src="/images/home_hero_4.jpg" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-10"></div>
-            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
-              <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
-                <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
-                  {{ __('homepage.slide1Title') }}
-                </h1>
-                <p class="text-lg md:text-xl xl:text-xl mb-4 xl:mb-6">
-                  {{ __('homepage.slide1Description') }}
-                </p>
-                <div><a href="/download#opening-account" class="button button-contained button-orange button-xl">{{
-                    __('homepage.slide1ButtonText') }}</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
@@ -82,50 +36,30 @@
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
-              <img src="/images/primadaya.jpg" class="w-full h-full object-cover object-right-top" />
+              <img src="/images/hero-bdkr.jpg" class="w-full h-full object-cover object-right-top" />
             </div>
-            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-30 z-20 xl:bg-opacity-20"></div>
+            <div
+              class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-transparent xl:opacity-90 xl:bg-gradient-to-br xl:from-black xl:to-transparent">
+            </div>
             <div
               class="flex h-full w-full items-center justify-start max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
               <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
                 <h1 class="font-display font-bold text-4xl md:text-4xl xl:text-5xl mb-3 md:mb-4">
-                  PDPP<br>
-                  PT Primadaya Plastisindo Tbk
+                  BDKR<br>
+                  PT. Berdikari Pondasi Perkasa Tbk
                 </h1>
                 <p class="text-lg md:text-xl xl:text-xl mb-4 xl:mb-6">
                   Book Building<br>
-                  13 Oct - 20 Oct 2022<br>
-                  Price Range IDR 195 - IDR 200<br>
+                  6 Feb - 10 Feb 2023<br>
+                  Price Range IDR 188 - IDR 200<br>
                 </p>
-                <div><a href="https://www.e-ipo.co.id/id/ipo/150/pdpp-pt-primadaya-plastisindo-tbk" target="_blank"
+                <div><a href="https://www.e-ipo.co.id/id/ipo/217/bdkr-pt-berdikari-pondasi-perkasa-tbk" target="_blank"
                     class="button button-contained button-orange button-xl">Place Order</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {{-- <div class="swiper-slide">
-          <div class="slide relative h-full w-full">
-            <div class="w-full h-full absolute inset-0 z-10">
-              <img src="/images/home_hero_2.jpg" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25"></div>
-            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
-              <div class="relative w-full md:w-2/3 lg:w-7/12 text-white">
-                <h1 class="font-display font-bold leading-tight text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
-                  {{ __('homepage.slide2Title') }}
-                </h1>
-                <p class="text-lg md:text-xl xl:text-2xl mb-4 xl:mb-6">
-                  {{ __('homepage.slide2Description') }}
-                </p>
-                <div><a href="/about-us" class="button button-contained button-orange button-xl">{{
-                    __('homepage.slide2ButtonText') }}</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
 
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
@@ -152,26 +86,6 @@
             </div>
           </div>
         </div>
-
-        {{-- <div class="swiper-slide">
-          <div class="slide relative h-full w-full">
-            <div class="w-full h-full absolute inset-0 z-10">
-              <img src="/images/home_hero_1.jpg" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25"></div>
-            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 py-4 xl:pt-36">
-              <div class="relative w-full md:w-2/3 lg:w-7/12 text-white">
-                <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">Providing You an
-                  Integrated Financial Services
-                </h1>
-                <p class="text-lg md:text-xl xl:text-2xl mb-4 xl:mb-6">Our integrated services ranging from Brokerage,
-                  Investment Management and Corporate Finance.</p>
-                <div><a href="/our-services" class="button button-contained button-orange button-xl">Our Services</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
 
       </div>
 
