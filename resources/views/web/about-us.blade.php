@@ -36,17 +36,18 @@
   </section>
 
   <section class="about-management">
-    <div class="w-full max-w-6xl mx-auto px-4 xl:px-12 py-4 xl:py-16">
+    <div class="w-full max-w-7xl mx-auto px-4 xl:px-12 py-4 xl:py-16">
       <div class="w-full">
         <h2 class="font-display text-3xl text-center font-bold text-blue mb-8 lg:text-4xl xl:mb-12">
           {{ __('about.management') }}</h2>
       </div>
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 xl:gap-16">
+      <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 xl:gap-12">
         <livewire:web.management-person :personId="1" />
         <livewire:web.management-person :personId="2" />
         <livewire:web.management-person :personId="3" />
         <livewire:web.management-person :personId="4" />
         <livewire:web.management-person :personId="5" />
+        <livewire:web.management-person :personId="6" />
       </div>
     </div>
   </section>
