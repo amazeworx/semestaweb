@@ -36,6 +36,28 @@
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
+              <img src="/images/home_hero_2.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25"></div>
+            <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
+              <div class="relative w-full md:w-2/3 lg:w-7/12 text-white">
+                <h1 class="font-display font-bold leading-tight text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">
+                  {{ __('homepage.slide2Title') }}
+                </h1>
+                <p class="text-lg md:text-xl xl:text-2xl mb-4 xl:mb-6">
+                  {{ __('homepage.slide2Description') }}
+                </p>
+                <div><a href="/about-us" class="button button-contained button-orange button-xl">{{
+                    __('homepage.slide2ButtonText') }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{-- <div class="swiper-slide">
+          <div class="slide relative h-full w-full">
+            <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/hero-bdkr.jpg" class="w-full h-full object-cover object-right-top" />
             </div>
             <div
@@ -59,7 +81,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
