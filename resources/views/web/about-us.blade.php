@@ -79,8 +79,8 @@
           {{ __('about.organizationStructure') }}
         </h2>
       </div>
-      <div class="w-full rounded-lg shadow overflow-hidden mb-4"><a href="/images/organization_structure.png"
-          target="_blank"><img src="/images/organization_structure.png" alt="Organization Structure" width="1400"
+      <div class="w-full rounded-lg shadow overflow-hidden mb-4"><a href="/images/Struktur_Org_2023.png"
+          target="_blank"><img src="/images/Struktur_Org_2023.png" alt="Organization Structure" width="1400"
             height="720"></a></div>
       <div class="w-full text-center text-gray-600">
         <p class="font-bold">Izin Perorangan PT Semesta Indovest Sekuritas</p>
@@ -250,6 +250,13 @@
                   <ul>
                     <li class="flex mb-4">
                       <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Laporan Keuangan SIS Audited 2022.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Laporan Keuangan SIS Audited
+                          2022.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
                       <a href="/storage/downloads/Laporan Keuangan SIS Audited 2021.pdf" target="_blank"
                         class="text-blue hover:underline"><span>Laporan Keuangan SIS Audited
                           2021.pdf</span>&nbsp;&nbsp;<span
@@ -266,13 +273,6 @@
                       <x-svg-icon-pdf />
                       <a href="/storage/downloads/Laporan Keuangan SIS Audited 2019.pdf" target="_blank"
                         class="text-blue hover:underline"><span>Laporan Keuangan SIS Audited
-                          2019.pdf</span>&nbsp;&nbsp;<span
-                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
-                    </li>
-                    <li class="flex mb-4">
-                      <x-svg-icon-pdf />
-                      <a href="/storage/downloads/Laporan Keuangan Tengah Tahunan - Induk 2019.pdf" target="_blank"
-                        class="text-blue hover:underline"><span>Laporan Keuangan Tengah Tahunan - Induk
                           2019.pdf</span>&nbsp;&nbsp;<span
                           class="material-icons text-sm text-gray-500">open_in_new</span></a>
                     </li>
@@ -310,6 +310,12 @@
                   <ul>
                     <li class="flex mb-4">
                       <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Hasil RUPS SIS 2023.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Hasil RUPS SIS 2023.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
                       <a href="/storage/downloads/Hasil RUPS SIS 2022.pdf" target="_blank"
                         class="text-blue hover:underline"><span>Hasil RUPS SIS 2022.pdf</span>&nbsp;&nbsp;<span
                           class="material-icons text-sm text-gray-500">open_in_new</span></a>
@@ -330,6 +336,31 @@
                       <x-svg-icon-pdf />
                       <a href="/storage/downloads/Hasil RUPS 2019.pdf" target="_blank"
                         class="text-blue hover:underline"><span>Hasil RUPS 2019.pdf</span>&nbsp;&nbsp;<span
+                          class="material-icons text-sm text-gray-500">open_in_new</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="relative rounded-md" :class="selected == 8 ? 'bg-indigo-50' : ''">
+              <button type="button" class="w-full px-4 py-4 md:px-8 md:py-6 text-left focus:outline-none"
+                @click="selected !== 7 ? selected = 7 : selected = null">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-base lg:text-lg">Sustainability Reports</span>
+                  <span class="material-icons transition transform"
+                    :class="selected == 7 ? 'rotate-180' : ''">expand_more</span>
+                </div>
+              </button>
+              <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container7"
+                x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''">
+                <div class="px-4 pt-2 pb-4 md:px-8">
+                  <ul>
+                    <li class="flex mb-4">
+                      <x-svg-icon-pdf />
+                      <a href="/storage/downloads/Laporan Berkelanjutan SIS 2022.pdf" target="_blank"
+                        class="text-blue hover:underline"><span>Laporan Berkelanjutan SIS
+                          2022.pdf</span>&nbsp;&nbsp;<span
                           class="material-icons text-sm text-gray-500">open_in_new</span></a>
                     </li>
                   </ul>
