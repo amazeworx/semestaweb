@@ -345,15 +345,15 @@
 
             <li class="relative rounded-md" :class="selected == 8 ? 'bg-indigo-50' : ''">
               <button type="button" class="w-full px-4 py-4 md:px-8 md:py-6 text-left focus:outline-none"
-                @click="selected !== 7 ? selected = 7 : selected = null">
+                @click="selected !== 8 ? selected = 8 : selected = null">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-base lg:text-lg">Sustainability Reports</span>
                   <span class="material-icons transition transform"
                     :class="selected == 7 ? 'rotate-180' : ''">expand_more</span>
                 </div>
               </button>
-              <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container7"
-                x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''">
+              <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container8"
+                x-bind:style="selected == 8 ? 'max-height: ' + $refs.container8.scrollHeight + 'px' : ''">
                 <div class="px-4 pt-2 pb-4 md:px-8">
                   <ul>
                     <li class="flex mb-4">
