@@ -29,8 +29,9 @@
         <div>
           <ul>
             <li class="flex border-b border-gray-200 py-4 text-base">
-              <div class="mr-4 w-2/12"><span class="text-gray-500 font-semibold">11 Nov 2023</span></div>
-              <div class="w-10/12">
+              <div class="mr-4"><span class="text-gray-500 font-semibold whitespace-nowrap">11 Nov 2023</span>
+              </div>
+              <div class="">
                 <h4><a class="text-blue font-semibold hover:text-blue-light"
                     href="/storage/research/ELPI Research Report.pdf" target="_blank">ELPI Research
                     Report</a>
