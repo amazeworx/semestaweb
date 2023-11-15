@@ -17,10 +17,28 @@
 
     </div>
 
-    <div id="market-news" class="flex flex-col w-full lg:pl-4 lg:w-2/5 xl:pl-16">
+    {{-- <div id="market-news" class="flex flex-col w-full lg:pl-4 lg:w-2/5 xl:pl-16">
       <h2 class="text-3xl text-blue font-display font-bold mb-4">{{ __('market-news.marketNews') }}</h2>
       <div class="flex-1 w-full">
         <x-market-news per-page="10" text-size="text-sm" />
+      </div>
+    </div> --}}
+    <div id="market-news" class="flex flex-col w-full lg:pl-4 lg:w-2/5 xl:pl-16">
+      <h2 class="text-3xl text-blue font-display font-bold mb-4">Research Report</h2>
+      <div class="flex-1 w-full">
+        <div>
+          <ul>
+            <li class="flex border-b border-gray-200 py-4 text-base">
+              <div class="mr-4 w-2/12"><span class="text-gray-500 font-semibold">11 Nov 2023</span></div>
+              <div class="w-10/12">
+                <h4><a class="text-blue font-semibold hover:text-blue-light"
+                    href="/storage/research/ELPI Research Report.pdf" target="_blank">ELPI Research
+                    Report</a>
+                </h4>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
