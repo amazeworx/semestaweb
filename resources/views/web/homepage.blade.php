@@ -228,18 +228,37 @@
     </div>
     <div
       class="flex flex-wrap md:flex-nowrap w-full max-w-screen-xl mx-auto px-4 xl:px-12 py-4 xl:pt-12 xl:pb-24 md:gap-6 xl:gap-16">
-      <div class="flex flex-col w-full md:w-1/2 lg:w-1/3">
+      <div class="flex flex-col w-full md:w-1/2 lg:w-3/5">
         <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">{{ __('homepage.dailyMarket') }}</h2>
         <div class="flex-1 w-full border border-gray-200 p-4 lg:p-8 mb-8 md:mb-0">
           <livewire:web.featured-daily-market :trimwords="420" />
         </div>
       </div>
-      <div class="flex flex-col w-full md:w-1/2 lg:w-2/3">
+      {{-- <div class="flex flex-col w-full md:w-1/2 lg:w-2/3">
         <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">{{ __('homepage.marketNews') }}</h2>
         <div class="flex-1 w-full border border-gray-200 px-4 py-4 md:px-8">
           <x-market-news per-page="5" text-size="text-base lg:text-lg" />
           <div class="mt-4"><a href="/market-news" class="button button-text button-lg"><span class="mr-1">{{
                 __('homepage.viewMore') }}</span> <span class="material-icons">arrow_right_alt</span></a></div>
+        </div>
+      </div> --}}
+      <div class="flex flex-col w-full md:w-1/2 lg:w-2/5">
+        <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">Research Report</h2>
+        <div class="flex-1 w-full border border-gray-200 px-4 py-4 md:px-8">
+          <div>
+            <ul>
+              <li class="flex border-b border-gray-200 py-4 text-base lg:text-base">
+                <div class="mr-4"><span class="text-gray-500 font-semibold whitespace-nowrap">11 Nov 2023</span>
+                </div>
+                <div class="">
+                  <h4><a class="text-blue font-semibold hover:text-blue-light"
+                      href="/storage/research/ELPI Research Report.pdf" target="_blank">ELPI Research
+                      Report</a>
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
