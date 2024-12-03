@@ -23,7 +23,7 @@
           <h2 class="font-display text-2xl font-bold text-blue mb-4 lg:text-3xl">
             Semesta Online Trading
           </h2>
-          <p><a href="/storage/downloads/sonline/SOL.exe" download class="button button-contained button-orange">
+          <p><a href="/storage/downloads/sonline/SOL.zip" download class="button button-contained button-orange">
               <x-svg-icon-windows /> Download for Windows
             </a></p>
           <p class="mt-2">

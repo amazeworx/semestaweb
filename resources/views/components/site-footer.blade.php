@@ -4,8 +4,9 @@
     <div class="w-full md:w-1/2 md:pr-3 lg:pr-0 lg:w-1/3 text-sm text-gray-600 mb-4 lg:mb-0">
       <h4 class="font-bold">PT Semesta Indovest Sekuritas</h4>
       <p class="">Lippo St. Moritz 15th Floor<br />
-        Jl. Puri Indah Raya Blok U1-3, CBD Jakarta Barat<br />
-        T: +62 21 3049 5900 F: +62 21 3049 5901</p>
+	Jl. Puri Indah Raya Blok U1-3, CBD Jakarta Barat<br />
+        T: +62 21 3049 5900 F: +62 21 3049 5901<br />
+        T: +62 21 5099 1300 F: +62 21 5900 1301</p>
       <div class="mt-3">
         <a href="https://twitter.com/semesta_mg" target="_blank" class="inline-block">
           <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -79,8 +79,8 @@
           {{ __('about.organizationStructure') }}
         </h2>
       </div>
-      <div class="w-full rounded-lg shadow overflow-hidden mb-4"><a href="/images/Struktur_Org_2023.png"
-          target="_blank"><img src="/images/Struktur_Org_2023.png" alt="Organization Structure" width="1400"
+      <div class="w-full rounded-lg shadow overflow-hidden mb-4"><a href="/images/Struktur_Org_2024.png"
+          target="_blank"><img src="/images/Struktur_Org_2024.png" alt="Organization Structure" width="1400"
             height="720"></a></div>
       <div class="w-full text-center text-gray-600">
         <p class="font-bold">Izin Perorangan PT Semesta Indovest Sekuritas</p>

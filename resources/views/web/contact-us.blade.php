@@ -21,8 +21,10 @@
             <strong>E-mail</strong> <a class="text-blue-300 hover:underline"
               href="mailto:info@semestaindovest.co.id">info@semestaindovest.co.id</a><br />
             <strong>Phone</strong> <a class="text-blue-300 hover:underline" href="tel:+622130495900">+62 21
-              30495900</a><br />
-            <strong>Fax</strong> <a class="text-blue-300 hover:underline" href="tel:+622130495901">+62 21 30495901</a>
+              30495900</a>, <a class="text-blue-300 hover:underline" href="tel:+622150991300">+62 21
+              50991300</a><br />
+            <strong>Fax</strong> <a class="text-blue-300 hover:underline" href="tel:+622130495901">+62 21 30495901</a>, <a class="text-blue-300 hover:underline" href="tel:+622150991301">+62 21
+              50991301</a>
           </p>
         </div>
         <div class="w-full lg:w-2/3">
