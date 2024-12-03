@@ -11,7 +11,7 @@
             <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/banner-coming-soon.jpg" class="w-full h-full object-cover" />
             </div>
-            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25"></div>
+            <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25" style="display:none"></div>
             <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
               <div class="relative w-full md:w-2/3 lg:w-7/12 text-white">
                 <h1 class="font-display font-bold leading-tight text-4xl md:text-5xl xl:text-6xl mb-4 md:mb-8">
