@@ -9,7 +9,8 @@
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
-              <img src="/images/banner-coming-soon.jpg" class="w-full h-full object-cover" />
+              <img src="/images/banner-coming-soon-sis.jpg" class="w-full h-full object-cover hidden md:block" />
+              <img src="/images/banner-coming-soon-sis-mobile.jpg" class="w-full h-full object-cover md:hidden" />
             </div>
             <div class="w-full h-full absolute inset-0 bg-black bg-opacity-60 z-20 xl:bg-opacity-25" style="display:none"></div>
             <div class="flex h-full w-full items-center max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36">
