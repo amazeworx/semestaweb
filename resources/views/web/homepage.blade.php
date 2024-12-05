@@ -30,7 +30,7 @@
             </div>
             <div class="flex h-full w-full items-end max-w-screen-xl mx-auto z-30 px-4 xl:px-12 pt-20 pb-4 xl:pt-36 md:hidden">
               <div class="relative w-full md:w-2/3 lg:w-7/12 text-white" style="background-color: rgba(0,0,0,0.5); padding: 20px;">
-                <h1 class="font-display font-bold leading-tight text-4xl md:text-5xl xl:text-6xl mb-4 md:mb-8">
+                <h1 class="font-display font-bold leading-tight text-3xl md:text-5xl xl:text-6xl mb-4 md:mb-8">
                   Kecepatan dan kemudahan dalam genggaman.
                 </h1>
                 <div class="mt-6 xl:mt-8">
