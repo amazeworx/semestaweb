@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\AboutUsController;
 use App\Http\Controllers\Web\OurServicesController;
 use App\Http\Controllers\Web\MarketNewsController;
 use App\Http\Controllers\Web\ContactUsController;
+use App\Http\Controllers\Web\PrivacyPolicyController;
 use App\Http\Controllers\Web\LocalizationController;
 use App\Http\Controllers\Admin\DailyMarketController;
 use App\Http\Controllers\Admin\ZipDownloadController;
@@ -35,6 +36,7 @@ Route::get('/about-us', [AboutUsController::class, 'index']);
 Route::get('/our-services', [OurServicesController::class, 'index']);
 Route::get('/market-news', [MarketNewsController::class, 'index']);
 Route::get('/contact-us', [ContactUsController::class, 'index']);
+Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index']);
 Route::view('/download', 'web.download');
 Route::get('/lw-open-account', \App\Http\Livewire\OpenAccount\OpenAccountForm::class);
 
