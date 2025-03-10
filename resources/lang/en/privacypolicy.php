@@ -2,8 +2,7 @@
 
 return [
   'pageTitle' => 'Privacy Policy',
-  'pageContent' => '<h2>Privacy Policy</h2>
-<p><strong>PT Semesta Indovest Sekuritas</strong> ("Semesta Indovest") is committed to upholding the confidentiality and security of personal information belonging to our Users ("Customers/You") and prospective Customers in compliance with applicable laws and regulations.</p>
+  'pageContent' => '<p><strong>PT Semesta Indovest Sekuritas</strong> ("Semesta Indovest") is committed to upholding the confidentiality and security of personal information belonging to our Users ("Customers/You") and prospective Customers in compliance with applicable laws and regulations.</p>
 <p>This Privacy Policy explains what information we gather, why we collect it, and how you can update, manage, export, or delete your information.</p>
 <p>In this Privacy Policy, we affirm that Semesta Indovest as the Personal Data Controller consistently works to ensure security and protection for your convenience during transactions. Semesta Indovest also pledges to safeguard User data and clarify how we collect, store, use, process, analyze, display, and/or manage any form of data or information that Customers provide to Semesta Indovest or that Semesta Indovest obtains from Customers, including Customer Personal data when registering, accessing, or using Semesta Indovest Services.</p>
 <p>We continuously protect your Personal Data in accordance with Law Number 27 of 2022 concerning Personal Data Protection and its implementing regulations, referred to as the "<strong>UU PDP</strong>," as well as other relevant and applicable laws and regulations, to guarantee the security of your data privacy.</p>
