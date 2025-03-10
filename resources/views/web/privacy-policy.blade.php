@@ -12,7 +12,7 @@
 
   <section class="section-text">
     <div class="w-full max-w-screen-md mx-auto px-4 xl:px-12 py-12 xl:py-16">
-      <div class="prose text-sm">
+      <div class="prose prose-sm max-w-none">
         {!! __('privacypolicy.pageContent') !!}
       </div>
 
