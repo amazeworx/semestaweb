@@ -62,7 +62,7 @@
     <div class="w-full md:w-2/3 text-center md:text-left mb-2 md:mb-0">&copy;Copyright <?php echo date('Y') ?>, PT
       Semesta Indovest Sekuritas. All Rights Reserved.</div>
     <div class="w-full md:w-1/3 text-center md:text-right mx-auto md:ml-auto md:mr-0"><a href="#"
-        class="hover:underline">Terms of Use</a> | <a href="#" class="hover:underline">Privacy Policy</a>
+        class="hover:underline">Terms of Use</a> | <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
     </div>
   </div>
 </div>
