@@ -13,7 +13,7 @@
   <section class="section-text">
     <div class="w-full max-w-screen-md mx-auto px-4 xl:px-12 py-12 xl:py-16">
       <div class="text-base lg:text-xl">
-        {!! __('privacypolicy.contentText') !!}
+        {!! __('privacypolicy.pageContent') !!}
       </div>
 
     </div>
