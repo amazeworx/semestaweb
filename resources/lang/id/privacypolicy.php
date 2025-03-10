@@ -2,9 +2,7 @@
 
 return [
   'pageTitle' => 'Kebijakan Privasi',
-  'pageContent' => '<h2>Kebijakan Privasi</h2>
-
-<p><strong>PT Semesta Indovest Sekuritas</strong> ("Semesta Indovest") berkomitmen untuk menjaga kerahasiaan dan keamanan informasi pribadi yang dimiliki oleh Pengguna kami ("Nasabah/Anda") dan calon Nasabah sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.</p>
+  'pageContent' => '<p><strong>PT Semesta Indovest Sekuritas</strong> ("Semesta Indovest") berkomitmen untuk menjaga kerahasiaan dan keamanan informasi pribadi yang dimiliki oleh Pengguna kami ("Nasabah/Anda") dan calon Nasabah sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.</p>
 
 <p>Kebijakan Privasi ini menjelaskan informasi apa yang kami kumpulkan, mengapa kami mengumpulkannya, dan bagaimana Anda dapat memperbarui, mengelola, mengekspor, atau menghapus informasi Anda.</p>
 
