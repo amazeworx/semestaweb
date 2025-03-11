@@ -68,7 +68,7 @@
             </div>
             <div
               class="absolute left-4 bottom-4 text-xs text-left text-white z-30 md:text-right md:right-4 lg:text-sm lg:right-6">
-              T&C : WNI, Individu, Rekening BCA dan min. deposit 100jt.
+              T&C : WNI, Individu, Rekening BCA dan min. deposit 20jt.
             </div>
           </div>
         </div>
