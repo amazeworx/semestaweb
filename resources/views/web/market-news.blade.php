@@ -24,23 +24,39 @@
       </div>
     </div> --}}
     <div id="market-news" class="flex flex-col w-full lg:pl-4 lg:w-2/5 xl:pl-16">
-      <h2 class="text-3xl text-blue font-display font-bold mb-4">Research Report</h2>
-      <div class="flex-1 w-full">
-        <div>
-          <ul>
-            <li class="flex border-b border-gray-200 py-4 text-base">
-              <div class="mr-4"><span class="text-gray-500 font-semibold whitespace-nowrap">11 Nov 2023</span>
-              </div>
-              <div class="">
-                <h4><a class="text-blue font-semibold hover:text-blue-light"
-                    href="/storage/research/ELPI Research Report.pdf" target="_blank">ELPI Research
-                    Report</a>
-                </h4>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <div class="mb-8">
+        <h2 class="text-3xl text-blue font-display font-bold mb-4">Research Report</h2>
+        <div class="flex-1 w-full">
+          <div>
+            <ul>
+              <li class="flex border-b border-gray-200 py-4 text-base">
+                <div class="mr-4"><span class="text-gray-500 font-semibold whitespace-nowrap">11 Nov 2023</span>
+                </div>
+                <div class="">
+                  <h4><a class="text-blue font-semibold hover:text-blue-light"
+                      href="/storage/research/ELPI Research Report.pdf" target="_blank">ELPI Research
+                      Report</a>
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>        
       </div>
+      <div class="mb-8">
+        <h2 class="text-3xl text-blue font-display font-bold mb-4">Market Education</h2>
+        <div class="flex-1 w-full">
+          <div>
+            <ul>
+              <li class="flex border-b border-gray-200 py-4 text-base">
+                <h4><a class="text-blue font-semibold hover:text-blue-light"
+                    href="/storage/market-education/SW_HMETD-handbook.pdf" target="_blank">HMETD & Warrant & Structured Warrant</a>
+                </h4>
+              </li>
+            </ul>
+          </div>
+        </div>        
+      </div>      
     </div>
   </div>
 
