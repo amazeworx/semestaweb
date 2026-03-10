@@ -24,7 +24,7 @@
       </div>
     </div> --}}
     <div id="market-news" class="flex flex-col w-full lg:pl-4 lg:w-2/5 xl:pl-16">
-      <div class="mb-8">
+      <div class="mb-16">
         <h2 class="text-3xl text-blue font-display font-bold mb-4">Research Report</h2>
         <div class="flex-1 w-full">
           <div>
@@ -43,7 +43,7 @@
           </div>
         </div>        
       </div>
-      <div class="mb-8">
+      <div class="mb-16">
         <h2 class="text-3xl text-blue font-display font-bold mb-4">Market Education</h2>
         <div class="flex-1 w-full">
           <div>
