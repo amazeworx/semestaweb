@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div id="corporate-finance" class="flex flex-wrap lg:flex-nowrap gap-4 xl:gap-12 mb-8 xl:mb-10">
+      <div id="corporate-finance" class="hidden flex-wrap lg:flex-nowrap gap-4 xl:gap-12 mb-8 xl:mb-10">
         <div class="w-full lg:w-1/4">
           <div class="mb-2">
             <img class="w-16 h-auto"
