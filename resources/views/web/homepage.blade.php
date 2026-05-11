@@ -6,6 +6,15 @@
 
       <div class="swiper-wrapper">
 
+        {{-- <div class="swiper-slide">
+          <div class="slide relative h-full w-full">
+            <div class="w-full h-full absolute inset-0 z-10">
+              <img src="/images/banner-voucher-deposit-desktop.jpg" class="w-full h-full object-cover hidden md:block" />
+              <img src="/images/banner-voucher-deposit-mobile.jpg" class="w-full h-full object-cover md:hidden" />
+            </div>
+          </div>
+        </div> --}}
+
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
@@ -44,7 +53,7 @@
               </div>
             </div>
           </div>
-        </div>        
+        </div>
 
         <div class="swiper-slide">
           <div class="slide relative h-full w-full">
@@ -73,7 +82,7 @@
           </div>
         </div>
 
-       {{--  <div class="swiper-slide">
+        {{-- <div class="swiper-slide">
           <div class="slide relative h-full w-full">
             <div class="w-full h-full absolute inset-0 z-10">
               <img src="/images/home_hero_2.jpg" class="w-full h-full object-cover" />
@@ -88,7 +97,7 @@
                   {{ __('homepage.slide2Description') }}
                 </p>
                 <div><a href="/about-us" class="button button-contained button-orange button-xl">{{
-                    __('homepage.slide2ButtonText') }}</a>
+                            __('homepage.slide2ButtonText') }}</a>
                 </div>
               </div>
             </div>
@@ -161,17 +170,17 @@
 
   {{-- <section class="home-hero relative">
     <div class="w-full h-full absolute inset-0 bg-black bg-opacity-50 z-0 xl:bg-opacity-25"></div>
-    <div class="flex w-full max-w-screen-xl mx-auto px-4 xl:px-12 py-4">
-      <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
-        <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">Make Your Money Work For You
-        </h1>
-        <p class="text-lg md:text-xl xl:text-2xl mb-4 xl:mb-6">We provide solutions to meet your specific financial
-          needs while
-          maximizing returns</p>
-        <div><a href="/download#opening-account" class="button button-contained button-orange button-xl">Open New
-            Account</a></div>
+      <div class="flex w-full max-w-screen-xl mx-auto px-4 xl:px-12 py-4">
+        <div class="relative w-full md:w-2/3 lg:w-1/2 text-white">
+          <h1 class="font-display font-bold text-4xl md:text-5xl xl:text-6xl mb-3 md:mb-4">Make Your Money Work For You
+          </h1>
+          <p class="text-lg md:text-xl xl:text-2xl mb-4 xl:mb-6">We provide solutions to meet your specific financial
+            needs while
+            maximizing returns</p>
+          <div><a href="/download#opening-account" class="button button-contained button-orange button-xl">Open New
+              Account</a></div>
+        </div>
       </div>
-    </div>
   </section> --}}
 
   {{-- <section class="home-about">
@@ -276,31 +285,31 @@
       </div>
       {{-- <div class="flex flex-col w-full md:w-1/2 lg:w-2/3">
         <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">{{ __('homepage.marketNews') }}</h2>
-        <div class="flex-1 w-full border border-gray-200 px-4 py-4 md:px-8">
-          <x-market-news per-page="5" text-size="text-base lg:text-lg" />
-          <div class="mt-4"><a href="/market-news" class="button button-text button-lg"><span class="mr-1">{{
+      <div class="flex-1 w-full border border-gray-200 px-4 py-4 md:px-8">
+        <x-market-news per-page="5" text-size="text-base lg:text-lg" />
+        <div class="mt-4"><a href="/market-news" class="button button-text button-lg"><span class="mr-1">{{
                 __('homepage.viewMore') }}</span> <span class="material-icons">arrow_right_alt</span></a></div>
-        </div>
-      </div> --}}
-      <div class="flex flex-col w-full md:w-1/2 lg:w-2/5">
-        <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">Research Report</h2>
-        <div class="flex-1 w-full border border-gray-200 px-4 py-4 md:px-8">
-          <div>
-            <ul>
-              <li class="flex border-b border-gray-200 py-4 text-base lg:text-base">
-                <div class="mr-4"><span class="text-gray-500 font-semibold whitespace-nowrap">11 Nov 2023</span>
-                </div>
-                <div class="">
-                  <h4><a class="text-blue font-semibold hover:text-blue-light"
-                      href="/storage/research/ELPI Research Report.pdf" target="_blank">ELPI Research
-                      Report</a>
-                  </h4>
-                </div>
-              </li>
-            </ul>
-          </div>
+      </div>
+    </div> --}}
+    <div class="flex flex-col w-full md:w-1/2 lg:w-2/5">
+      <h2 class="text-2xl lg:text-3xl text-blue font-display font-bold mb-4">Research Report</h2>
+      <div class="flex-1 w-full border border-gray-200 px-4 py-4 md:px-8">
+        <div>
+          <ul>
+            <li class="flex border-b border-gray-200 py-4 text-base lg:text-base">
+              <div class="mr-4"><span class="text-gray-500 font-semibold whitespace-nowrap">11 Nov 2023</span>
+              </div>
+              <div class="">
+                <h4><a class="text-blue font-semibold hover:text-blue-light"
+                    href="/storage/research/ELPI Research Report.pdf" target="_blank">ELPI Research
+                    Report</a>
+                </h4>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
