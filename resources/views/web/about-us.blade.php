@@ -84,8 +84,8 @@
             height="720"></a></div>
       <div class="w-full text-center text-gray-600">
         <p class="font-bold">Izin Perorangan PT Semesta Indovest Sekuritas</p>
-        <p><a href="/storage/downloads/Karyawan%20Berizin.pdf" target="_blank" class="hover:underline"><span class="inline-block mr-3">WPPE: 77</span><span class="inline-block mr-3">WPEE : 7</span><span
-            class="inline-block mr-3">WMI : 6</span></a></p>
+        <p><a href="/storage/downloads/Karyawan%20Berizin.pdf" target="_blank" class="hover:underline flex justify-center gap-4"><span class="">WPPE: 77</span><span class="">WPEE : 7</span><span
+            class="">WMI : 6</span></a></p>
       </div>
     </div>
   </section>
