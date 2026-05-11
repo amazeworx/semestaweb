@@ -197,13 +197,13 @@
   </section> --}}
 
   <section class="home-services bg-gray-100">
-    <div class="flex flex-col w-full max-w-screen-xl mx-auto px-4 xl:px-12 py-12 xl:py-24">
+    <div class="flex flex-col w-full max-w-screen-lg mx-auto px-4 xl:px-12 py-12 xl:py-24">
 
       <div class="text-center mb-8 xl:mb-10">
         <h2 class="text-3xl md:text-4xl text-blue font-display font-bold">{{ __('homepage.ourServices') }}</h2>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 xl:gap-x-8">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:gap-x-8">
 
         <div class="flex flex-col bg-white shadow rounded overflow-hidden">
           <div>
@@ -240,7 +240,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col bg-white shadow rounded overflow-hidden">
+        <div class="hidden flex-col bg-white shadow rounded overflow-hidden">
           <div>
             <a href="/our-services/#corporate-finance" class="block relative">
               <img class="h-44 md:h-40 lg:h-56 object-cover" src="/images/card_corporate_finance.jpg" alt="brokerage"
